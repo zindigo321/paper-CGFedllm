@@ -1,0 +1,235 @@
+{
+  "markdown_files": 15,
+  "internal_links_checked": 123,
+  "internal_errors": [],
+  "bibtex_entries": 10,
+  "original_pdfs": 5,
+  "public_pdfs": 2,
+  "external_links": [
+    {
+      "url": "https://api.crossref.org/works/10.1145/3786335.3813151",
+      "status": 200,
+      "final_url": "https://api.crossref.org/works/10.1145/3786335.3813151",
+      "content_type": "application/json"
+    },
+    {
+      "url": "https://arxiv.org/abs/2303.10512v2",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/2303.10512v2",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://arxiv.org/abs/2403.07378v5",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/2403.07378v5",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://arxiv.org/abs/2403.12313v1",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/2403.12313v1",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://arxiv.org/abs/2406.05233v1",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/2406.05233v1",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://arxiv.org/abs/2412.17053v1",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/2412.17053v1",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "status": 200,
+      "final_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/license.html",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2303.10512v2",
+      "status": 200,
+      "final_url": "https://arxiv.org/pdf/2303.10512v2",
+      "content_type": "application/pdf"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2403.07378v5",
+      "status": 200,
+      "final_url": "https://arxiv.org/pdf/2403.07378v5",
+      "content_type": "application/pdf"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2403.12313v1",
+      "status": 200,
+      "final_url": "https://arxiv.org/pdf/2403.12313v1",
+      "content_type": "application/pdf"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2406.05233v1",
+      "status": 200,
+      "final_url": "https://arxiv.org/pdf/2406.05233v1",
+      "content_type": "application/pdf"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2412.17053v1",
+      "status": 200,
+      "final_url": "https://arxiv.org/pdf/2412.17053v1",
+      "content_type": "application/pdf"
+    },
+    {
+      "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "status": 200,
+      "final_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "content_type": "text/html"
+    },
+    {
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "status": 200,
+      "final_url": "https://creativecommons.org/licenses/by/4.0/",
+      "content_type": "text/html"
+    },
+    {
+      "url": "https://dl.acm.org/doi/10.1145/3786335.3813151",
+      "status": 403,
+      "note": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://doi.org/10.1145/3786335.3813151",
+      "status": 403,
+      "note": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://doi.org/10.1609/aaai.v39i26.34985",
+      "status": 200,
+      "final_url": "https://ojs.aaai.org/index.php/AAAI/article/view/34985",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://doi.org/10.48550/arXiv.2303.10512",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/2303.10512",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://doi.org/10.48550/arXiv.2403.07378",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/2403.07378",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://doi.org/10.48550/arXiv.2403.12313",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/2403.12313",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://doi.org/10.48550/arXiv.2406.05233",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/2406.05233",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://doi.org/10.48550/arXiv.2412.17053",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/2412.17053",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/AIoT-MLSys-Lab/SVD-LLM",
+      "status": 200,
+      "final_url": "https://github.com/AIoT-MLSys-Lab/SVD-LLM",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/QingruZhang/AdaLoRA",
+      "status": 200,
+      "final_url": "https://github.com/QingruZhang/AdaLoRA",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/QingruZhang/AdaLoRA/blob/main/loralib/loralib/adalora.py",
+      "status": 200,
+      "final_url": "https://github.com/QingruZhang/AdaLoRA/blob/main/loralib/loralib/adalora.py",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/hendrycks/test",
+      "status": 200,
+      "final_url": "https://github.com/hendrycks/test",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/hkust-nlp/ceval",
+      "status": 200,
+      "final_url": "https://github.com/hkust-nlp/ceval",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/imkevinkuo/flasc",
+      "status": 200,
+      "final_url": "https://github.com/imkevinkuo/flasc",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/zindigo321/paper-CGFedllm",
+      "status": 200,
+      "final_url": "https://github.com/zindigo321/paper-CGFedllm",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/zindigo321/paper-CGFedllm.git",
+      "status": 200,
+      "final_url": "https://github.com/zindigo321/paper-CGFedllm",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://huggingface.co/datasets/databricks/databricks-dolly-15k",
+      "status": 200,
+      "final_url": "https://huggingface.co/datasets/databricks/databricks-dolly-15k",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://ojs.aaai.org/index.php/AAAI/article/view/34985",
+      "status": 200,
+      "final_url": "https://ojs.aaai.org/index.php/AAAI/article/view/34985",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://openreview.net/forum?id=LNYIUouhdt",
+      "status": 200,
+      "final_url": "https://openreview.net/challenge?redirect=%2Fforum%3Fid%3DLNYIUouhdt",
+      "content_type": "text/html; charset=utf-8",
+      "note": "verification wall; URL exists but rendered article not verified"
+    },
+    {
+      "url": "https://openreview.net/forum?id=NLPzL6HWNl",
+      "status": 200,
+      "final_url": "https://openreview.net/challenge?redirect=%2Fforum%3Fid%3DNLPzL6HWNl",
+      "content_type": "text/html; charset=utf-8",
+      "note": "verification wall; URL exists but rendered article not verified"
+    },
+    {
+      "url": "https://openreview.net/forum?id=lq62uWRJjiY",
+      "status": 200,
+      "final_url": "https://openreview.net/challenge?redirect=%2Fforum%3Fid%3Dlq62uWRJjiY",
+      "content_type": "text/html; charset=utf-8",
+      "note": "verification wall; URL exists but rendered article not verified"
+    },
+    {
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/4e243e95c913b367775d71d7182b99d9-Abstract-Conference.html",
+      "status": 200,
+      "final_url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/4e243e95c913b367775d71d7182b99d9-Abstract-Conference.html",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/3104e1ab39875cf54fe1eb4473e7c5a1-Abstract-Conference.html",
+      "status": 200,
+      "final_url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/3104e1ab39875cf54fe1eb4473e7c5a1-Abstract-Conference.html",
+      "content_type": "text/html; charset=utf-8"
+    }
+  ],
+  "checked_on": "2026-10-11",
+  "scope": "local relative targets and HTTP responses; not GitHub online display"
+}

@@ -1,0 +1,170 @@
+{
+  "checked_on": "2026-10-11",
+  "syntax_renderer": "markdown-it and KaTeX strict",
+  "syntax": {
+    "files": [
+      {
+        "file": "NOTICE.md",
+        "math": 0,
+        "tables": 2
+      },
+      {
+        "file": "README.md",
+        "math": 0,
+        "tables": 2
+      },
+      {
+        "file": "UPLOAD.md",
+        "math": 0,
+        "tables": 0
+      },
+      {
+        "file": "comparison.md",
+        "math": 21,
+        "tables": 4
+      },
+      {
+        "file": "papers/2023-zhang-adalora/notes.md",
+        "math": 32,
+        "tables": 3
+      },
+      {
+        "file": "papers/2023-zhang-adalora/source.md",
+        "math": 0,
+        "tables": 0
+      },
+      {
+        "file": "papers/2024-kuo-flasc/notes.md",
+        "math": 34,
+        "tables": 3
+      },
+      {
+        "file": "papers/2024-kuo-flasc/source.md",
+        "math": 0,
+        "tables": 0
+      },
+      {
+        "file": "papers/2024-sun-ffa-lora/notes.md",
+        "math": 63,
+        "tables": 3
+      },
+      {
+        "file": "papers/2024-sun-ffa-lora/source.md",
+        "math": 0,
+        "tables": 0
+      },
+      {
+        "file": "papers/2024-wu-dr-encoder/notes.md",
+        "math": 52,
+        "tables": 3
+      },
+      {
+        "file": "papers/2024-wu-dr-encoder/source.md",
+        "math": 0,
+        "tables": 0
+      },
+      {
+        "file": "papers/2025-wang-svd-llm/notes.md",
+        "math": 32,
+        "tables": 3
+      },
+      {
+        "file": "papers/2025-wang-svd-llm/source.md",
+        "math": 0,
+        "tables": 0
+      },
+      {
+        "file": "verification.md",
+        "math": 0,
+        "tables": 2
+      }
+    ],
+    "math_count": 234,
+    "table_count": 25,
+    "failures": []
+  },
+  "local_print_preview": {
+    "renderer": "WeasyPrint / local HTML; not live GitHub",
+    "files": [
+      {
+        "file": "README.md",
+        "preview_pages": 2,
+        "text_extracted": true
+      },
+      {
+        "file": "comparison.md",
+        "preview_pages": 2,
+        "text_extracted": true
+      },
+      {
+        "file": "papers/2023-zhang-adalora/notes.md",
+        "preview_pages": 3,
+        "text_extracted": true
+      },
+      {
+        "file": "papers/2024-kuo-flasc/notes.md",
+        "preview_pages": 3,
+        "text_extracted": true
+      },
+      {
+        "file": "papers/2024-sun-ffa-lora/notes.md",
+        "preview_pages": 3,
+        "text_extracted": true
+      },
+      {
+        "file": "papers/2024-wu-dr-encoder/notes.md",
+        "preview_pages": 3,
+        "text_extracted": true
+      },
+      {
+        "file": "papers/2025-wang-svd-llm/notes.md",
+        "preview_pages": 4,
+        "text_extracted": true
+      }
+    ],
+    "bibtex": [
+      {
+        "file": "papers/2023-zhang-adalora/citation.bib",
+        "entries": 2,
+        "keys": [
+          "zhang2023adaptive_iclr",
+          "zhang2023adalora_arxiv_v2"
+        ]
+      },
+      {
+        "file": "papers/2024-kuo-flasc/citation.bib",
+        "entries": 2,
+        "keys": [
+          "kuo2024federated_arxiv_v1",
+          "kuo2026flasc_cais"
+        ]
+      },
+      {
+        "file": "papers/2024-sun-ffa-lora/citation.bib",
+        "entries": 2,
+        "keys": [
+          "sun2024improving_iclr",
+          "sun2024improving_arxiv_v1"
+        ]
+      },
+      {
+        "file": "papers/2024-wu-dr-encoder/citation.bib",
+        "entries": 2,
+        "keys": [
+          "wu2025drencoder_aaai",
+          "wu2024drencoder_arxiv_v1"
+        ]
+      },
+      {
+        "file": "papers/2025-wang-svd-llm/citation.bib",
+        "entries": 2,
+        "keys": [
+          "wang2025svdllm_iclr",
+          "wang2025svdllm_arxiv_v5"
+        ]
+      }
+    ]
+  },
+  "visual_review": "Chinese text, key formulas and quantitative tables inspected in README, comparison and five notes",
+  "github_online_display_verified": false
+}

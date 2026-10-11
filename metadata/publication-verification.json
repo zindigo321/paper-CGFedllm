@@ -1,0 +1,165 @@
+{
+  "verified_on": "2026-10-11",
+  "method": "Uploaded PDFs read in full; official version pages, author repositories, proceedings pages and publisher-deposited Crossref metadata used for bibliographic verification.",
+  "records": [
+    {
+      "paper": "AdaLoRA",
+      "conference": "ICLR 2023",
+      "conference_url": "https://openreview.net/forum?id=lq62uWRJjiY",
+      "conference_bibtex_source": "https://github.com/QingruZhang/AdaLoRA",
+      "uploaded_authors_count": 8,
+      "conference_authors_count": 7,
+      "difference": "Uploaded v2 adds Nikos Karampatziakis and AdaLoRA title prefix",
+      "conference_doi": "not provided in verified official record",
+      "uploaded_version": "2303.10512v2"
+    },
+    {
+      "paper": "DR-Encoder",
+      "conference": "AAAI 2025",
+      "source": "https://ojs.aaai.org/index.php/AAAI/article/view/34985",
+      "doi": "10.1609/aaai.v39i26.34985",
+      "published": "2025-04-11",
+      "volume": 39,
+      "issue": 26,
+      "pages": "27706-27714",
+      "read_full_text_version": "2412.17053v1",
+      "formal_full_text_obtained": false
+    },
+    {
+      "paper": "FLASC",
+      "source": "https://api.crossref.org/works/10.1145/3786335.3813151",
+      "publisher_deposited_metadata": {
+        "title": [
+          "FLASC: Federated LoRA with Sparse Communication"
+        ],
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0009-0008-5669-647X",
+            "authenticated-orcid": false,
+            "given": "Kevin",
+            "family": "Kuo",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Carnegie Mellon University, Pittsburgh, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0004-6610-8396",
+            "authenticated-orcid": false,
+            "given": "Arian",
+            "family": "Raje",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Carnegie Mellon University, Pittsburgh, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-6657-7521",
+            "authenticated-orcid": false,
+            "given": "Kousik",
+            "family": "Rajesh",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Carnegie Mellon University, Pittsburgh, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-6404-2395",
+            "authenticated-orcid": false,
+            "given": "Virginia",
+            "family": "Smith",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Carnegie Mellon University, Pittsburgh, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2026,
+              5,
+              26
+            ]
+          ]
+        },
+        "container-title": [
+          "Proceedings of the ACM Conference on AI and Agentic Systems"
+        ],
+        "DOI": "10.1145/3786335.3813151",
+        "page": "990-1008",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2026,
+                  5,
+                  26
+                ]
+              ],
+              "date-time": "2026-05-26T00:00:00Z",
+              "timestamp": 1779753600000
+            },
+            "content-version": "vor",
+            "delay-in-days": 0,
+            "URL": "https://creativecommons.org/licenses/by/4.0/legalcode"
+          }
+        ],
+        "URL": "https://doi.org/10.1145/3786335.3813151",
+        "publisher": "ACM",
+        "type": "proceedings-article"
+      },
+      "read_full_text_version": "2406.05233v1",
+      "formal_full_text_obtained": false,
+      "license_scope_warning": "The CC BY license is identified as vor and is not asserted to cover the uploaded 2024 preprint."
+    },
+    {
+      "paper": "FFA-LoRA",
+      "conference": "ICLR 2024",
+      "source": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/4e243e95c913b367775d71d7182b99d9-Abstract-Conference.html",
+      "conference_doi": "not provided in verified official record",
+      "read_full_text_version": "2403.12313v1"
+    },
+    {
+      "paper": "SVD-LLM",
+      "conference": "ICLR 2025",
+      "source": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/3104e1ab39875cf54fe1eb4473e7c5a1-Abstract-Conference.html",
+      "conference_doi": "not provided in verified official record",
+      "read_full_text_version": "2403.07378v5",
+      "method_in_read_version": "Sequential LoRA low-rank factor update, not early-version closed-form update"
+    }
+  ]
+}

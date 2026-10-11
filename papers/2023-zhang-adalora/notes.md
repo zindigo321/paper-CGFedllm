@@ -28,10 +28,10 @@
 
 ## 方法流程、模块与核心公式
 
-1. 冻结预训练权重，初始化非零随机 $P,Q$ 与零对角矩阵 $\Lambda$。
+1. 冻结预训练权重，初始化非零随机  $`P,Q`$  与零对角矩阵  $`\Lambda`$ 。
 2. 用任务损失与正交正则更新三个因子。
 3. 计算每个参数的敏感度、平滑敏感度和不确定性，再组合成三元组分数。
-4. 每隔 $\Delta T$ 步，在所有适配矩阵的三元组中全局保留预算允许的高分方向，屏蔽其他奇异值。
+4. 每隔  $`\Delta T`$  步，在所有适配矩阵的三元组中全局保留预算允许的高分方向，屏蔽其他奇异值。
 5. 初期保持较大预算，中期逐渐减小，末期固定秩分布继续训练（pp. 4–6，算法 1）。
 
 权重参数化与正交正则（p. 4，式 (3)–(4)）：
@@ -42,7 +42,7 @@ W=W^{(0)}+P\Lambda Q,
 R(P,Q)=\lVert P^\top P-I\rVert_F^2+\lVert QQ^\top-I\rVert_F^2.
 $$
 
-$W^{(0)}\in\mathbb R^{d_1\times d_2}$ 是冻结权重；$P\in\mathbb R^{d_1\times r}$、$Q\in\mathbb R^{r\times d_2}$ 是可训练方向；$\Lambda$ 对角元素 $\lambda_i$ 控制方向强度；$r$ 是初始秩；$I$ 为单位矩阵，$\lVert\cdot\rVert_F$ 为 Frobenius 范数。训练目标为任务损失加 $\gamma\sum_k R(P_k,Q_k)$。这里是**模仿 SVD 的可学习参数化**，不是每步计算严格 SVD（p. 4）。
+ $`W^{(0)}\in\mathbb R^{d_1\times d_2}`$  是冻结权重； $`P\in\mathbb R^{d_1\times r}`$ 、 $`Q\in\mathbb R^{r\times d_2}`$  是可训练方向； $`\Lambda`$  对角元素  $`\lambda_i`$  控制方向强度； $`r`$  是初始秩； $`I`$  为单位矩阵， $`\lVert\cdot\rVert_F`$  为 Frobenius 范数。训练目标为任务损失加  $`\gamma\sum_k R(P_k,Q_k)`$ 。这里是**模仿 SVD 的可学习参数化**，不是每步计算严格 SVD（p. 4）。
 
 敏感度及其平滑、不确定性（p. 5，式 (8)–(11)）：
 
@@ -57,7 +57,7 @@ $$
 \qquad s_t(w)=\bar I_t(w)\bar U_t(w).
 $$
 
-第 $k$ 个矩阵的第 $i$ 个三元组分数（p. 5，式 (7)）：
+第  $`k`$  个矩阵的第  $`i`$  个三元组分数（p. 5，式 (7)）：
 
 $$
 S_{k,i}=s(\lambda_{k,i})+
@@ -65,9 +65,9 @@ S_{k,i}=s(\lambda_{k,i})+
 \frac1{d_2}\sum_{j=1}^{d_2}s(Q_{k,ij}).
 $$
 
-$\beta_1,\beta_2$ 是指数移动平均系数；$b(t)$ 表示**全局保留奇异值数量 / 总秩**，不直接等于参数个数或 GPU 显存。式 (6) 对所有 $S_{k,i}$ 做 Top-$b(t)$ 选择；未选中的 $\lambda_{k,i}$ 置零。不同形状矩阵每个秩的参数代价可能不同（后一说明为整理者推断）。
+ $`\beta_1,\beta_2`$  是指数移动平均系数； $`b(t)`$  表示**全局保留奇异值数量 / 总秩**，不直接等于参数个数或 GPU 显存。式 (6) 对所有  $`S_{k,i}`$  做 Top- $`b(t)`$  选择；未选中的  $`\lambda_{k,i}`$  置零。不同形状矩阵每个秩的参数代价可能不同（后一说明为整理者推断）。
 
-原文使用初始预算约为目标的 1.5 倍、warm-up / cubic decay / 固定预算三阶段（p. 6）。附录式 (12) 中间段分子写作 $t-t_i-t_f$（p. 14），与阶段衔接的直观描述存在疑点；本笔记不静默修正该式。2026-10-11 核对作者 [RankAllocator 实现](https://github.com/QingruZhang/AdaLoRA/blob/main/loralib/loralib/adalora.py) 后，确认当前代码 `schedule_threshold` 的中段系数为 $1-(t-t_i)/(T-t_i-t_f)$；复现应锁定代码版本，保留 PDF 与当前代码的这个差异。
+原文使用初始预算约为目标的 1.5 倍、warm-up / cubic decay / 固定预算三阶段（p. 6）。附录式 (12) 中间段分子写作  $`t-t_i-t_f`$ （p. 14），与阶段衔接的直观描述存在疑点；本笔记不静默修正该式。2026-10-11 核对作者 [RankAllocator 实现](https://github.com/QingruZhang/AdaLoRA/blob/main/loralib/loralib/adalora.py) 后，确认当前代码 `schedule_threshold` 的中段系数为  $`1-(t-t_i)/(T-t_i-t_f)`$ ；复现应锁定代码版本，保留 PDF 与当前代码的这个差异。
 
 ## 实验设置与主要定量结果
 
@@ -78,7 +78,7 @@ $\beta_1,\beta_2$ 是指数移动平均系数；$b(t)$ 表示**全局保留奇�
 | 模型与任务 | DeBERTaV3-base：GLUE 开发集、SQuAD v1.1/v2.0；BART-large：XSum、CNN/DailyMail（pp. 6–8） |
 | 对比方法 | Full fine-tuning、BitFit、Houlsby / Pfeiffer Adapter、推广到更多权重矩阵的 LoRA，而非只在 query/value 上应用的原始配置（pp. 6–7） |
 | 指标 | GLUE：任务各自 Accuracy、Matthews correlation、F1、相关系数；QA：EM / F1；摘要：ROUGE-1/2/L（pp. 7–8） |
-| 统计 | GLUE 表 1 是 5 个随机种子的均值；正文称实验增益通过 $p<0.05$ 显著性检验，但未逐格给出检验方法与 p 值（pp. 6–7） |
+| 统计 | GLUE 表 1 是 5 个随机种子的均值；正文称实验增益通过  $`p<0.05`$  显著性检验，但未逐格给出检验方法与 p 值（pp. 6–7） |
 | 计算环境 | PyTorch、Hugging Face Transformers，NVIDIA V100（p. 6） |
 
 以下数字直接抄自相应表格，指标为原表使用的百分制分数：
@@ -108,7 +108,7 @@ $\beta_1,\beta_2$ 是指数移动平均系数；$b(t)$ 表示**全局保留奇�
 
 官方代码：[QingruZhang/AdaLoRA](https://github.com/QingruZhang/AdaLoRA)，PDF p. 1 明确给出。数据集是 GLUE、SQuAD v1.1/v2.0、XSum 和 CNN/DailyMail；统计及配置位于附录 B–E（pp. 14–16）。原文未提供本次实验全部 checkpoint / 环境锁文件的下载链接。
 
-可按 SQuAD v2.0 低预算配置起步：$b(T)=72$、最终平均秩 1、初始秩 2，batch size 16，AdamW，learning rate $10^{-3}$，12 epochs，$\gamma=0.1$，$t_i=5000$、$\Delta T=100$、$t_f=50000$（pp. 8、15，表 9–10）。实现前应核对步数定义，保存采样种子、数据版本与代码 commit。
+可按 SQuAD v2.0 低预算配置起步： $`b(T)=72`$ 、最终平均秩 1、初始秩 2，batch size 16，AdamW，learning rate  $`10^{-3}`$ ，12 epochs， $`\gamma=0.1`$ ， $`t_i=5000`$ 、 $`\Delta T=100`$ 、 $`t_f=50000`$ （pp. 8、15，表 9–10）。实现前应核对步数定义，保存采样种子、数据版本与代码 commit。
 
 上传件存在下列不一致，不能当作已解决：p. 9 叙述将 XSum 1.10% 的 LoRA R-2 写为 19.89，而表 3 同档为 20.20；p. 8 说摘要训练 15 epochs，p. 16 表 13 的 XSum 为 25；p. 16 表 12 的预算档与主文摘要表 3 不同；p. 16 训练成本文字写 SQuADv2，p. 17 表 15 行标签写 SST-2。本笔记分别保留表格出处，不将这些值拼成一个配置。
 

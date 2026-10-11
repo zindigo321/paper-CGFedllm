@@ -28,9 +28,9 @@ FLASC 在通信受限的 cross-device federated learning 中，将 LoRA 的本�
 
 ## 方法流程与核心公式
 
-LoRA 表示 $W=W_0+BA$，冻结主干 $W_0$；$B\in\mathbb R^{d\times r}$、$A\in\mathbb R^{r\times k}$；$r$ 为 LoRA 秩。将所有层的 $A,B$ 展平并拼接为向量 $P$，使用**全局**而非逐层 Top-K 掩码（pp. 4–5）。
+LoRA 表示  $`W=W_0+BA`$ ，冻结主干  $`W_0`$ ； $`B\in\mathbb R^{d\times r}`$ 、 $`A\in\mathbb R^{r\times k}`$ ； $`r`$  为 LoRA 秩。将所有层的  $`A,B`$  展平并拼接为向量  $`P`$ ，使用**全局**而非逐层 Top-K 掩码（pp. 4–5）。
 
-定义 $\operatorname{Top}_d(P)$ 保留幅度最高的 $d$ 比例元素。$d_{\mathrm{down}}$ 与 $d_{\mathrm{up}}$ 为保留的**密度**，不是删去比例。第 $t$ 轮（按 p. 5 算法 1 统一记号）：
+定义  $`\operatorname{Top}_d(P)`$  保留幅度最高的  $`d`$  比例元素。 $`d_{\mathrm{down}}`$  与  $`d_{\mathrm{up}}`$  为保留的**密度**，不是删去比例。第  $`t`$  轮（按 p. 5 算法 1 统一记号）：
 
 $$
 P_i^t=P^t\odot M_{\mathrm{down}}^t,
@@ -53,7 +53,7 @@ g_t=\frac1n\sum_{i=1}^{n}\widetilde{\Delta P_i^t},
 P^{t+1}=\operatorname{AdamUpdate}(P^t,g_t).
 $$
 
-$D_i$ 为客户端数据，$n$ 为本轮参与客户端数，$\odot$ 为逐元素乘法。注意算法的 delta 是“下载权重减本地训练后权重”，作为 server Adam 的 pseudo-gradient；若反过来定义 delta，服务端符号也必须相应变化（p. 5；附录 A，p. 18）。
+ $`D_i`$  为客户端数据， $`n`$  为本轮参与客户端数， $`\odot`$  为逐元素乘法。注意算法的 delta 是“下载权重减本地训练后权重”，作为 server Adam 的 pseudo-gradient；若反过来定义 delta，服务端符号也必须相应变化（p. 5；附录 A，p. 18）。
 
 每轮顺序是：服务端对稠密 LoRA 状态选下载掩码 → 抽样客户端 → 客户端以稀疏值初始化并**更新所有适配器参数** → 计算 delta → 独立选择上传掩码 → FedAdam 聚合 → 保持稠密服务端状态。没有把被置零参数永久冻结，也没有在算法 1 中给出 error-feedback 状态；不要自行补入（pp. 3–5）。
 
@@ -70,32 +70,32 @@ $D_i$ 为客户端数据，$n$ 为本轮参与客户端数，$\odot$ 为逐元�
 
 上述数据来自 pp. 5–6，表 1。FLAIR 每轮 200 clients、2 local epochs、最多 5000 rounds；其他三个数据集每轮 10 clients、1 local epoch、最多 200 rounds；local batch size 都为 16（p. 6）。模型主干预先在客户端可用，此初始化分发成本不等于每轮 LoRA 通信成本（p. 4）。
 
-对比：Dense LoRA、Adapter LTH、SparseAdapter；冻结消融还包括 Federated Select；系统异质性比较 Heterogeneous LoRA；隐私比较 full fine-tuning 与 FFA-LoRA。服务端 FedAdam，客户端 SGD（momentum 0.9），多个 server / client learning rate 配置搜索，$\beta_1=0.9,\beta_2=0.999$（pp. 6–11、19–20）。
+对比：Dense LoRA、Adapter LTH、SparseAdapter；冻结消融还包括 Federated Select；系统异质性比较 Heterogeneous LoRA；隐私比较 full fine-tuning 与 FFA-LoRA。服务端 FedAdam，客户端 SGD（momentum 0.9），多个 server / client learning rate 配置搜索， $`\beta_1=0.9,\beta_2=0.999`$ （pp. 6–11、19–20）。
 
 ## 主要定量结果及统计口径
 
 | 实验 | 原文结果 | 适用范围与出处 |
 | --- | --- | --- |
-| 四任务通信曲线 | FLASC 以 3–10× 更少通信匹配 LoRA 效用 | $r=16$，FLASC / SparseAdapter 密度 1/4；3 seeds，阴影为 min / mean / max，不是置信区间；图 2、pp. 6–7 |
+| 四任务通信曲线 | FLASC 以 3–10× 更少通信匹配 LoRA 效用 |  $`r=16`$ ，FLASC / SparseAdapter 密度 1/4；3 seeds，阴影为 min / mean / max，不是置信区间；图 2、pp. 6–7 |
 | 20NewsGroups 达到 70% Accuracy | 对称 1/4 密度约 4× 更少通信时间；上行密度 1/64 时约 16× 更快通信 | 下行密度 1/4，上行 / 下行速度比 1、1/4、1/16；理想无噪声固定带宽模型，仅传输时间；图 3、p. 7 |
-| 强标签异质性 20NewsGroups | $r=16$ 约 75%，full FT 与较小秩约 70%；同通信成本下稀疏通信保留较高秩更有利 | Dirichlet $\alpha=0.01$；近似读数来自作者正文，不能补成精确小数；图 5、pp. 8–9 |
+| 强标签异质性 20NewsGroups |  $`r=16`$  约 75%，full FT 与较小秩约 70%；同通信成本下稀疏通信保留较高秩更有利 | Dirichlet  $`\alpha=0.01`$ ；近似读数来自作者正文，不能补成精确小数；图 5、pp. 8–9 |
 | FLAIR，无噪声 | full FT / LoRA / FLASC / FFA-LoRA：78.70 / 78.28 / 78.18 / 77.79 F1 | 图 7，p. 10 |
-| FLAIR，$\epsilon=2$ | full FT / LoRA / FLASC / FFA-LoRA：67.85 / 68.96 / 68.33 / 66.05 F1 | $\sigma=0.34$，图 7，p. 10；FLASC 与 FFA 均在 LoRA 基础上减少约 50% 通信 |
+| FLAIR， $`\epsilon=2`$  | full FT / LoRA / FLASC / FFA-LoRA：67.85 / 68.96 / 68.33 / 66.05 F1 |  $`\sigma=0.34`$ ，图 7，p. 10；FLASC 与 FFA 均在 LoRA 基础上减少约 50% 通信 |
 
 图 2 的不同任务准确率不能相互排名；通信时间的 16× 数字也不能当作实测训练总时间。稀疏索引编码、协议开销、实际网络丢包和端到端 wall-clock 的完整成本没有在上传版中量化（整理者归纳）。
 
 ## 隐私实验必须区分的条件
 
-论文使用 **global / central client-level DP-FedAdam**：服务器裁剪、聚合客户端更新，再加入噪声；邻接数据集差异为一个客户端的数据集合加入 / 移除（pp. 10–11）。上传件讨论 FFA-LoRA 在客户端执行 DP-SGD 的不同设置，不能只按相同 $\epsilon$ 直接比较两个论文。
+论文使用 **global / central client-level DP-FedAdam**：服务器裁剪、聚合客户端更新，再加入噪声；邻接数据集差异为一个客户端的数据集合加入 / 移除（pp. 10–11）。上传件讨论 FFA-LoRA 在客户端执行 DP-SGD 的不同设置，不能只按相同  $`\epsilon`$  直接比较两个论文。
 
 更重要的是，报告的 privacy budget 使用**较大模拟 cohort**，实际每轮训练样本数较少：Reddit 实际 10 clients、模拟 1000；FLAIR 实际 200、模拟 5000（pp. 11、20，B.4）。噪声缩放用于可行的实验模拟，报告预算不是对实际小 cohort 部署的直接同条件保证。
 
-Reddit 的 $\sigma\in\{0,0.013,0.072,0.58\}$，$C=10^{-4}$，client learning rate $5\times10^{-4}$；FLAIR 的 $\sigma\in\{0,0.34\}$，$C=5\times10^{-3}$，client learning rate $10^{-2}$（p. 20）。完整 $\delta$、accountant 版本和全部训练结果 checkpoint 在上传 PDF 中未明确提供。
+Reddit 的  $`\sigma\in\{0,0.013,0.072,0.58\}`$ ， $`C=10^{-4}`$ ，client learning rate  $`5\times10^{-4}`$ ；FLAIR 的  $`\sigma\in\{0,0.34\}`$ ， $`C=5\times10^{-3}`$ ，client learning rate  $`10^{-2}`$ （p. 20）。完整  $`\delta`$ 、accountant 版本和全部训练结果 checkpoint 在上传 PDF 中未明确提供。
 
 ## 消融、适用条件与局限性
 
 - **冻结消融（原文）**：全局固定 SparseAdapter 掩码与允许服务端变掩码但客户端仍冻结的 Federated Select，均弱于允许稠密本地训练的 FLASC（pp. 7–8，图 4）。
-- **秩、异质性与密度（原文）**：比较 $r\in\{1,4,16\}$ 与密度 1/4、1/16；$\alpha\in\{100,1,0.01\}$；秩与通信稀疏度应共同考虑，不能把所有任务都降到最低秩（pp. 8–9、20）。
+- **秩、异质性与密度（原文）**：比较  $`r\in\{1,4,16\}`$  与密度 1/4、1/16； $`\alpha\in\{100,1,0.01\}`$ ；秩与通信稀疏度应共同考虑，不能把所有任务都降到最低秩（pp. 8–9、20）。
 - **系统异质性（原文）**：用 2 / 4 个预算 tier、按 4 的幂设置通信能力；几种方法表现接近，不能宣称 FLASC 每个配置都严格最优（pp. 9–10，图 6）。
 - **隐私秩消融（原文）**：Reddit 从秩 1 到 256；较大秩在非私有设置更好，较小秩在带噪设置更有利；冻结并非所有情况下都能提升效用（p. 11，图 8）。
 - **适用条件（整理者归纳）**：模型主干已可用、LoRA 本身有效、通信是主要瓶颈，且客户端仍能完成稠密适配器训练。

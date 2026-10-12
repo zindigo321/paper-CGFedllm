@@ -8,6 +8,26 @@
 
 最初自动环境的写入接口曾返回 `403 Resource not accessible by integration`，因此改用 GitHub Desktop 发布。该历史错误不能再被当作当前仓库“未推送”的状态。
 
+## 2026-10-12：修正所有 notes 的公式显示（当前更新）
+
+第六篇已由用户推送，基准为 [9df64e5](https://github.com/zindigo321/paper-CGFedllm/commit/9df64e5098d09c514a841a9f5547b6009cc4991e)。本次只准备本地修正文件供用户自行更新；以下第六篇入库步骤保留为历史，不需要重新导入其 PDF。
+
+本次更新包 `CGFedLLM-math-fix.zip` 修改 **9 个已有文件**：FLASC、FFA-LoRA、SVD-LLM、CG-FedLLM 的 notes，以及 metadata/markdown-checks.json、metadata/link-checks.json、verification.md、UPLOAD.md、checksums.sha256。没有新增 / 删除文件；PDF、引用和文献元数据不变。
+
+1. 解压到仓库外，阅读 START_HERE.txt。在 GitHub Desktop 打开现有仓库，Fetch origin 并同步；保留自己的未提交修改。如上述基准之后又修改过涉及文件，先比较再合并。
+2. 只将包内 **files/ 的内容**按相对路径合并到仓库根目录。保留既有 papers / metadata 目录里的其他文件；不复制外层说明、补丁或 Git 配置，不重新初始化仓库。
+3. 在 Changes 中核对 9 项修改、0 项新增 / 删除；四篇 notes 的改动应只涉及 17 处函数名宏、CG 的 eta 步长和 GDP 间距。可用 Git Bash 在仓库根目录运行 `sha256sum -c checksums.sha256`，应有 30 项通过。
+4. 提交下面的 Summary，然后 Push origin。包内 changes.patch 是可选方式，与复制 files 二选一；先用 `git apply --check` 检查补丁，不要重复应用。
+
+```text
+docs: fix GitHub math macro compatibility
+```
+
+5. 用 View on GitHub 打开六篇 notes，检查全部 280 个公式和 comparison 的 24 个公式。必须确认公式实际显示，页面没有宏拒绝 / 解析报错；不能仅检查是否存在数学组件。额外确认 CG 更新式显示希腊字母步长，GDP 两个 Phi 后没有感叹号。
+6. 当前在线基准的错误和本地修正检查已记录在 verification / metadata；修正后的在线显示尚未验证。推送后另补实际提交与显示结果，保留历史检查记录。
+
+以后保留现有数学定界格式，多字母函数名优先沿用 `\mathrm{...}`；块公式的符号转义要实际检查 GitHub 显示。如仅为调整间距，使用现有可验证写法或省略该间距，避免让 Markdown 标点转义改变显示出的数学符号。本地 LaTeX / KaTeX 解析成功仍需在线验证。
+
 ## 2026-10-12：新增第六篇 CG-FedLLM（本次更新）
 
 本次基于远程 `main` 的 [e9bf347](https://github.com/zindigo321/paper-CGFedllm/commit/e9bf34708eb5597a840095f3b2c495d7078cf32a) 准备增量文件。按用户要求由用户自行更新；本次没有向远程仓库写入、创建 PR 或宣称已发布。原 Git 历史保留。

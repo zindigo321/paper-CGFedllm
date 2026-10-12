@@ -2,6 +2,38 @@
 
 当前阅读范围为六份实际上传全文、119 页：已有五篇 92 页（原核对日期 2026-10-11），加 CG-FedLLM v3 扩展版 27 页（本次核对日期 2026-10-12）。以下区分本次增量准备、历史发布检查、数学修订与待补充资料。
 
+## 2026-10-12：全部 notes 的公式兼容性审核与修正
+
+本次基于用户已推送的 [9df64e5](https://github.com/zindigo321/paper-CGFedllm/commit/9df64e5098d09c514a841a9f5547b6009cc4991e) 检查六篇笔记。通过 GitHub 插件确认 `main`，另以只读浏览器检查六个 notes 页面及 comparison 的实际公式输出；不是仅检查 HTML 中是否存在数学组件。修正文件由用户自行提交 / 推送，未写入远程。
+
+### 当前发布版的实际显示结果
+
+| 笔记 | 公式总数 | 宏被拒绝的公式数 | `operatorname` 出现次数 | 其他发现 |
+| --- | --- | --- | --- | --- |
+| AdaLoRA | 32 | 0 | 0 | 未发现本次同类问题 |
+| FLASC | 34 | 4 | 5 | Top / LocalSGD / AdamUpdate |
+| FFA-LoRA | 63 | 1 | 1 | DP-SGD 的 Clip |
+| DR-Encoder | 53 | 0 | 0 | 现有 `mathrm` Enc / Dec 及算子复合已显示为 MathML |
+| SVD-LLM | 32 | 1 | 1 | rank 约束 |
+| CG-FedLLM | 66 | 4 | 10 | 另有 eta 和 GDP 感叹号两个显示问题 |
+
+六篇合计 280 个组件，270 个有 MathML 输出，10 个明确显示 `The following macros are not allowed: operatorname`，0 个仍在等待。comparison 的 24 个公式均有 MathML 输出且无报错，共计检查 304 个组件。MathML 输出并不等于科学内容已获证明；CG 中两个静默显示问题即属例外。
+
+### 修正内容与依据
+
+- 四篇 notes 中的 17 处 `operatorname` 改用 `mathrm`，覆盖 10 个报错公式，保留函数名、参数、上下标和公式顺序。该写法已在本仓库 DR-Encoder 公式的实际 GitHub 页面验证。GitHub 官方 [数学格式文档](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions) 说明其数学渲染方式；[github/markup #1688](https://github.com/github/markup/issues/1688) 记录了同类宏报错，但该讨论不等于平台承诺修复时间。
+- CG-FedLLM 更新公式中的 `eta` 补为 `\eta`：附件物理 p. 5 算法 1 确认为希腊字母步长，与笔记紧接其后的解释一致。
+- CG-FedLLM GDP 公式删去两处 `\!` 负间距指令，保留 `\Phi\left(...)`。当前 GitHub 页面把它们显示为两个感叹号，已在 MathML 的 `mo` 节点中确认；附件物理 p. 9 式 (6) 没有感叹号。只调整间距表示，不更改概率公式。
+- 原有行内反引号数学定界格式和独占行的双美元块格式保留。AdaLoRA、DR-Encoder、comparison、所有 PDF、source、citation 和文献元数据逐字节保持本次基准内容。
+
+### 本次检查与后续要求
+
+- 六篇笔记的公式数量和次序保持；已知被拒绝宏及块公式中易被 Markdown 消耗的标点转义清零。全部 304 个数学表达式通过本地 KaTeX 严格解析；表格、相对链接、JSON、BibTeX、PDF 身份和校验清单按定稿文件复查。详细数量与记录见 [metadata/markdown-checks.json](metadata/markdown-checks.json)。
+- 六篇 notes 和 comparison 生成本地 HTML / 排版预览；目视复查四篇改动公式及 CG 的步长 / GDP 显示。该结果仅属于本地预览。
+- 交付 9 个修改文件、0 个新增或删除：四篇 notes、metadata 下两份检查记录、verification、UPLOAD 和 checksums。校验清单仍为 30 项；复制增量文件与应用补丁均在全新发布基准副本上验证。
+- **尚未执行：修正后文件的 GitHub 在线最终显示验证。** 本次实际浏览器结果属于当前发布基准，其错误已确认；本地修正尚待用户推送。推送后须逐篇检查实际公式输出、报错及 eta / GDP 两处，不能只统计数学组件。
+- **对历史验证的补充限定：** 以下历史记录中“KaTeX 严格解析通过”“数学组件被识别”只覆盖相应本地语法 / HTML 阶段，不足以判定 GitHub 最终显示正确。历史日期和统计保留，不能用其覆盖本次浏览器发现。
+
 ## 2026-10-12：CG-FedLLM 第六篇增量准备
 
 - 通过 GitHub 插件读取现有仓库元数据、分支和完整文件树，检出基准为 `main` 的 [e9bf347](https://github.com/zindigo321/paper-CGFedllm/commit/e9bf34708eb5597a840095f3b2c495d7078cf32a)。仓库内未发现 AGENTS.md。已有 README、比较、许可、验证、上传说明、metadata 和五篇 notes / source / citation 均用于理解整理约定。

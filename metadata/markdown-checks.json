@@ -1,5 +1,7 @@
 {
   "checked_on": "2026-10-12",
+  "stage": "All six notes: GitHub macro-compatibility and silent-display correction",
+  "tracked_base_commit": "9df64e5098d09c514a841a9f5547b6009cc4991e",
   "syntax_renderer": "markdown-it 15.0.2 + KaTeX 0.19.0 strict",
   "syntax": {
     "files": [
@@ -86,75 +88,368 @@
       {
         "file": "verification.md",
         "math": 0,
-        "tables": 3
+        "tables": 4
       }
     ],
     "math_count": 304,
-    "table_count": 35,
+    "table_count": 36,
     "failures": [],
     "table_errors": [],
     "orphan_table_rows": []
   },
+  "all_notes_source_audit": [
+    {
+      "file": "papers/2023-zhang-adalora/notes.md",
+      "math_expressions": 32,
+      "operatorname_occurrences_before": 0,
+      "blocked_expressions_before": 0,
+      "affected_lines": [],
+      "operatorname_occurrences_after": 0,
+      "additional_corrections": [],
+      "changed": false,
+      "published_baseline_mathml_outputs": 32,
+      "published_baseline_errors": []
+    },
+    {
+      "file": "papers/2024-kuo-flasc/notes.md",
+      "math_expressions": 34,
+      "operatorname_occurrences_before": 5,
+      "blocked_expressions_before": 4,
+      "affected_lines": [
+        33,
+        38,
+        42,
+        47,
+        53
+      ],
+      "operatorname_occurrences_after": 0,
+      "additional_corrections": [],
+      "changed": true,
+      "published_baseline_mathml_outputs": 30,
+      "published_baseline_errors": [
+        {
+          "index": 7,
+          "message": "The following macros are not allowed: operatorname"
+        },
+        {
+          "index": 12,
+          "message": "The following macros are not allowed: operatorname"
+        },
+        {
+          "index": 13,
+          "message": "The following macros are not allowed: operatorname"
+        },
+        {
+          "index": 14,
+          "message": "The following macros are not allowed: operatorname"
+        }
+      ]
+    },
+    {
+      "file": "papers/2024-sun-ffa-lora/notes.md",
+      "math_expressions": 63,
+      "operatorname_occurrences_before": 1,
+      "blocked_expressions_before": 1,
+      "affected_lines": [
+        65
+      ],
+      "operatorname_occurrences_after": 0,
+      "additional_corrections": [],
+      "changed": true,
+      "published_baseline_mathml_outputs": 62,
+      "published_baseline_errors": [
+        {
+          "index": 27,
+          "message": "The following macros are not allowed: operatorname"
+        }
+      ]
+    },
+    {
+      "file": "papers/2024-wu-dr-encoder/notes.md",
+      "math_expressions": 53,
+      "operatorname_occurrences_before": 0,
+      "blocked_expressions_before": 0,
+      "affected_lines": [],
+      "operatorname_occurrences_after": 0,
+      "additional_corrections": [],
+      "changed": false,
+      "published_baseline_mathml_outputs": 53,
+      "published_baseline_errors": []
+    },
+    {
+      "file": "papers/2025-wang-svd-llm/notes.md",
+      "math_expressions": 32,
+      "operatorname_occurrences_before": 1,
+      "blocked_expressions_before": 1,
+      "affected_lines": [
+        39
+      ],
+      "operatorname_occurrences_after": 0,
+      "additional_corrections": [],
+      "changed": true,
+      "published_baseline_mathml_outputs": 31,
+      "published_baseline_errors": [
+        {
+          "index": 9,
+          "message": "The following macros are not allowed: operatorname"
+        }
+      ]
+    },
+    {
+      "file": "papers/2025-wu-cg-fedllm/notes.md",
+      "math_expressions": 66,
+      "operatorname_occurrences_before": 10,
+      "blocked_expressions_before": 4,
+      "affected_lines": [
+        38,
+        39,
+        60,
+        61,
+        174,
+        174,
+        174,
+        175,
+        175,
+        180
+      ],
+      "operatorname_occurrences_after": 0,
+      "additional_corrections": [
+        {
+          "line": 67,
+          "issue": "missing backslash in eta",
+          "fix": "eta -> \\eta",
+          "pdf_physical_page": 5,
+          "source": "Algorithm 1"
+        },
+        {
+          "lines": [
+            190,
+            191
+          ],
+          "issue": "Markdown consumed the negative-spacing escape and displayed two exclamation marks",
+          "fix": "\\Phi\\!\\left -> \\Phi\\left",
+          "pdf_physical_page": 9,
+          "source": "Equation (6)"
+        }
+      ],
+      "changed": true,
+      "published_baseline_mathml_outputs": 62,
+      "published_baseline_errors": [
+        {
+          "index": 6,
+          "message": "The following macros are not allowed: operatorname"
+        },
+        {
+          "index": 15,
+          "message": "The following macros are not allowed: operatorname"
+        },
+        {
+          "index": 49,
+          "message": "The following macros are not allowed: operatorname"
+        },
+        {
+          "index": 50,
+          "message": "The following macros are not allowed: operatorname"
+        }
+      ]
+    }
+  ],
+  "published_baseline_browser_audit": {
+    "checked_on": "2026-10-12",
+    "base_commit": "9df64e5098d09c514a841a9f5547b6009cc4991e",
+    "method": "Read-only inspection of live GitHub browser DOM after every math-renderer reached MathML output or a flash-error; not merely counting server-side placeholders",
+    "notes": [
+      {
+        "file": "papers/2023-zhang-adalora/notes.md",
+        "components": 32,
+        "mathml_outputs": 32,
+        "pending": 0,
+        "errors": []
+      },
+      {
+        "file": "papers/2024-kuo-flasc/notes.md",
+        "components": 34,
+        "mathml_outputs": 30,
+        "pending": 0,
+        "errors": [
+          {
+            "index": 7,
+            "message": "The following macros are not allowed: operatorname"
+          },
+          {
+            "index": 12,
+            "message": "The following macros are not allowed: operatorname"
+          },
+          {
+            "index": 13,
+            "message": "The following macros are not allowed: operatorname"
+          },
+          {
+            "index": 14,
+            "message": "The following macros are not allowed: operatorname"
+          }
+        ]
+      },
+      {
+        "file": "papers/2024-sun-ffa-lora/notes.md",
+        "components": 63,
+        "mathml_outputs": 62,
+        "pending": 0,
+        "errors": [
+          {
+            "index": 27,
+            "message": "The following macros are not allowed: operatorname"
+          }
+        ]
+      },
+      {
+        "file": "papers/2024-wu-dr-encoder/notes.md",
+        "components": 53,
+        "mathml_outputs": 53,
+        "pending": 0,
+        "errors": [],
+        "compatible_mathrm_examples": [
+          "notes lines 34–37: Enc / Dec reconstruction objective",
+          "notes lines 45–46: Dec / Aggregation / Noise / Clip / Enc composition"
+        ]
+      },
+      {
+        "file": "papers/2025-wang-svd-llm/notes.md",
+        "components": 32,
+        "mathml_outputs": 31,
+        "pending": 0,
+        "errors": [
+          {
+            "index": 9,
+            "message": "The following macros are not allowed: operatorname"
+          }
+        ]
+      },
+      {
+        "file": "papers/2025-wu-cg-fedllm/notes.md",
+        "components": 66,
+        "mathml_outputs": 62,
+        "pending": 0,
+        "errors": [
+          {
+            "index": 6,
+            "message": "The following macros are not allowed: operatorname"
+          },
+          {
+            "index": 15,
+            "message": "The following macros are not allowed: operatorname"
+          },
+          {
+            "index": 49,
+            "message": "The following macros are not allowed: operatorname"
+          },
+          {
+            "index": 50,
+            "message": "The following macros are not allowed: operatorname"
+          }
+        ],
+        "silent_display_issues": [
+          {
+            "index": 16,
+            "observed": "MathML contains separate e, t, a identifiers in the step-size position; raw note says eta, PDF p. 5 Algorithm 1 says Greek eta"
+          },
+          {
+            "index": 56,
+            "observed": "MathML contains two literal mo ! nodes after Phi; raw note uses negative-spacing escape, PDF p. 9 Equation (6) has no exclamation marks"
+          }
+        ]
+      }
+    ],
+    "comparison": {
+      "file": "comparison.md",
+      "components": 24,
+      "mathml_outputs": 24,
+      "pending": 0,
+      "errors": []
+    },
+    "counts": {
+      "notes": 6,
+      "note_math_components": 280,
+      "note_mathml_outputs": 270,
+      "note_failed_components": 10,
+      "all_math_components": 304,
+      "all_mathml_outputs": 294,
+      "all_failed_components": 10,
+      "silent_display_formulas": 2
+    },
+    "index_convention": "Zero-based index in document math-renderer order, not a PDF equation number",
+    "limitation": "MathML output alone does not prove a formula's scientific correctness. Full browser verification of corrected unpublished notes remains pending until the user pushes them."
+  },
+  "github_compatibility_corrections": {
+    "operatorname_occurrences_before": 17,
+    "operatorname_occurrences_after": 0,
+    "previously_blocked_expressions": 10,
+    "additional_corrected_expressions": 2,
+    "corrected_notes": 4,
+    "note_math_expressions": 280,
+    "function_name_macro": "mathrm; existing Enc / Dec and operator composition verified on the live DR-Encoder page",
+    "eta": "Restored Greek eta in CG update formula; checked against uploaded PDF physical p. 5 Algorithm 1",
+    "gdp_spacing": "Removed two negative-spacing escapes that GitHub displayed as literal exclamation marks; checked against PDF physical p. 9 Equation (6)",
+    "display_punctuation_escape_findings_after": [],
+    "inline_and_display_delimiters": "Existing GitHub-supported inline backtick-math and double-dollar block delimiters retained",
+    "formula_order_and_count_preserved": true,
+    "unchanged_notes": [
+      "papers/2023-zhang-adalora/notes.md",
+      "papers/2024-wu-dr-encoder/notes.md"
+    ],
+    "comparison_unchanged": true,
+    "corrected_live_github_output": "not yet verified; user must push these files first"
+  },
   "local_print_preview": {
+    "checked_on": "2026-10-12",
     "renderer": "Local HTML / KaTeX with WeasyPrint 70.0; not live GitHub",
     "files": [
       {
-        "file": "README.md",
-        "preview_pages": 2,
-        "text_extracted": true,
-        "replacement_characters": 0,
-        "first_page_rendered": true
-      },
-      {
-        "file": "comparison.md",
+        "file": "papers/2023-zhang-adalora/notes.md",
         "preview_pages": 3,
         "text_extracted": true,
-        "replacement_characters": 0,
-        "first_page_rendered": true
+        "replacement_characters": 0
       },
       {
-        "file": "NOTICE.md",
-        "preview_pages": 1,
+        "file": "papers/2024-kuo-flasc/notes.md",
+        "preview_pages": 3,
         "text_extracted": true,
-        "replacement_characters": 0,
-        "first_page_rendered": true
+        "replacement_characters": 0
       },
       {
-        "file": "UPLOAD.md",
-        "preview_pages": 2,
+        "file": "papers/2024-sun-ffa-lora/notes.md",
+        "preview_pages": 3,
         "text_extracted": true,
-        "replacement_characters": 0,
-        "first_page_rendered": true
-      },
-      {
-        "file": "verification.md",
-        "preview_pages": 4,
-        "text_extracted": true,
-        "replacement_characters": 0,
-        "first_page_rendered": true
+        "replacement_characters": 0
       },
       {
         "file": "papers/2024-wu-dr-encoder/notes.md",
         "preview_pages": 4,
         "text_extracted": true,
-        "replacement_characters": 0,
-        "first_page_rendered": true
+        "replacement_characters": 0
+      },
+      {
+        "file": "papers/2025-wang-svd-llm/notes.md",
+        "preview_pages": 4,
+        "text_extracted": true,
+        "replacement_characters": 0
       },
       {
         "file": "papers/2025-wu-cg-fedllm/notes.md",
         "preview_pages": 6,
         "text_extracted": true,
-        "replacement_characters": 0,
-        "first_page_rendered": true
+        "replacement_characters": 0
       },
       {
-        "file": "papers/2025-wu-cg-fedllm/source.md",
-        "preview_pages": 1,
+        "file": "comparison.md",
+        "preview_pages": 3,
         "text_extracted": true,
-        "replacement_characters": 0,
-        "first_page_rendered": true
+        "replacement_characters": 0
       }
     ],
+    "changed_formula_preview_pages": 1,
+    "changed_expressions": 12,
+    "cg_eta_and_gdp_symbol_checks": "passed in local MathML; live corrected output not yet published",
     "bibtex": [
       {
         "file": "papers/2023-zhang-adalora/citation.bib",
@@ -214,13 +509,61 @@
   },
   "visual_review": {
     "reviewed_on": "2026-10-12",
-    "scope": "Local Chinese text, CG method/privacy formulas and quantitative tables; README, comparison and license rows. Complete local HTML/print previews for 8 changed Markdown files; selected pages/tables reviewed visually, not a claim that all pages of the source or final GitHub site were screenshot-reviewed."
+    "scope": "All six notes and comparison have local HTML / print previews. Twelve changed expressions reviewed visually together, including Greek eta and the two Phi arguments without exclamation marks. Does not claim all preview pages or the corrected GitHub pages were visually reviewed."
+  },
+  "current_local_checks": {
+    "relative_links": 154,
+    "relative_errors": [],
+    "json_files": [
+      {
+        "file": "metadata/link-checks.json",
+        "valid": true
+      },
+      {
+        "file": "metadata/markdown-checks.json",
+        "valid": true
+      },
+      {
+        "file": "metadata/papers.json",
+        "valid": true
+      },
+      {
+        "file": "metadata/publication-verification.json",
+        "valid": true
+      }
+    ],
+    "bibtex_entries": 12,
+    "public_pdf_identities": [
+      {
+        "file": "papers/2024-sun-ffa-lora/paper.pdf",
+        "pages": 17,
+        "bytes": 423335,
+        "sha256": "8c69b08e409ec1751d10268a4c73463aa0b5d93d159086d329da94b2e801ff1c"
+      },
+      {
+        "file": "papers/2024-wu-dr-encoder/paper.pdf",
+        "pages": 17,
+        "bytes": 4773361,
+        "sha256": "3cbc64725b916b8634ebf2984172dd82e0c691cc9d74322c6d680fd783dc5f7b"
+      },
+      {
+        "file": "papers/2025-wu-cg-fedllm/paper.pdf",
+        "pages": 27,
+        "bytes": 8788962,
+        "sha256": "b878337481740d7343413b72cf9a54dca5ca3bf1f339ed6007526fc6cf889e4e"
+      }
+    ],
+    "cg_pdf_byte_identical_to_attachment": true,
+    "uploaded_papers": 6,
+    "uploaded_pages": 119,
+    "checksums_expected": 30
   },
   "github_online_display_verified": false,
   "github_markdown_api_preview": {
-    "status": "blocked_by_automatic_approval_review",
-    "reason": "The attempted preview would send unpublished local Markdown content to an external GitHub API. No online rendering result was accepted as validation. Local rendering used instead; user checks the published GitHub pages after pushing."
+    "status": "not_requested_in_this_correction",
+    "scope": "Published baseline was checked with a read-only browser; corrected files were checked locally. No corrected unpublished Markdown was sent to a preview API."
   },
+  "historical_validation_limitation": "KaTeX parsing and the presence of math-renderer placeholders do not prove that the final GitHub runtime rendered the formulas successfully. Earlier dated results are preserved below with that limited scope.",
   "previous_snapshots": [
     {
       "checked_on": "2026-10-11",
@@ -391,6 +734,231 @@
       },
       "visual_review": "Chinese text, key formulas and quantitative tables inspected in README, comparison and five notes",
       "github_online_display_verified": false
+    },
+    {
+      "checked_on": "2026-10-12",
+      "syntax_renderer": "markdown-it 15.0.2 + KaTeX 0.19.0 strict",
+      "syntax": {
+        "files": [
+          {
+            "file": "NOTICE.md",
+            "math": 0,
+            "tables": 2
+          },
+          {
+            "file": "README.md",
+            "math": 0,
+            "tables": 2
+          },
+          {
+            "file": "UPLOAD.md",
+            "math": 0,
+            "tables": 0
+          },
+          {
+            "file": "comparison.md",
+            "math": 24,
+            "tables": 4
+          },
+          {
+            "file": "papers/2023-zhang-adalora/notes.md",
+            "math": 32,
+            "tables": 3
+          },
+          {
+            "file": "papers/2023-zhang-adalora/source.md",
+            "math": 0,
+            "tables": 0
+          },
+          {
+            "file": "papers/2024-kuo-flasc/notes.md",
+            "math": 34,
+            "tables": 3
+          },
+          {
+            "file": "papers/2024-kuo-flasc/source.md",
+            "math": 0,
+            "tables": 0
+          },
+          {
+            "file": "papers/2024-sun-ffa-lora/notes.md",
+            "math": 63,
+            "tables": 3
+          },
+          {
+            "file": "papers/2024-sun-ffa-lora/source.md",
+            "math": 0,
+            "tables": 0
+          },
+          {
+            "file": "papers/2024-wu-dr-encoder/notes.md",
+            "math": 53,
+            "tables": 3
+          },
+          {
+            "file": "papers/2024-wu-dr-encoder/source.md",
+            "math": 0,
+            "tables": 0
+          },
+          {
+            "file": "papers/2025-wang-svd-llm/notes.md",
+            "math": 32,
+            "tables": 3
+          },
+          {
+            "file": "papers/2025-wang-svd-llm/source.md",
+            "math": 0,
+            "tables": 0
+          },
+          {
+            "file": "papers/2025-wu-cg-fedllm/notes.md",
+            "math": 66,
+            "tables": 9
+          },
+          {
+            "file": "papers/2025-wu-cg-fedllm/source.md",
+            "math": 0,
+            "tables": 0
+          },
+          {
+            "file": "verification.md",
+            "math": 0,
+            "tables": 3
+          }
+        ],
+        "math_count": 304,
+        "table_count": 35,
+        "failures": [],
+        "table_errors": [],
+        "orphan_table_rows": []
+      },
+      "local_print_preview": {
+        "renderer": "Local HTML / KaTeX with WeasyPrint 70.0; not live GitHub",
+        "files": [
+          {
+            "file": "README.md",
+            "preview_pages": 2,
+            "text_extracted": true,
+            "replacement_characters": 0,
+            "first_page_rendered": true
+          },
+          {
+            "file": "comparison.md",
+            "preview_pages": 3,
+            "text_extracted": true,
+            "replacement_characters": 0,
+            "first_page_rendered": true
+          },
+          {
+            "file": "NOTICE.md",
+            "preview_pages": 1,
+            "text_extracted": true,
+            "replacement_characters": 0,
+            "first_page_rendered": true
+          },
+          {
+            "file": "UPLOAD.md",
+            "preview_pages": 2,
+            "text_extracted": true,
+            "replacement_characters": 0,
+            "first_page_rendered": true
+          },
+          {
+            "file": "verification.md",
+            "preview_pages": 4,
+            "text_extracted": true,
+            "replacement_characters": 0,
+            "first_page_rendered": true
+          },
+          {
+            "file": "papers/2024-wu-dr-encoder/notes.md",
+            "preview_pages": 4,
+            "text_extracted": true,
+            "replacement_characters": 0,
+            "first_page_rendered": true
+          },
+          {
+            "file": "papers/2025-wu-cg-fedllm/notes.md",
+            "preview_pages": 6,
+            "text_extracted": true,
+            "replacement_characters": 0,
+            "first_page_rendered": true
+          },
+          {
+            "file": "papers/2025-wu-cg-fedllm/source.md",
+            "preview_pages": 1,
+            "text_extracted": true,
+            "replacement_characters": 0,
+            "first_page_rendered": true
+          }
+        ],
+        "bibtex": [
+          {
+            "file": "papers/2023-zhang-adalora/citation.bib",
+            "entries": 2,
+            "keys": [
+              "zhang2023adaptive_iclr",
+              "zhang2023adalora_arxiv_v2"
+            ],
+            "errors": []
+          },
+          {
+            "file": "papers/2024-kuo-flasc/citation.bib",
+            "entries": 2,
+            "keys": [
+              "kuo2024federated_arxiv_v1",
+              "kuo2026flasc_cais"
+            ],
+            "errors": []
+          },
+          {
+            "file": "papers/2024-sun-ffa-lora/citation.bib",
+            "entries": 2,
+            "keys": [
+              "sun2024improving_iclr",
+              "sun2024improving_arxiv_v1"
+            ],
+            "errors": []
+          },
+          {
+            "file": "papers/2024-wu-dr-encoder/citation.bib",
+            "entries": 2,
+            "keys": [
+              "wu2025drencoder_aaai",
+              "wu2024drencoder_arxiv_v1"
+            ],
+            "errors": []
+          },
+          {
+            "file": "papers/2025-wang-svd-llm/citation.bib",
+            "entries": 2,
+            "keys": [
+              "wang2025svdllm_iclr",
+              "wang2025svdllm_arxiv_v5"
+            ],
+            "errors": []
+          },
+          {
+            "file": "papers/2025-wu-cg-fedllm/citation.bib",
+            "entries": 2,
+            "keys": [
+              "wu2025cgfedllm_arxiv_v3",
+              "wu2025cgfedllm_ecai"
+            ],
+            "errors": []
+          }
+        ]
+      },
+      "visual_review": {
+        "reviewed_on": "2026-10-12",
+        "scope": "Local Chinese text, CG method/privacy formulas and quantitative tables; README, comparison and license rows. Complete local HTML/print previews for 8 changed Markdown files; selected pages/tables reviewed visually, not a claim that all pages of the source or final GitHub site were screenshot-reviewed."
+      },
+      "github_online_display_verified": false,
+      "github_markdown_api_preview": {
+        "status": "blocked_by_automatic_approval_review",
+        "reason": "The attempted preview would send unpublished local Markdown content to an external GitHub API. No online rendering result was accepted as validation. Local rendering used instead; user checks the published GitHub pages after pushing."
+      },
+      "stage": "CG-FedLLM addition: original local syntax/preview check before live-browser macro audit"
     }
   ]
 }

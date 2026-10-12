@@ -36,7 +36,7 @@ SVD-LLM 用数据感知低秩分解压缩 LLM 权重。它对校准激活的 Gra
 为了统一维度，记  $`W\in\mathbb R^{d\times n}`$ 、 $`X\in\mathbb R^{n\times N}`$ ， $`N`$  为校准激活列数。原文优化每层输出误差（p. 3，式 (1)）：
 
 $$
-\min_{\operatorname{rank}(W')\le r}\lVert WX-W'X\rVert_F.
+\min_{\mathrm{rank}(W')\le r}\lVert WX-W'X\rVert_F.
 $$
 
 白化与低秩分解（pp. 4–5）：

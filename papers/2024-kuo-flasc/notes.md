@@ -30,27 +30,27 @@ FLASC 在通信受限的 cross-device federated learning 中，将 LoRA 的本�
 
 LoRA 表示  $`W=W_0+BA`$ ，冻结主干  $`W_0`$ ； $`B\in\mathbb R^{d\times r}`$ 、 $`A\in\mathbb R^{r\times k}`$ ； $`r`$  为 LoRA 秩。将所有层的  $`A,B`$  展平并拼接为向量  $`P`$ ，使用**全局**而非逐层 Top-K 掩码（pp. 4–5）。
 
-定义  $`\operatorname{Top}_d(P)`$  保留幅度最高的  $`d`$  比例元素。 $`d_{\mathrm{down}}`$  与  $`d_{\mathrm{up}}`$  为保留的**密度**，不是删去比例。第  $`t`$  轮（按 p. 5 算法 1 统一记号）：
+定义  $`\mathrm{Top}_d(P)`$  保留幅度最高的  $`d`$  比例元素。 $`d_{\mathrm{down}}`$  与  $`d_{\mathrm{up}}`$  为保留的**密度**，不是删去比例。第  $`t`$  轮（按 p. 5 算法 1 统一记号）：
 
 $$
 P_i^t=P^t\odot M_{\mathrm{down}}^t,
 \quad
-M_{\mathrm{down}}^t=\operatorname{Top}_{d_{\mathrm{down}}}(P^t),
+M_{\mathrm{down}}^t=\mathrm{Top}_{d_{\mathrm{down}}}(P^t),
 $$
 
 $$
-P_i^{t\prime}=\operatorname{LocalSGD}(P_i^t,D_i),
+P_i^{t\prime}=\mathrm{LocalSGD}(P_i^t,D_i),
 \quad
 \Delta P_i^t=P_i^t-P_i^{t\prime},
 \quad
 \widetilde{\Delta P_i^t}=\Delta P_i^t\odot
-\operatorname{Top}_{d_{\mathrm{up}}}(\Delta P_i^t),
+\mathrm{Top}_{d_{\mathrm{up}}}(\Delta P_i^t),
 $$
 
 $$
 g_t=\frac1n\sum_{i=1}^{n}\widetilde{\Delta P_i^t},
 \qquad
-P^{t+1}=\operatorname{AdamUpdate}(P^t,g_t).
+P^{t+1}=\mathrm{AdamUpdate}(P^t,g_t).
 $$
 
  $`D_i`$  为客户端数据， $`n`$  为本轮参与客户端数， $`\odot`$  为逐元素乘法。注意算法的 delta 是“下载权重减本地训练后权重”，作为 server Adam 的 pseudo-gradient；若反过来定义 delta，服务端符号也必须相应变化（p. 5；附录 A，p. 18）。

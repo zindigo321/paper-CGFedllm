@@ -35,8 +35,8 @@ CG-FedLLM 在联邦 LoRA 微调中，用客户端 encoder 压缩低秩因子，�
 原文压缩与重建（p. 4，式 (1)–(2)）、损失（p. 5，式 (3)）：
 
 $$
-F_i=\operatorname{Enc}(G_i),\qquad
-\widetilde G_i=\operatorname{Dec}(F_i),\qquad
+F_i=\mathrm{Enc}(G_i),\qquad
+\widetilde G_i=\mathrm{Dec}(F_i),\qquad
 \mathcal L_{\mathrm{recons}}=\lVert G-\widetilde G\rVert_2^2.
 $$
 
@@ -57,14 +57,14 @@ $$
 按原算法保留其求和与更新符号：
 
 $$
-[\bar A_i,\bar B_i]=\operatorname{Enc}([A_i,B_i]),\qquad
-[\widetilde A_i,\widetilde B_i]=\operatorname{Dec}([\bar A_i,\bar B_i]),
+[\bar A_i,\bar B_i]=\mathrm{Enc}([A_i,B_i]),\qquad
+[\widetilde A_i,\widetilde B_i]=\mathrm{Dec}([\bar A_i,\bar B_i]),
 $$
 
 $$
 \widetilde A=\sum_i\widetilde A_i,\quad
 \widetilde B=\sum_i\widetilde B_i,\quad
-W_{\mathrm{global}}^{t+1}=W_{\mathrm{global}}^t+eta\widetilde B\widetilde A.
+W_{\mathrm{global}}^{t+1}=W_{\mathrm{global}}^t+\eta\widetilde B\widetilde A.
 $$
 
  $`\eta`$  为步长，参与集合为  $`I_t`$ 。原算法没有明确给出按客户端数据量加权、平均系数或 LoRA scaling 的完整处理；不能自行替换成另一种 FedAvg / 聚合实现后仍称其为原文算法。两个因子分别求和再相乘通常含交叉客户端项，与 [FFA-LoRA](../2024-sun-ffa-lora/notes.md) 讨论的聚合不匹配有关，详见下文。
@@ -171,13 +171,13 @@ Compress 四维均值高于 LoRA、低于 Cent；不能把第 C.3 节末尾的�
 第 4.5 节（p. 9，式 (4)–(5)）写：
 
 $$
-\mathcal M=\operatorname{Aggre}\circ\operatorname{Noise}\circ\operatorname{Clip},\qquad
-\widetilde{\mathcal M}=\operatorname{Dec}\circ\mathcal M\circ\operatorname{Enc}.
+\mathcal M=\mathrm{Aggre}\circ\mathrm{Noise}\circ\mathrm{Clip},\qquad
+\widetilde{\mathcal M}=\mathrm{Dec}\circ\mathcal M\circ\mathrm{Enc}.
 $$
 
 即先编码，然后裁剪、加噪、聚合、解码。该顺序也与基本 FAF 中“逐客户端先解码再聚合”不同（pp. 5–6）。第 4.4 节和附录 D.2 则描述在低秩因子上先裁剪 / 加噪，再编码上传（pp. 8、20–21）。不能将两套次序拼成一个已确定的实现或隐私证明。
 
-原文裁剪为  $`\operatorname{Clip}(A,C)=A\min(1,C/\lVert A\rVert_2)`$  ，加噪写  $`A+n_A,\ n_A\sim\mathcal N(0,\sigma I)`$  （p. 9）；附录 D.2 称先裁剪使敏感度为 1（p. 20）。第 4.5 节定义 add/remove-client 邻接；Lemma 1 给出  $`C/K`$  敏感度，其中  $`K`$  是选中客户端数。均值聚合的分母、裁剪作用于原因子还是 latent、非线性 decoder 的作用及动态  $`K`$  情况没有完全说明；其表达式不能被直接当作任意解码后更新的已验证敏感度。
+原文裁剪为  $`\mathrm{Clip}(A,C)=A\min(1,C/\lVert A\rVert_2)`$  ，加噪写  $`A+n_A,\ n_A\sim\mathcal N(0,\sigma I)`$  （p. 9）；附录 D.2 称先裁剪使敏感度为 1（p. 20）。第 4.5 节定义 add/remove-client 邻接；Lemma 1 给出  $`C/K`$  敏感度，其中  $`K`$  是选中客户端数。均值聚合的分母、裁剪作用于原因子还是 latent、非线性 decoder 的作用及动态  $`K`$  情况没有完全说明；其表达式不能被直接当作任意解码后更新的已验证敏感度。
 
 GDP 公式保留原文渐近条件（p. 9，式 (6)–(7)）：
 
@@ -187,8 +187,8 @@ p\sqrt T\longrightarrow\nu,\qquad
 $$
 
 $$
-\delta(\epsilon)=\Phi\!\left(-\frac\epsilon\mu+\frac\mu2\right)
--e^\epsilon\Phi\!\left(-\frac\epsilon\mu-\frac\mu2\right).
+\delta(\epsilon)=\Phi\left(-\frac\epsilon\mu+\frac\mu2\right)
+-e^\epsilon\Phi\left(-\frac\epsilon\mu-\frac\mu2\right).
 $$
 
  $`\Phi`$  是标准正态分布 CDF， $`T`$  是步骤数， $`p=K/M`$  是采样率， $`M`$  在该定理指总客户端数。原文称“Poisson sampling without replacement”，采样实现仍需核对；该渐近公式不是任意有限步训练的无条件精确 accountant。PDF 噪声分布写  $`\sigma I`$  ，GDP 式和表 15 的 MSE 又涉及  $`\sigma^2`$  ，方差 / 标准差 / noise multiplier 的含义需统一。完整实验  $`\delta`$  、裁剪阈值、各预算实际  $`\sigma`$  及 A/B 两次发布的联合预算未明确给出。

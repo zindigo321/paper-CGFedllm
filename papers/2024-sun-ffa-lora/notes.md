@@ -62,7 +62,7 @@ DP-SGD 机制（p. 3，用统一记号）：
 
 $$
 \bar g=\frac1{|\mathcal B|}
-\left[\sum_{x\in\mathcal B}\operatorname{Clip}(\nabla\ell_x,C)
+\left[\sum_{x\in\mathcal B}\mathrm{Clip}(\nabla\ell_x,C)
 +z\right],
 \qquad z\sim\mathcal N(0,\sigma^2C^2I).
 $$

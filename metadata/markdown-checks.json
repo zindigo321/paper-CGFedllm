@@ -1,6 +1,6 @@
 {
-  "checked_on": "2026-10-11",
-  "syntax_renderer": "markdown-it and KaTeX strict",
+  "checked_on": "2026-10-12",
+  "syntax_renderer": "markdown-it 15.0.2 + KaTeX 0.19.0 strict",
   "syntax": {
     "files": [
       {
@@ -20,7 +20,7 @@
       },
       {
         "file": "comparison.md",
-        "math": 21,
+        "math": 24,
         "tables": 4
       },
       {
@@ -55,7 +55,7 @@
       },
       {
         "file": "papers/2024-wu-dr-encoder/notes.md",
-        "math": 52,
+        "math": 53,
         "tables": 3
       },
       {
@@ -74,52 +74,85 @@
         "tables": 0
       },
       {
+        "file": "papers/2025-wu-cg-fedllm/notes.md",
+        "math": 66,
+        "tables": 9
+      },
+      {
+        "file": "papers/2025-wu-cg-fedllm/source.md",
+        "math": 0,
+        "tables": 0
+      },
+      {
         "file": "verification.md",
         "math": 0,
-        "tables": 2
+        "tables": 3
       }
     ],
-    "math_count": 234,
-    "table_count": 25,
-    "failures": []
+    "math_count": 304,
+    "table_count": 35,
+    "failures": [],
+    "table_errors": [],
+    "orphan_table_rows": []
   },
   "local_print_preview": {
-    "renderer": "WeasyPrint / local HTML; not live GitHub",
+    "renderer": "Local HTML / KaTeX with WeasyPrint 70.0; not live GitHub",
     "files": [
       {
         "file": "README.md",
         "preview_pages": 2,
-        "text_extracted": true
+        "text_extracted": true,
+        "replacement_characters": 0,
+        "first_page_rendered": true
       },
       {
         "file": "comparison.md",
+        "preview_pages": 3,
+        "text_extracted": true,
+        "replacement_characters": 0,
+        "first_page_rendered": true
+      },
+      {
+        "file": "NOTICE.md",
+        "preview_pages": 1,
+        "text_extracted": true,
+        "replacement_characters": 0,
+        "first_page_rendered": true
+      },
+      {
+        "file": "UPLOAD.md",
         "preview_pages": 2,
-        "text_extracted": true
+        "text_extracted": true,
+        "replacement_characters": 0,
+        "first_page_rendered": true
       },
       {
-        "file": "papers/2023-zhang-adalora/notes.md",
-        "preview_pages": 3,
-        "text_extracted": true
-      },
-      {
-        "file": "papers/2024-kuo-flasc/notes.md",
-        "preview_pages": 3,
-        "text_extracted": true
-      },
-      {
-        "file": "papers/2024-sun-ffa-lora/notes.md",
-        "preview_pages": 3,
-        "text_extracted": true
+        "file": "verification.md",
+        "preview_pages": 4,
+        "text_extracted": true,
+        "replacement_characters": 0,
+        "first_page_rendered": true
       },
       {
         "file": "papers/2024-wu-dr-encoder/notes.md",
-        "preview_pages": 3,
-        "text_extracted": true
+        "preview_pages": 4,
+        "text_extracted": true,
+        "replacement_characters": 0,
+        "first_page_rendered": true
       },
       {
-        "file": "papers/2025-wang-svd-llm/notes.md",
-        "preview_pages": 4,
-        "text_extracted": true
+        "file": "papers/2025-wu-cg-fedllm/notes.md",
+        "preview_pages": 6,
+        "text_extracted": true,
+        "replacement_characters": 0,
+        "first_page_rendered": true
+      },
+      {
+        "file": "papers/2025-wu-cg-fedllm/source.md",
+        "preview_pages": 1,
+        "text_extracted": true,
+        "replacement_characters": 0,
+        "first_page_rendered": true
       }
     ],
     "bibtex": [
@@ -129,7 +162,8 @@
         "keys": [
           "zhang2023adaptive_iclr",
           "zhang2023adalora_arxiv_v2"
-        ]
+        ],
+        "errors": []
       },
       {
         "file": "papers/2024-kuo-flasc/citation.bib",
@@ -137,7 +171,8 @@
         "keys": [
           "kuo2024federated_arxiv_v1",
           "kuo2026flasc_cais"
-        ]
+        ],
+        "errors": []
       },
       {
         "file": "papers/2024-sun-ffa-lora/citation.bib",
@@ -145,7 +180,8 @@
         "keys": [
           "sun2024improving_iclr",
           "sun2024improving_arxiv_v1"
-        ]
+        ],
+        "errors": []
       },
       {
         "file": "papers/2024-wu-dr-encoder/citation.bib",
@@ -153,7 +189,8 @@
         "keys": [
           "wu2025drencoder_aaai",
           "wu2024drencoder_arxiv_v1"
-        ]
+        ],
+        "errors": []
       },
       {
         "file": "papers/2025-wang-svd-llm/citation.bib",
@@ -161,10 +198,199 @@
         "keys": [
           "wang2025svdllm_iclr",
           "wang2025svdllm_arxiv_v5"
-        ]
+        ],
+        "errors": []
+      },
+      {
+        "file": "papers/2025-wu-cg-fedllm/citation.bib",
+        "entries": 2,
+        "keys": [
+          "wu2025cgfedllm_arxiv_v3",
+          "wu2025cgfedllm_ecai"
+        ],
+        "errors": []
       }
     ]
   },
-  "visual_review": "Chinese text, key formulas and quantitative tables inspected in README, comparison and five notes",
-  "github_online_display_verified": false
+  "visual_review": {
+    "reviewed_on": "2026-10-12",
+    "scope": "Local Chinese text, CG method/privacy formulas and quantitative tables; README, comparison and license rows. Complete local HTML/print previews for 8 changed Markdown files; selected pages/tables reviewed visually, not a claim that all pages of the source or final GitHub site were screenshot-reviewed."
+  },
+  "github_online_display_verified": false,
+  "github_markdown_api_preview": {
+    "status": "blocked_by_automatic_approval_review",
+    "reason": "The attempted preview would send unpublished local Markdown content to an external GitHub API. No online rendering result was accepted as validation. Local rendering used instead; user checks the published GitHub pages after pushing."
+  },
+  "previous_snapshots": [
+    {
+      "checked_on": "2026-10-11",
+      "syntax_renderer": "markdown-it and KaTeX strict",
+      "syntax": {
+        "files": [
+          {
+            "file": "NOTICE.md",
+            "math": 0,
+            "tables": 2
+          },
+          {
+            "file": "README.md",
+            "math": 0,
+            "tables": 2
+          },
+          {
+            "file": "UPLOAD.md",
+            "math": 0,
+            "tables": 0
+          },
+          {
+            "file": "comparison.md",
+            "math": 21,
+            "tables": 4
+          },
+          {
+            "file": "papers/2023-zhang-adalora/notes.md",
+            "math": 32,
+            "tables": 3
+          },
+          {
+            "file": "papers/2023-zhang-adalora/source.md",
+            "math": 0,
+            "tables": 0
+          },
+          {
+            "file": "papers/2024-kuo-flasc/notes.md",
+            "math": 34,
+            "tables": 3
+          },
+          {
+            "file": "papers/2024-kuo-flasc/source.md",
+            "math": 0,
+            "tables": 0
+          },
+          {
+            "file": "papers/2024-sun-ffa-lora/notes.md",
+            "math": 63,
+            "tables": 3
+          },
+          {
+            "file": "papers/2024-sun-ffa-lora/source.md",
+            "math": 0,
+            "tables": 0
+          },
+          {
+            "file": "papers/2024-wu-dr-encoder/notes.md",
+            "math": 52,
+            "tables": 3
+          },
+          {
+            "file": "papers/2024-wu-dr-encoder/source.md",
+            "math": 0,
+            "tables": 0
+          },
+          {
+            "file": "papers/2025-wang-svd-llm/notes.md",
+            "math": 32,
+            "tables": 3
+          },
+          {
+            "file": "papers/2025-wang-svd-llm/source.md",
+            "math": 0,
+            "tables": 0
+          },
+          {
+            "file": "verification.md",
+            "math": 0,
+            "tables": 2
+          }
+        ],
+        "math_count": 234,
+        "table_count": 25,
+        "failures": []
+      },
+      "local_print_preview": {
+        "renderer": "WeasyPrint / local HTML; not live GitHub",
+        "files": [
+          {
+            "file": "README.md",
+            "preview_pages": 2,
+            "text_extracted": true
+          },
+          {
+            "file": "comparison.md",
+            "preview_pages": 2,
+            "text_extracted": true
+          },
+          {
+            "file": "papers/2023-zhang-adalora/notes.md",
+            "preview_pages": 3,
+            "text_extracted": true
+          },
+          {
+            "file": "papers/2024-kuo-flasc/notes.md",
+            "preview_pages": 3,
+            "text_extracted": true
+          },
+          {
+            "file": "papers/2024-sun-ffa-lora/notes.md",
+            "preview_pages": 3,
+            "text_extracted": true
+          },
+          {
+            "file": "papers/2024-wu-dr-encoder/notes.md",
+            "preview_pages": 3,
+            "text_extracted": true
+          },
+          {
+            "file": "papers/2025-wang-svd-llm/notes.md",
+            "preview_pages": 4,
+            "text_extracted": true
+          }
+        ],
+        "bibtex": [
+          {
+            "file": "papers/2023-zhang-adalora/citation.bib",
+            "entries": 2,
+            "keys": [
+              "zhang2023adaptive_iclr",
+              "zhang2023adalora_arxiv_v2"
+            ]
+          },
+          {
+            "file": "papers/2024-kuo-flasc/citation.bib",
+            "entries": 2,
+            "keys": [
+              "kuo2024federated_arxiv_v1",
+              "kuo2026flasc_cais"
+            ]
+          },
+          {
+            "file": "papers/2024-sun-ffa-lora/citation.bib",
+            "entries": 2,
+            "keys": [
+              "sun2024improving_iclr",
+              "sun2024improving_arxiv_v1"
+            ]
+          },
+          {
+            "file": "papers/2024-wu-dr-encoder/citation.bib",
+            "entries": 2,
+            "keys": [
+              "wu2025drencoder_aaai",
+              "wu2024drencoder_arxiv_v1"
+            ]
+          },
+          {
+            "file": "papers/2025-wang-svd-llm/citation.bib",
+            "entries": 2,
+            "keys": [
+              "wang2025svdllm_iclr",
+              "wang2025svdllm_arxiv_v5"
+            ]
+          }
+        ]
+      },
+      "visual_review": "Chinese text, key formulas and quantitative tables inspected in README, comparison and five notes",
+      "github_online_display_verified": false
+    }
+  ]
 }

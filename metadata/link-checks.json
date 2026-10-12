@@ -1,15 +1,184 @@
 {
-  "markdown_files": 15,
-  "internal_links_checked": 123,
+  "checked_on": "2026-10-12",
+  "markdown_files": 17,
+  "internal_links_checked": 153,
   "internal_errors": [],
-  "bibtex_entries": 10,
-  "original_pdfs": 5,
-  "public_pdfs": 2,
+  "bibtex": [
+    {
+      "file": "papers/2023-zhang-adalora/citation.bib",
+      "entries": 2,
+      "keys": [
+        "zhang2023adaptive_iclr",
+        "zhang2023adalora_arxiv_v2"
+      ],
+      "errors": []
+    },
+    {
+      "file": "papers/2024-kuo-flasc/citation.bib",
+      "entries": 2,
+      "keys": [
+        "kuo2024federated_arxiv_v1",
+        "kuo2026flasc_cais"
+      ],
+      "errors": []
+    },
+    {
+      "file": "papers/2024-sun-ffa-lora/citation.bib",
+      "entries": 2,
+      "keys": [
+        "sun2024improving_iclr",
+        "sun2024improving_arxiv_v1"
+      ],
+      "errors": []
+    },
+    {
+      "file": "papers/2024-wu-dr-encoder/citation.bib",
+      "entries": 2,
+      "keys": [
+        "wu2025drencoder_aaai",
+        "wu2024drencoder_arxiv_v1"
+      ],
+      "errors": []
+    },
+    {
+      "file": "papers/2025-wang-svd-llm/citation.bib",
+      "entries": 2,
+      "keys": [
+        "wang2025svdllm_iclr",
+        "wang2025svdllm_arxiv_v5"
+      ],
+      "errors": []
+    },
+    {
+      "file": "papers/2025-wu-cg-fedllm/citation.bib",
+      "entries": 2,
+      "keys": [
+        "wu2025cgfedllm_arxiv_v3",
+        "wu2025cgfedllm_ecai"
+      ],
+      "errors": []
+    }
+  ],
+  "json": [
+    {
+      "file": "metadata/link-checks.json",
+      "valid": true
+    },
+    {
+      "file": "metadata/markdown-checks.json",
+      "valid": true
+    },
+    {
+      "file": "metadata/papers.json",
+      "valid": true
+    },
+    {
+      "file": "metadata/publication-verification.json",
+      "valid": true
+    }
+  ],
+  "pdfs": [
+    {
+      "file": "papers/2024-sun-ffa-lora/paper.pdf",
+      "pages": 17,
+      "bytes": 423335,
+      "sha256": "8c69b08e409ec1751d10268a4c73463aa0b5d93d159086d329da94b2e801ff1c"
+    },
+    {
+      "file": "papers/2024-wu-dr-encoder/paper.pdf",
+      "pages": 17,
+      "bytes": 4773361,
+      "sha256": "3cbc64725b916b8634ebf2984172dd82e0c691cc9d74322c6d680fd783dc5f7b"
+    },
+    {
+      "file": "papers/2025-wu-cg-fedllm/paper.pdf",
+      "pages": 27,
+      "bytes": 8788962,
+      "sha256": "b878337481740d7343413b72cf9a54dca5ca3bf1f339ed6007526fc6cf889e4e"
+    }
+  ],
+  "new_pdf_byte_identical": true,
+  "original_pdfs": 6,
+  "public_pdfs": 3,
+  "bibtex_entries": 12,
+  "tracked_base_commit": "e9bf34708eb5597a840095f3b2c495d7078cf32a",
+  "preserved_files": [
+    {
+      "file": "papers/2023-zhang-adalora/citation.bib",
+      "unchanged": true
+    },
+    {
+      "file": "papers/2023-zhang-adalora/notes.md",
+      "unchanged": true
+    },
+    {
+      "file": "papers/2023-zhang-adalora/source.md",
+      "unchanged": true
+    },
+    {
+      "file": "papers/2024-kuo-flasc/citation.bib",
+      "unchanged": true
+    },
+    {
+      "file": "papers/2024-kuo-flasc/notes.md",
+      "unchanged": true
+    },
+    {
+      "file": "papers/2024-kuo-flasc/source.md",
+      "unchanged": true
+    },
+    {
+      "file": "papers/2024-sun-ffa-lora/citation.bib",
+      "unchanged": true
+    },
+    {
+      "file": "papers/2024-sun-ffa-lora/notes.md",
+      "unchanged": true
+    },
+    {
+      "file": "papers/2024-sun-ffa-lora/paper.pdf",
+      "unchanged": true
+    },
+    {
+      "file": "papers/2024-sun-ffa-lora/source.md",
+      "unchanged": true
+    },
+    {
+      "file": "papers/2024-wu-dr-encoder/citation.bib",
+      "unchanged": true
+    },
+    {
+      "file": "papers/2024-wu-dr-encoder/paper.pdf",
+      "unchanged": true
+    },
+    {
+      "file": "papers/2024-wu-dr-encoder/source.md",
+      "unchanged": true
+    },
+    {
+      "file": "papers/2025-wang-svd-llm/citation.bib",
+      "unchanged": true
+    },
+    {
+      "file": "papers/2025-wang-svd-llm/notes.md",
+      "unchanged": true
+    },
+    {
+      "file": "papers/2025-wang-svd-llm/source.md",
+      "unchanged": true
+    }
+  ],
   "external_links": [
     {
       "url": "https://api.crossref.org/works/10.1145/3786335.3813151",
       "status": 200,
       "final_url": "https://api.crossref.org/works/10.1145/3786335.3813151",
+      "content_type": "application/json"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.3233/FAIA251320",
+      "status": 200,
+      "final_url": "https://api.crossref.org/works/10.3233/FAIA251320",
       "content_type": "application/json"
     },
     {
@@ -28,6 +197,12 @@
       "url": "https://arxiv.org/abs/2403.12313v1",
       "status": 200,
       "final_url": "https://arxiv.org/abs/2403.12313v1",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://arxiv.org/abs/2405.13746v3",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/2405.13746v3",
       "content_type": "text/html; charset=utf-8"
     },
     {
@@ -52,36 +227,54 @@
       "url": "https://arxiv.org/pdf/2303.10512v2",
       "status": 200,
       "final_url": "https://arxiv.org/pdf/2303.10512v2",
-      "content_type": "application/pdf"
+      "content_type": "application/pdf",
+      "pdf_header": true
     },
     {
       "url": "https://arxiv.org/pdf/2403.07378v5",
       "status": 200,
       "final_url": "https://arxiv.org/pdf/2403.07378v5",
-      "content_type": "application/pdf"
+      "content_type": "application/pdf",
+      "pdf_header": true
     },
     {
       "url": "https://arxiv.org/pdf/2403.12313v1",
       "status": 200,
       "final_url": "https://arxiv.org/pdf/2403.12313v1",
-      "content_type": "application/pdf"
+      "content_type": "application/pdf",
+      "pdf_header": true
+    },
+    {
+      "url": "https://arxiv.org/pdf/2405.13746v3",
+      "status": 200,
+      "final_url": "https://arxiv.org/pdf/2405.13746v3",
+      "content_type": "application/pdf",
+      "pdf_header": true
     },
     {
       "url": "https://arxiv.org/pdf/2406.05233v1",
       "status": 200,
       "final_url": "https://arxiv.org/pdf/2406.05233v1",
-      "content_type": "application/pdf"
+      "content_type": "application/pdf",
+      "pdf_header": true
     },
     {
       "url": "https://arxiv.org/pdf/2412.17053v1",
       "status": 200,
       "final_url": "https://arxiv.org/pdf/2412.17053v1",
-      "content_type": "application/pdf"
+      "content_type": "application/pdf",
+      "pdf_header": true
     },
     {
       "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
       "status": 200,
       "final_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "content_type": "text/html"
+    },
+    {
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "status": 200,
+      "final_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
       "content_type": "text/html"
     },
     {
@@ -93,17 +286,35 @@
     {
       "url": "https://dl.acm.org/doi/10.1145/3786335.3813151",
       "status": 403,
-      "note": "HTTP Error 403: Forbidden"
+      "note": "HTTP 403; access limitation, not proof the resource is absent."
+    },
+    {
+      "url": "https://docs.github.com/en/desktop/making-changes-in-a-branch/committing-and-reviewing-changes-to-your-project-in-github-desktop",
+      "status": 200,
+      "final_url": "https://docs.github.com/en/desktop/making-changes-in-a-branch/committing-and-reviewing-changes-to-your-project-in-github-desktop",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions",
+      "status": 200,
+      "final_url": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions",
+      "content_type": "text/html; charset=utf-8"
     },
     {
       "url": "https://doi.org/10.1145/3786335.3813151",
       "status": 403,
-      "note": "HTTP Error 403: Forbidden"
+      "note": "HTTP 403; access limitation, not proof the resource is absent."
     },
     {
       "url": "https://doi.org/10.1609/aaai.v39i26.34985",
       "status": 200,
       "final_url": "https://ojs.aaai.org/index.php/AAAI/article/view/34985",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://doi.org/10.3233/FAIA251320",
+      "status": 200,
+      "final_url": "https://ebooks.iospress.nl/doi/10.3233/FAIA251320",
       "content_type": "text/html; charset=utf-8"
     },
     {
@@ -125,6 +336,12 @@
       "content_type": "text/html; charset=utf-8"
     },
     {
+      "url": "https://doi.org/10.48550/arXiv.2405.13746",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/2405.13746",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
       "url": "https://doi.org/10.48550/arXiv.2406.05233",
       "status": 200,
       "final_url": "https://arxiv.org/abs/2406.05233",
@@ -137,9 +354,29 @@
       "content_type": "text/html; charset=utf-8"
     },
     {
+      "url": "https://ebooks.iospress.nl/DOI/10.3233/FAIA251320",
+      "status": 200,
+      "final_url": "https://ebooks.iospress.nl/DOI/10.3233/FAIA251320",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://ebooks.iospress.nl/pdf/doi/10.3233/FAIA251320",
+      "status": 200,
+      "final_url": "https://ebooks.iospress.nl/DOI/10.3233/FAIA251320",
+      "content_type": "text/html; charset=utf-8",
+      "pdf_header": false,
+      "note": "Response is not PDF bytes; HTTP success alone does not establish full-text acquisition."
+    },
+    {
       "url": "https://github.com/AIoT-MLSys-Lab/SVD-LLM",
       "status": 200,
       "final_url": "https://github.com/AIoT-MLSys-Lab/SVD-LLM",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/JayZhang42/FederatedGPT-Shepherd",
+      "status": 200,
+      "final_url": "https://github.com/JayZhang42/FederatedGPT-Shepherd",
       "content_type": "text/html; charset=utf-8"
     },
     {
@@ -179,9 +416,15 @@
       "content_type": "text/html; charset=utf-8"
     },
     {
-      "url": "https://github.com/zindigo321/paper-CGFedllm.git",
+      "url": "https://github.com/zindigo321/paper-CGFedllm/commit/e98c35274f380d6d5b17dd1664364c238871466c",
       "status": 200,
-      "final_url": "https://github.com/zindigo321/paper-CGFedllm",
+      "final_url": "https://github.com/zindigo321/paper-CGFedllm/commit/e98c35274f380d6d5b17dd1664364c238871466c",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/zindigo321/paper-CGFedllm/commit/e9bf34708eb5597a840095f3b2c495d7078cf32a",
+      "status": 200,
+      "final_url": "https://github.com/zindigo321/paper-CGFedllm/commit/e9bf34708eb5597a840095f3b2c495d7078cf32a",
       "content_type": "text/html; charset=utf-8"
     },
     {
@@ -189,6 +432,11 @@
       "status": 200,
       "final_url": "https://huggingface.co/datasets/databricks/databricks-dolly-15k",
       "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://journals.sagepub.com/doi/full/10.3233/FAIA251320",
+      "status": 403,
+      "note": "HTTP 403; access limitation, not proof the resource is absent."
     },
     {
       "url": "https://ojs.aaai.org/index.php/AAAI/article/view/34985",
@@ -201,21 +449,21 @@
       "status": 200,
       "final_url": "https://openreview.net/challenge?redirect=%2Fforum%3Fid%3DLNYIUouhdt",
       "content_type": "text/html; charset=utf-8",
-      "note": "verification wall; URL exists but rendered article not verified"
+      "note": "Verification wall; article not verified."
     },
     {
       "url": "https://openreview.net/forum?id=NLPzL6HWNl",
       "status": 200,
       "final_url": "https://openreview.net/challenge?redirect=%2Fforum%3Fid%3DNLPzL6HWNl",
       "content_type": "text/html; charset=utf-8",
-      "note": "verification wall; URL exists but rendered article not verified"
+      "note": "Verification wall; article not verified."
     },
     {
       "url": "https://openreview.net/forum?id=lq62uWRJjiY",
       "status": 200,
       "final_url": "https://openreview.net/challenge?redirect=%2Fforum%3Fid%3Dlq62uWRJjiY",
       "content_type": "text/html; charset=utf-8",
-      "note": "verification wall; URL exists but rendered article not verified"
+      "note": "Verification wall; article not verified."
     },
     {
       "url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/4e243e95c913b367775d71d7182b99d9-Abstract-Conference.html",
@@ -228,8 +476,251 @@
       "status": 200,
       "final_url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/3104e1ab39875cf54fe1eb4473e7c5a1-Abstract-Conference.html",
       "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://shi.buaa.edu.cn/wuhuiwen/en/lwcg/231598/content/34102.htm",
+      "status": 200,
+      "final_url": "https://shi.buaa.edu.cn/wuhuiwen/en/lwcg/231598/content/34102.htm",
+      "content_type": "text/html"
     }
   ],
-  "checked_on": "2026-10-11",
-  "scope": "local relative targets and HTTP responses; not GitHub online display"
+  "scope": "Current local relative links, full BibTeX/JSON, 3 public PDF identities, Markdown tables and current HTTP response samples. Online display of new unpublished files has not been verified.",
+  "original_pdfs_count_basis": "6 uploaded source records in metadata; 3 redistributed PDFs physically present and parsed in this checkout.",
+  "previous_snapshots": [
+    {
+      "markdown_files": 15,
+      "internal_links_checked": 123,
+      "internal_errors": [],
+      "bibtex_entries": 10,
+      "original_pdfs": 5,
+      "public_pdfs": 2,
+      "external_links": [
+        {
+          "url": "https://api.crossref.org/works/10.1145/3786335.3813151",
+          "status": 200,
+          "final_url": "https://api.crossref.org/works/10.1145/3786335.3813151",
+          "content_type": "application/json"
+        },
+        {
+          "url": "https://arxiv.org/abs/2303.10512v2",
+          "status": 200,
+          "final_url": "https://arxiv.org/abs/2303.10512v2",
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://arxiv.org/abs/2403.07378v5",
+          "status": 200,
+          "final_url": "https://arxiv.org/abs/2403.07378v5",
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://arxiv.org/abs/2403.12313v1",
+          "status": 200,
+          "final_url": "https://arxiv.org/abs/2403.12313v1",
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://arxiv.org/abs/2406.05233v1",
+          "status": 200,
+          "final_url": "https://arxiv.org/abs/2406.05233v1",
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://arxiv.org/abs/2412.17053v1",
+          "status": 200,
+          "final_url": "https://arxiv.org/abs/2412.17053v1",
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+          "status": 200,
+          "final_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/license.html",
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://arxiv.org/pdf/2303.10512v2",
+          "status": 200,
+          "final_url": "https://arxiv.org/pdf/2303.10512v2",
+          "content_type": "application/pdf"
+        },
+        {
+          "url": "https://arxiv.org/pdf/2403.07378v5",
+          "status": 200,
+          "final_url": "https://arxiv.org/pdf/2403.07378v5",
+          "content_type": "application/pdf"
+        },
+        {
+          "url": "https://arxiv.org/pdf/2403.12313v1",
+          "status": 200,
+          "final_url": "https://arxiv.org/pdf/2403.12313v1",
+          "content_type": "application/pdf"
+        },
+        {
+          "url": "https://arxiv.org/pdf/2406.05233v1",
+          "status": 200,
+          "final_url": "https://arxiv.org/pdf/2406.05233v1",
+          "content_type": "application/pdf"
+        },
+        {
+          "url": "https://arxiv.org/pdf/2412.17053v1",
+          "status": 200,
+          "final_url": "https://arxiv.org/pdf/2412.17053v1",
+          "content_type": "application/pdf"
+        },
+        {
+          "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+          "status": 200,
+          "final_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+          "content_type": "text/html"
+        },
+        {
+          "url": "https://creativecommons.org/licenses/by/4.0/",
+          "status": 200,
+          "final_url": "https://creativecommons.org/licenses/by/4.0/",
+          "content_type": "text/html"
+        },
+        {
+          "url": "https://dl.acm.org/doi/10.1145/3786335.3813151",
+          "status": 403,
+          "note": "HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://doi.org/10.1145/3786335.3813151",
+          "status": 403,
+          "note": "HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://doi.org/10.1609/aaai.v39i26.34985",
+          "status": 200,
+          "final_url": "https://ojs.aaai.org/index.php/AAAI/article/view/34985",
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://doi.org/10.48550/arXiv.2303.10512",
+          "status": 200,
+          "final_url": "https://arxiv.org/abs/2303.10512",
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://doi.org/10.48550/arXiv.2403.07378",
+          "status": 200,
+          "final_url": "https://arxiv.org/abs/2403.07378",
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://doi.org/10.48550/arXiv.2403.12313",
+          "status": 200,
+          "final_url": "https://arxiv.org/abs/2403.12313",
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://doi.org/10.48550/arXiv.2406.05233",
+          "status": 200,
+          "final_url": "https://arxiv.org/abs/2406.05233",
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://doi.org/10.48550/arXiv.2412.17053",
+          "status": 200,
+          "final_url": "https://arxiv.org/abs/2412.17053",
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://github.com/AIoT-MLSys-Lab/SVD-LLM",
+          "status": 200,
+          "final_url": "https://github.com/AIoT-MLSys-Lab/SVD-LLM",
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://github.com/QingruZhang/AdaLoRA",
+          "status": 200,
+          "final_url": "https://github.com/QingruZhang/AdaLoRA",
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://github.com/QingruZhang/AdaLoRA/blob/main/loralib/loralib/adalora.py",
+          "status": 200,
+          "final_url": "https://github.com/QingruZhang/AdaLoRA/blob/main/loralib/loralib/adalora.py",
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://github.com/hendrycks/test",
+          "status": 200,
+          "final_url": "https://github.com/hendrycks/test",
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://github.com/hkust-nlp/ceval",
+          "status": 200,
+          "final_url": "https://github.com/hkust-nlp/ceval",
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://github.com/imkevinkuo/flasc",
+          "status": 200,
+          "final_url": "https://github.com/imkevinkuo/flasc",
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://github.com/zindigo321/paper-CGFedllm",
+          "status": 200,
+          "final_url": "https://github.com/zindigo321/paper-CGFedllm",
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://github.com/zindigo321/paper-CGFedllm.git",
+          "status": 200,
+          "final_url": "https://github.com/zindigo321/paper-CGFedllm",
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://huggingface.co/datasets/databricks/databricks-dolly-15k",
+          "status": 200,
+          "final_url": "https://huggingface.co/datasets/databricks/databricks-dolly-15k",
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://ojs.aaai.org/index.php/AAAI/article/view/34985",
+          "status": 200,
+          "final_url": "https://ojs.aaai.org/index.php/AAAI/article/view/34985",
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://openreview.net/forum?id=LNYIUouhdt",
+          "status": 200,
+          "final_url": "https://openreview.net/challenge?redirect=%2Fforum%3Fid%3DLNYIUouhdt",
+          "content_type": "text/html; charset=utf-8",
+          "note": "verification wall; URL exists but rendered article not verified"
+        },
+        {
+          "url": "https://openreview.net/forum?id=NLPzL6HWNl",
+          "status": 200,
+          "final_url": "https://openreview.net/challenge?redirect=%2Fforum%3Fid%3DNLPzL6HWNl",
+          "content_type": "text/html; charset=utf-8",
+          "note": "verification wall; URL exists but rendered article not verified"
+        },
+        {
+          "url": "https://openreview.net/forum?id=lq62uWRJjiY",
+          "status": 200,
+          "final_url": "https://openreview.net/challenge?redirect=%2Fforum%3Fid%3Dlq62uWRJjiY",
+          "content_type": "text/html; charset=utf-8",
+          "note": "verification wall; URL exists but rendered article not verified"
+        },
+        {
+          "url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/4e243e95c913b367775d71d7182b99d9-Abstract-Conference.html",
+          "status": 200,
+          "final_url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/4e243e95c913b367775d71d7182b99d9-Abstract-Conference.html",
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/3104e1ab39875cf54fe1eb4473e7c5a1-Abstract-Conference.html",
+          "status": 200,
+          "final_url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/3104e1ab39875cf54fe1eb4473e7c5a1-Abstract-Conference.html",
+          "content_type": "text/html; charset=utf-8"
+        }
+      ],
+      "checked_on": "2026-10-11",
+      "scope": "local relative targets and HTTP responses; not GitHub online display"
+    }
+  ]
 }

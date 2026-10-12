@@ -1,5 +1,5 @@
 {
-  "verified_on": "2026-10-11",
+  "verified_on": "2026-10-12",
   "directory_year_policy": "year printed on the uploaded PDF version, not latest publication year",
   "papers": [
     {
@@ -96,6 +96,43 @@
       "license": "arXiv non-exclusive distribution",
       "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
       "verified_on": "2026-10-11"
+    },
+    {
+      "id": 6,
+      "directory": "papers/2025-wu-cg-fedllm",
+      "title_uploaded": "CG-FedLLM: How to Compress Gradients in Federated Fune-tuning for Large Language Models",
+      "uploaded_filename": "CG-FedLLM How to Compress Gradients in Federated Fine-Tuning for Large Language Models(3).pdf",
+      "uploaded_version": "2405.13746v3",
+      "version_year": 2025,
+      "publication_year": 2025,
+      "pages": 27,
+      "bytes": 8788962,
+      "sha256_uploaded": "b878337481740d7343413b72cf9a54dca5ca3bf1f339ed6007526fc6cf889e4e",
+      "full_text": true,
+      "public_pdf": true,
+      "arxiv_source": "https://arxiv.org/abs/2405.13746v3",
+      "pdf_source": "https://arxiv.org/pdf/2405.13746v3",
+      "license": "CC BY-NC-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "verified_on": "2026-10-12",
+      "version_label": "Extended Version",
+      "arxiv_submitted": "2025-11-17",
+      "pdf_document_date": "2025-11-18",
+      "authors_uploaded": [
+        "Huiwen Wu",
+        "Xiaogang Xu",
+        "Deyi Zhang",
+        "Xiaohan Li",
+        "Jiafei Wu",
+        "Zhe Liu"
+      ],
+      "arxiv_doi": "10.48550/arXiv.2405.13746",
+      "publication_doi": "10.3233/FAIA251320",
+      "notes": "Directory year follows uploaded v3. Formal publication metadata is distinct; formal PDF was not obtained. Uploaded bytes are not asserted equal to an official server download."
     }
-  ]
+  ],
+  "previous_verified_on": "2026-10-11",
+  "paper_count": 6,
+  "total_uploaded_pages": 119,
+  "public_pdf_count": 3
 }

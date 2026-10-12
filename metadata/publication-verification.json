@@ -1,5 +1,5 @@
 {
-  "verified_on": "2026-10-11",
+  "verified_on": "2026-10-12",
   "method": "Uploaded PDFs read in full; official version pages, author repositories, proceedings pages and publisher-deposited Crossref metadata used for bibliographic verification.",
   "records": [
     {
@@ -160,6 +160,210 @@
       "conference_doi": "not provided in verified official record",
       "read_full_text_version": "2403.07378v5",
       "method_in_read_version": "Sequential LoRA low-rank factor update, not early-version closed-form update"
+    },
+    {
+      "paper": "CG-FedLLM",
+      "conference": "ECAI 2025",
+      "conference_ordinal": 28,
+      "conference_url": "https://journals.sagepub.com/doi/full/10.3233/FAIA251320",
+      "source": "https://api.crossref.org/works/10.3233/FAIA251320",
+      "doi": "10.3233/FAIA251320",
+      "publication_year": 2025,
+      "publisher_deposited_metadata": {
+        "title": [
+          "CG-FedLLM: How to Compress Gradients in Federated Fine-Tuning for Large Language Models"
+        ],
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0001-8471-4219",
+            "authenticated-orcid": false,
+            "given": "Huiwen",
+            "family": "Wu",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Zhejiang Laboratory"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Xiaogang",
+            "family": "Xu",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "The Chinese University of Hong Kong"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Deyi",
+            "family": "Zhang",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Zhejiang Laboratory"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Xiaohan",
+            "family": "Li",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Zhejiang Laboratory"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Jiafei",
+            "family": "Wu",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Zhejiang Laboratory"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Zhe",
+            "family": "Liu",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Zhejiang Laboratory"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "Frontiers in Artificial Intelligence and Applications",
+          "ECAI 2025"
+        ],
+        "publisher": "IOS Press",
+        "type": "book-chapter",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              10,
+              21
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2025,
+              10,
+              21
+            ]
+          ]
+        },
+        "published-online": null,
+        "volume": null,
+        "page": null,
+        "DOI": "10.3233/faia251320",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2025,
+                  10,
+                  21
+                ]
+              ],
+              "date-time": "2025-10-21T00:00:00Z",
+              "timestamp": 1761004800000
+            },
+            "content-version": "unspecified",
+            "delay-in-days": 0,
+            "URL": "https://creativecommons.org/licenses/by-nc/4.0/"
+          }
+        ],
+        "URL": "https://doi.org/10.3233/faia251320",
+        "link": [
+          {
+            "URL": "https://ebooks.iospress.nl/pdf/doi/10.3233/FAIA251320",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ]
+      },
+      "pages": "4257-4264",
+      "pages_source": "https://ebooks.iospress.nl/DOI/10.3233/FAIA251320",
+      "series_volume": 413,
+      "series_volume_source": "IOS publisher page, Ebook Volume 413: ECAI 2025; cross-checked with uploaded reference [55], physical PDF page 13",
+      "read_full_text_version": "2405.13746v3",
+      "uploaded_version_label": "Extended Version",
+      "formal_full_text_obtained": false,
+      "formal_pdf_obtained": false,
+      "formal_html_fully_read": false,
+      "formal_html_metadata_accessed": true,
+      "verified_on": "2026-10-12",
+      "date_difference": {
+        "crossref_published_print": "2025-10-21",
+        "author_website_publication": "2025-10-22",
+        "sage_published_online": "2026-08-25",
+        "policy": "Conference year remains ECAI 2025; distinct dates preserved, no claim that all denote the same event.",
+        "ios_citation_online_date": "2025-10-22"
+      },
+      "title_difference": {
+        "uploaded": "CG-FedLLM: How to Compress Gradients in Federated Fune-tuning for Large Language Models",
+        "formal_crossref": "CG-FedLLM: How to Compress Gradients in Federated Fine-Tuning for Large Language Models",
+        "sage_display": "CG-FedLL How to Compress Gradients in Federated Fine-Tuning for Large Language Models"
+      },
+      "ordinal_difference": "Uploaded page 1 says 26th ECAI; publisher volume and first-author website say 28th.",
+      "uploaded_license": "CC BY-NC-SA 4.0",
+      "formal_license_record": "CC BY-NC 4.0",
+      "license_scope_warning": "Formal publication license does not replace the uploaded v3 license.",
+      "access_limitations": [
+        "Direct SAGE HTTP request returned 403; search reader supplied publisher HTML metadata.",
+        "Official IOS PDF URL returned HTTP 200 with text/html redirected to the DOI landing page, not PDF bytes."
+      ],
+      "official_code_status": "No author-owned CG-FedLLM implementation verified in uploaded PDF and title/author searches on 2026-10-12; cited FedIT/Shepherd is a framework reference, not verified as this paper implementation.",
+      "publisher_page": "https://ebooks.iospress.nl/DOI/10.3233/FAIA251320"
     }
-  ]
+  ],
+  "previous_verified_on": "2026-10-11",
+  "existing_records_last_verified_on": "2026-10-11"
 }

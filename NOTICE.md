@@ -4,14 +4,17 @@
 
 ## 已收录的原始 PDF
 
-以下两个文件仅将上传件改名为 `paper.pdf`，内容和字节保持不变；完整作者、题名、原始文件名、版本、来源、SHA-256 与许可证据见相应 `source.md`。
+以下三个文件仅将上传件改名为 `paper.pdf`，内容和字节保持不变；完整作者、题名、原始文件名、版本、来源、SHA-256 与许可证据见相应 `source.md`。
 
 | 文件 | 作者署名 | 上传版本 | 论文适用许可 |
 | --- | --- | --- | --- |
 | [DR-Encoder PDF](papers/2024-wu-dr-encoder/paper.pdf) | Huiwen Wu, Deyi Zhang, Xiaohan Li, Xiaogang Xu, Jiafei Wu, Zhe Liu | arXiv:2412.17053v1 | [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)，本仓库非商业原样分享，保留署名 / 来源，不分发改编 PDF |
 | [FFA-LoRA PDF](papers/2024-sun-ffa-lora/paper.pdf) | Youbang Sun, Zitao Li, Yaliang Li, Bolin Ding | arXiv:2403.12313v1 | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)，保留署名、来源与许可链接；PDF 未作修改 |
+| [CG-FedLLM 扩展版 PDF](papers/2025-wu-cg-fedllm/paper.pdf) | Huiwen Wu, Xiaogang Xu, Deyi Zhang, Xiaohan Li, Jiafei Wu, Zhe Liu | arXiv:2405.13746v3 | [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)，本仓库非商业原样分享，保留署名 / 来源 / 许可；若分发改编材料，遵循相同方式共享要求 |
 
-这里的版本许可依据 arXiv **对应版本页**的 “view license” 链接，核对日期为 2026-10-11。
+这里的版本许可依据 arXiv **对应版本页**的 “view license” 链接，DR-Encoder / FFA-LoRA 核对日期为 2026-10-11，CG-FedLLM v3 为 2026-10-12（并核对 PDF 内嵌 License）。
+
+CG-FedLLM 的正式 ECAI 出版记录 / 当前出版网页为 CC BY-NC 4.0，上传 v3 为 CC BY-NC-SA 4.0；本仓库 `paper.pdf` 依据后者。原样论文、独立阅读笔记和作者代码分别处理，未将论文许可自动扩展为全仓库统一许可证；具体来源和版本差异见 [source.md](papers/2025-wu-cg-fedllm/source.md)。
 
 ## 仅链接全文的上传版本
 

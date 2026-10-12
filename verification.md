@@ -1,6 +1,38 @@
 # 验证记录、文件清单与待补充信息
 
-当前阅读范围为六份实际上传全文、119 页：已有五篇 92 页（原核对日期 2026-10-11），加 CG-FedLLM v3 扩展版 27 页（本次核对日期 2026-10-12）。以下区分本次增量准备、历史发布检查、数学修订与待补充资料。
+当前阅读范围为七份实际上传全文、138 页：此前六篇 119 页，加 PowerSGD+ arXiv v1 的 19 页（本次核对日期 2026-10-12）。以下保留原核对日期、检查范围与历史发布记录。
+
+## 2026-10-12：新增第七篇 PowerSGD+
+
+- 通过 GitHub 插件确认最新 `main` 为 [667cb40](https://github.com/zindigo321/paper-CGFedllm/commit/667cb40b1a81d7ed964cb7801dde4cfa5b65af04)，已含上一轮宏兼容修正；另在该提交上检出独立工作副本。未发现 AGENTS.md，沿用既有目录、物理页码、引用、许可边界与检查记录。未写入远程或创建 PR，按用户现有偏好交付自行更新包。
+- 新增 `papers/2025-xie-powersgd-plus/` 的 notes / source / citation 共 3 个文件；修改根目录 6 个文件、metadata 4 个文件、CG / DR / FFA / SVD 四篇 notes 的阅读联系，共 14 个修改、0 个删除；定稿为 34 个仓库文件，SHA-256 清单 33 项。
+- 完整解析和阅读附件 19 页，含正文、参考文献与附录 A–C；关键首页、算法、定理、结果、配置与证明疑点页面另做目视核对。全部分析基于上传 v1，不把正式会议页码当作本笔记物理页码。
+- 附件版本为 `2509.11254v1`，2025-09-14；659,326 bytes，SHA-256 `42d02bd274f8054293cb99634b3d78a1184719c92e4a5635341ce1f92b7de5d0`。PDF metadata 未提供独立创建 / 修改日期。
+- 正式 ICASSP 2026 的题名、作者、IEEE、pp. 921–925、published-print 2026-05-03 和 DOI `10.1109/ICASSP55912.2026.11465020` 由出版社提交的 Crossref 核实，官方会议日程 SPTM-P2.2 对照题名 / 作者。IEEE Xplore 直接页面有验证限制；正式 PDF 未取得，未完成两版全文一致性对照。官方 PowerSGD+ 代码未核实。
+- arXiv 对应版本页与 PDF License 均为非独占分发许可，沿用仓库规则不公开复制 PDF；仅记录全文入口和附件身份。原始附件未改字节，不进入本次补丁、增量包或 Git 历史；公开 PDF 仍为原三份。
+
+### 本次实际检查结果
+
+| 检查 | 结果与范围 |
+| --- | --- |
+| 阅读与版本 | 附件 19 页全文 / 参考文献 / 附录已读；v1 日期、作者、许可核对；七个 source 记录合计 138 页；正式版仅核对书目，未取得全文 |
+| 数字与公式 | GLUE 原表八项分数及重新计算均值分列；核对 C4 四配置 PPL 与 token 数；理论针对 MSGD，区分渐近阶与有限步依赖；未将随机梯度参数写成 DP 预算 |
+| Markdown / 数学 | 19 个 Markdown、364 个表达式通过本地 KaTeX 严格解析；已知被拒绝宏和块级标点转义检查；45 个表格结构检查，无列数错误 / 孤立行；新 notes 的 57 个公式按顺序保留 |
+| 结构与引用 | 全部相对链接、4 个 JSON 和 7 份 BibTeX 共 14 条记录按定稿文件检查；实际数量及逐项结果见 metadata/link-checks.json / markdown-checks.json |
+| PDF / 保留内容 | 原三份公开 PDF 的页数 / 字节 / SHA-256 与 metadata 一致；其余已有 source / BibTeX 保持；两篇未修改 notes 的字节保持；四篇相关 notes 仅增加必要阅读联系（CG 关系标题同步） |
+| 本地预览 | 新 notes / source、README / comparison / NOTICE / verification / UPLOAD 生成本地预览，目视检查关键理论公式、算法、数据表与目录 / 许可说明；不等同最终 GitHub 输出 |
+| 在线显示 | 用于复查的 GitHub CG 已发布页面返回服务错误，重载一次仍同；未取得实际数学输出。新增 / 修改内容未推送，最终在线显示未验证，也未发送未发布内容到外部预览 API |
+| 打包与校验 | 定稿后生成 33 项 SHA-256；增量文件复制与补丁应用在全新发布基准副本验证，与全部 34 个定稿文件逐字节一致 |
+
+本次 HTTP 检查覆盖新引入的外部入口，既有 URL 的旧响应 / 日期留在历史快照；遇到验证页或响应不是 PDF 时，不以 HTTP 200 认定取得全文。新公式沿用已修正定界格式，多字母函数用 `mathrm`，不引入 `operatorname`。
+
+### 新增待核实问题
+
+- 表 1 的 Full precision / PowerSGD / GaLore 原表 Avg 为 86.35 / 85.73 / 85.70，按表内八项分数重算到两位小数为 86.39 / 85.76 / 85.77；保留两套值，不擅自改原表。
+- PowerSGD+ 的四个 C4 配置有一项略差于 PowerSGD；Full rank PPL 差距仍存在，原文 GaLore “diverged”的有限 PPL 与判据需核实；GLUE 指标 / split / 多 seed 资料不完整。
+- 收敛保证针对 MSGD，不能自动扩展为 Adam / AdamW；有限步界依赖 tau、rank 和 momentum。附录中的符号、零 / 秩亏 QR 初始化、跨节点噪声独立性与基底同步细节待核实。
+- 算法 1 包含完整更新矩阵刷新；表 2 是元素量级口径，非累计网络字节或 wall-clock。C4 的 10 epochs 与固定 steps 描述、Adam / AdamW 分任务配置、GaLore 细节需核实。
+- 正式 PDF、官方 PowerSGD+ 代码、完整训练日志未取得；没有运行训练、反例实验、网络测速、隐私攻击或形式化证明。新增内容的最终 GitHub 显示待用户推送后检查。
 
 ## 2026-10-12：全部 notes 的公式兼容性审核与修正
 
@@ -103,7 +135,7 @@ ACM DOI / 全文入口在当前访问环境返回 HTTP 403，部分 OpenReview �
 根目录文件：
 
 - [README.md](README.md)：总览、全文索引与目录说明。
-- [comparison.md](comparison.md)：六篇论文的问题、方法、实验条件、主要结果与局限比较。
+- [comparison.md](comparison.md)：七篇论文的问题、方法、实验条件、主要结果与局限比较。
 - [NOTICE.md](NOTICE.md)：版本、PDF 再分发许可与文档权利边界。
 - [verification.md](verification.md)：本文件。
 - [UPLOAD.md](UPLOAD.md)：保留历史的上传步骤和发布后检查。
@@ -119,15 +151,16 @@ ACM DOI / 全文入口在当前访问环境返回 HTTP 403，部分 OpenReview �
 | `papers/2024-sun-ffa-lora/` | [notes.md](papers/2024-sun-ffa-lora/notes.md) | [citation.bib](papers/2024-sun-ffa-lora/citation.bib) | [source.md](papers/2024-sun-ffa-lora/source.md) | [paper.pdf](papers/2024-sun-ffa-lora/paper.pdf)，原样 CC BY 4.0 |
 | `papers/2025-wang-svd-llm/` | [notes.md](papers/2025-wang-svd-llm/notes.md) | [citation.bib](papers/2025-wang-svd-llm/citation.bib) | [source.md](papers/2025-wang-svd-llm/source.md) | 未入库，来源见 source.md |
 | `papers/2025-wu-cg-fedllm/` | [notes.md](papers/2025-wu-cg-fedllm/notes.md) | [citation.bib](papers/2025-wu-cg-fedllm/citation.bib) | [source.md](papers/2025-wu-cg-fedllm/source.md) | [paper.pdf](papers/2025-wu-cg-fedllm/paper.pdf)，原样 CC BY-NC-SA 4.0 |
+| `papers/2025-xie-powersgd-plus/` | [notes.md](papers/2025-xie-powersgd-plus/notes.md) | [citation.bib](papers/2025-xie-powersgd-plus/citation.bib) | [source.md](papers/2025-xie-powersgd-plus/source.md) | 未入库，仅保留官方 v1 全文链接 |
 
 机器可读记录：
 
-- [metadata/papers.json](metadata/papers.json)：6 个原件的题名、版本、页数、字节数与 SHA-256。
+- [metadata/papers.json](metadata/papers.json)：7 个原件的题名、版本、页数、字节数与 SHA-256。
 - [metadata/publication-verification.json](metadata/publication-verification.json)：正式出版元数据与版本差异。
 - [metadata/link-checks.json](metadata/link-checks.json)：相对链接与外部 HTTP 检查结果。
 - [metadata/markdown-checks.json](metadata/markdown-checks.json)：数学、表格、BibTeX 与本地预览检查结果。
 
-原始交付压缩包外层另含 `paper-CGFedllm.bundle` 与 `DELIVERY.txt`，供历史备份；它们没有入库。首次发布提交已更新 **27 个仓库文件**，包括修改原 README 和新增其他 26 个文件。当前数学格式与状态修订仅更新既有文件，目录和 PDF 收录范围保持不变。
+原始交付压缩包外层另含 `paper-CGFedllm.bundle` 与 `DELIVERY.txt`，供历史备份；它们没有入库。首次发布提交已更新 **27 个仓库文件**，包括修改原 README 和新增其他 26 个文件。后续第六篇入库扩展为 31 个文件，数学兼容修正仅更新既有文件；本次第七篇新增 3 个文件后为 34 个，公开 PDF 仍为三份。
 
 ## 待补充的信息
 

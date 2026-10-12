@@ -362,8 +362,184 @@
       ],
       "official_code_status": "No author-owned CG-FedLLM implementation verified in uploaded PDF and title/author searches on 2026-10-12; cited FedIT/Shepherd is a framework reference, not verified as this paper implementation.",
       "publisher_page": "https://ebooks.iospress.nl/DOI/10.3233/FAIA251320"
+    },
+    {
+      "paper": "PowerSGD+",
+      "conference": "ICASSP 2026",
+      "conference_url": "https://www.cmsworkshops.com/ICASSP2026/view_paper.php?PaperNum=6804&bare=1",
+      "publisher_page": "https://ieeexplore.ieee.org/document/11465020/",
+      "source": "https://api.crossref.org/works/10.1109/ICASSP55912.2026.11465020",
+      "doi": "10.1109/ICASSP55912.2026.11465020",
+      "publication_year": 2026,
+      "pages": "921-925",
+      "pages_source": "Publisher-deposited Crossref page field",
+      "publisher_deposited_metadata": {
+        "title": [
+          "From PowerSGD to PowerSGD+: Low-Rank Gradient Compression For Distributed Optimization With Convergence Guarantees"
+        ],
+        "author": [
+          {
+            "given": "Shengping",
+            "family": "Xie",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Peking University"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Chuyan",
+            "family": "Chen",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Peking University"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Kun",
+            "family": "Yuan",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Peking University"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "ICASSP 2026 - 2026 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)"
+        ],
+        "publisher": "IEEE",
+        "type": "proceedings-article",
+        "published": {
+          "date-parts": [
+            [
+              2026,
+              5,
+              3
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2026,
+              5,
+              3
+            ]
+          ]
+        },
+        "published-online": null,
+        "page": "921-925",
+        "DOI": "10.1109/icassp55912.2026.11465020",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2026,
+                  5,
+                  3
+                ]
+              ],
+              "date-time": "2026-05-03T00:00:00Z",
+              "timestamp": 1777766400000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-029"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2026,
+                  5,
+                  3
+                ]
+              ],
+              "date-time": "2026-05-03T00:00:00Z",
+              "timestamp": 1777766400000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-037"
+          }
+        ],
+        "URL": "https://doi.org/10.1109/icassp55912.2026.11465020",
+        "link": [
+          {
+            "URL": "http://xplorestaging.ieee.org/ielx8/11460365/11460314/11465020.pdf?arnumber=11465020",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "event": {
+          "name": "ICASSP 2026 - 2026 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)",
+          "location": "Barcelona, Spain",
+          "start": {
+            "date-parts": [
+              [
+                2026,
+                5,
+                3
+              ]
+            ]
+          },
+          "end": {
+            "date-parts": [
+              [
+                2026,
+                5,
+                8
+              ]
+            ]
+          }
+        }
+      },
+      "read_full_text_version": "2509.11254v1",
+      "uploaded_version_year": 2025,
+      "uploaded_physical_pages": 19,
+      "formal_full_text_obtained": false,
+      "formal_pdf_obtained": false,
+      "formal_html_fully_read": false,
+      "verified_on": "2026-10-12",
+      "version_difference": "Actual reading is the complete 19-page arXiv v1; verified conference metadata spans 5 pages. Formal full text not obtained, so no claim that proofs, appendices, tables or configurations match across versions.",
+      "directory_year": "2025, the uploaded PDF version year, not the formal 2026 publication year",
+      "title_difference": "Formal Crossref uses For / With capitalization; arXiv v1 uses for / with. No substantive title change verified.",
+      "uploaded_license": "arXiv non-exclusive distribution",
+      "formal_license_record": "Crossref lists IEEE policy-029 and policy-037, content-version stm-asf; not interpreted as a CC redistribution grant.",
+      "official_code_status": "No author-owned PowerSGD+ implementation verified in the uploaded PDF or title/author/GitHub searches on 2026-10-12. epfml/powersgd is the earlier PowerSGD reference implementation, not this paper official code.",
+      "access_limitations": [
+        "Direct IEEE Xplore web reader displayed a JavaScript / robot verification wall; it was not treated as a successfully read formal article.",
+        "Crossref API was unavailable to the search reader; a direct read-only HTTP request succeeded and supplied the full publisher-deposited metadata.",
+        "Conference schedule metadata was readable; no formal five-page PDF was obtained."
+      ]
     }
   ],
   "previous_verified_on": "2026-10-11",
-  "existing_records_last_verified_on": "2026-10-11"
+  "existing_records_last_verified_on": "2026-10-11",
+  "new_record_last_verified_on": "2026-10-12"
 }

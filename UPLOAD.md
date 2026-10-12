@@ -8,7 +8,28 @@
 
 最初自动环境的写入接口曾返回 `403 Resource not accessible by integration`，因此改用 GitHub Desktop 发布。该历史错误不能再被当作当前仓库“未推送”的状态。
 
-## 2026-10-12：修正所有 notes 的公式显示（当前更新）
+## 2026-10-12：新增第七篇 PowerSGD+（当前更新）
+
+基于用户已推送公式修正后的 [667cb40](https://github.com/zindigo321/paper-CGFedllm/commit/667cb40b1a81d7ed964cb7801dde4cfa5b65af04) 准备。保持既有仓库与历史，由用户自行 Commit / Push；本次未写入远程或创建 PR。
+
+`PowerSGD-plus-update.zip` 包含 **3 个新增、14 个修改、0 个删除**：新增 `papers/2025-xie-powersgd-plus/` 的 notes.md、source.md、citation.bib；修改 README、comparison、NOTICE、verification、UPLOAD、checksums，metadata 下四个 JSON，以及 CG / DR / FFA / SVD 四篇 notes 的双向阅读联系。
+
+上传版为 2025 年 arXiv v1，19 页，新增后七篇 / 138 页。该版本为 arXiv 非独占许可，按已有规则只保留全文链接与身份记录，包内不含新 PDF；公开 PDF 仍为原三份，字节不变。ICASSP 2026 的书目与阅读版分开，正式全文未取得。
+
+1. 将 ZIP 解压到仓库外，阅读 START_HERE.txt。在 GitHub Desktop 打开已有仓库，Fetch origin 并同步；保留自己的未提交修改。如基准之后改过本次涉及文件，先比较再合并。
+2. 将 **files/ 内的内容**按相同相对路径合并到仓库根目录。合并 papers / metadata 并保留其他文件，不把 files 文件夹本身套进去，不删除 / 替换整个目录。
+3. START_HERE.txt、CHANGESET.json、changes.patch 留在仓库外，不复制 .git、不重建仓库。补丁为可选方式，与复制文件二选一，先用 `git apply --check` 检查。
+4. 回到 Changes 核对 17 项：3 新增、14 修改、0 删除。新目录有三个文档；检查其中全文链接，不创建虚假 paper.pdf。可在 Git Bash 仓库根目录运行 `sha256sum -c checksums.sha256`，33 项应全部通过。
+5. Summary 使用下方说明，Commit 后再 Push origin。Commit 与 Push 是两个步骤。
+
+```text
+docs: add PowerSGD+ literature notes
+```
+
+6. 用 View on GitHub 检查七篇索引、所有笔记 / 引用 / 来源链接和比较表；目视检查新增理论 / 算法公式，以及原 CG 的 eta / GDP 修正。须确认实际公式显示且无宏报错，不能仅统计数学组件。
+7. 本次只完成本地新增内容的语法 / 排版检查；用于复查的 GitHub 既有页面返回服务错误，新增内容的最终在线显示尚未验证。推送后另记录真实提交与页面检查结果，保留历史记录。
+
+## 2026-10-12：修正所有 notes 的公式显示（已推送，历史）
 
 第六篇已由用户推送，基准为 [9df64e5](https://github.com/zindigo321/paper-CGFedllm/commit/9df64e5098d09c514a841a9f5547b6009cc4991e)。本次只准备本地修正文件供用户自行更新；以下第六篇入库步骤保留为历史，不需要重新导入其 PDF。
 
@@ -28,7 +49,7 @@ docs: fix GitHub math macro compatibility
 
 以后保留现有数学定界格式，多字母函数名优先沿用 `\mathrm{...}`；块公式的符号转义要实际检查 GitHub 显示。如仅为调整间距，使用现有可验证写法或省略该间距，避免让 Markdown 标点转义改变显示出的数学符号。本地 LaTeX / KaTeX 解析成功仍需在线验证。
 
-## 2026-10-12：新增第六篇 CG-FedLLM（本次更新）
+## 2026-10-12：新增第六篇 CG-FedLLM（历史）
 
 本次基于远程 `main` 的 [e9bf347](https://github.com/zindigo321/paper-CGFedllm/commit/e9bf34708eb5597a840095f3b2c495d7078cf32a) 准备增量文件。按用户要求由用户自行更新；本次没有向远程仓库写入、创建 PR 或宣称已发布。原 Git 历史保留。
 

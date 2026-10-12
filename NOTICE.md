@@ -23,8 +23,11 @@ CG-FedLLM 的正式 ECAI 出版记录 / 当前出版网页为 CC BY-NC 4.0，上
 | [AdaLoRA](papers/2023-zhang-adalora/source.md) | arXiv:2303.10512v2 | arXiv 非独占分发许可；本仓库第三方再分发权未确认，仅保留来源与笔记 |
 | [Federated LoRA with Sparse Communication](papers/2024-kuo-flasc/source.md) | arXiv:2406.05233v1 | 同上；2026 正式 VOR 的 CC BY 记录不自动覆盖上传的 2024 年版 |
 | [SVD-LLM](papers/2025-wang-svd-llm/source.md) | arXiv:2403.07378v5 | arXiv 非独占分发许可；不把其他版本 / 官方代码的许可当作上传 PDF 的许可 |
+| [PowerSGD+](papers/2025-xie-powersgd-plus/source.md) | arXiv:2509.11254v1，2025 年 19 页完整预印本 | arXiv 非独占分发许可，2026-10-12 核对对应版本页与 PDF metadata；仅保留全文链接、中文笔记和附件身份记录，不复制公开 PDF |
 
 [arXiv 非独占许可正文](https://arxiv.org/licenses/nonexclusive-distrib/1.0/)所列分发权授予 arXiv，而非自动授予所有第三方。上述文件未提交到 Git 历史，也未创建空白或虚假的 `paper.pdf`。获得这些特定上传版本的明确再分发许可后，可原样补充。
+
+PowerSGD+ 的 ICASSP 2026 正式出版记录与上传 v1 分开。IEEE 提交的 Crossref 记录列 IEEE policy-029 / policy-037，并非本次核实的 CC 再分发许可；未将正式记录、早期 PowerSGD 代码或其他版本的许可替代上传 PDF 的许可。该附件字节未被修改，也未放入本次增量包 / 补丁。独立阅读整理不改变作者、出版者的权利。
 
 ## 整理原则
 

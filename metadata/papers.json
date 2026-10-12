@@ -129,6 +129,36 @@
       "arxiv_doi": "10.48550/arXiv.2405.13746",
       "publication_doi": "10.3233/FAIA251320",
       "notes": "Directory year follows uploaded v3. Formal publication metadata is distinct; formal PDF was not obtained. Uploaded bytes are not asserted equal to an official server download."
+    },
+    {
+      "id": 7,
+      "directory": "papers/2025-xie-powersgd-plus",
+      "title_uploaded": "From PowerSGD to PowerSGD+: Low-Rank Gradient Compression for Distributed Optimization with Convergence Guarantees",
+      "uploaded_filename": "From PowerSGD to PowerSGD+ Low-Rank Gradient Compression.pdf",
+      "uploaded_version": "2509.11254v1",
+      "version_year": 2025,
+      "publication_year": 2026,
+      "pages": 19,
+      "bytes": 659326,
+      "sha256_uploaded": "42d02bd274f8054293cb99634b3d78a1184719c92e4a5635341ce1f92b7de5d0",
+      "full_text": true,
+      "public_pdf": false,
+      "arxiv_source": "https://arxiv.org/abs/2509.11254v1",
+      "pdf_source": "https://arxiv.org/pdf/2509.11254v1",
+      "license": "arXiv non-exclusive distribution",
+      "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "verified_on": "2026-10-12",
+      "authors_uploaded": [
+        "Shengping Xie",
+        "Chuyan Chen",
+        "Kun Yuan"
+      ],
+      "arxiv_submitted": "2025-09-14",
+      "pdf_document_date": null,
+      "pdf_document_date_note": "No separate CreationDate or ModDate in the attachment; the first-page arXiv version stamp says 14 September 2025.",
+      "formal_doi": "10.1109/ICASSP55912.2026.11465020",
+      "formal_pages": "921-925",
+      "repository_pdf_handling": "Official full-text link and original identity recorded; no PDF copied into repository or update package under existing redistribution policy."
     }
   ],
   "previous_verified_on": "2026-10-11",

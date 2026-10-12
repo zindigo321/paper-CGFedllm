@@ -1,176 +1,1985 @@
 {
   "checked_on": "2026-10-12",
-  "stage": "Seventh paper: complete uploaded PowerSGD+ arXiv v1 reading and local knowledge-base update",
-  "tracked_base_commit": "667cb40b1a81d7ed964cb7801dde4cfa5b65af04",
+  "stage": "Two new complete journal notes, root synchronization, duplicate upload handling; final local validation",
+  "tracked_base_commit": "1c580e38b1acfdbcecbf7da7b30a621d1e6b93dc",
   "syntax_renderer": "markdown-it 15.0.2 + KaTeX 0.19.0 strict",
   "syntax": {
+    "checked_on": "2026-10-12",
+    "renderer": "markdown-it 15.0.2 + KaTeX 0.19.0 strict",
     "files": [
       {
         "file": "NOTICE.md",
         "math": 0,
-        "tables": 2
+        "tables": 2,
+        "html": "NOTICE.md.html",
+        "math_formulas": []
       },
       {
         "file": "README.md",
         "math": 0,
-        "tables": 2
+        "tables": 2,
+        "html": "README.md.html",
+        "math_formulas": []
       },
       {
         "file": "UPLOAD.md",
         "math": 0,
-        "tables": 0
+        "tables": 0,
+        "html": "UPLOAD.md.html",
+        "math_formulas": []
       },
       {
         "file": "comparison.md",
         "math": 27,
-        "tables": 4
+        "tables": 4,
+        "html": "comparison.md.html",
+        "math_formulas": [
+          {
+            "tex": "\\epsilon=4",
+            "display": false
+          },
+          {
+            "tex": "A_0",
+            "display": false
+          },
+          {
+            "tex": "B",
+            "display": false
+          },
+          {
+            "tex": "\\epsilon=6,\\delta=10^{-5}",
+            "display": false
+          },
+          {
+            "tex": "WS",
+            "display": false
+          },
+          {
+            "tex": "\\epsilon=0.25",
+            "display": false
+          },
+          {
+            "tex": "b(t)",
+            "display": false
+          },
+          {
+            "tex": "6.10\\times10^{-5}",
+            "display": false
+          },
+          {
+            "tex": "d_{\\mathrm{up/down}}",
+            "display": false
+          },
+          {
+            "tex": "B",
+            "display": false
+          },
+          {
+            "tex": "rd/[r(d+k)]=1/2",
+            "display": false
+          },
+          {
+            "tex": "R_w",
+            "display": false
+          },
+          {
+            "tex": "1-r(d+n)/(dn)",
+            "display": false
+          },
+          {
+            "tex": "mr+nr+mn/\\tau",
+            "display": false
+          },
+          {
+            "tex": "r/m+r/n+1/\\tau",
+            "display": false
+          },
+          {
+            "tex": "mr+nr+(mn-mr)/\\tau",
+            "display": false
+          },
+          {
+            "tex": "6.10\\times10^{-5}",
+            "display": false
+          },
+          {
+            "tex": "\\delta",
+            "display": false
+          },
+          {
+            "tex": "\\delta",
+            "display": false
+          },
+          {
+            "tex": "\\delta",
+            "display": false
+          },
+          {
+            "tex": "\\epsilon",
+            "display": false
+          },
+          {
+            "tex": "\\delta",
+            "display": false
+          },
+          {
+            "tex": "A",
+            "display": false
+          },
+          {
+            "tex": "\\epsilon=4",
+            "display": false
+          },
+          {
+            "tex": "r=8",
+            "display": false
+          },
+          {
+            "tex": "\\epsilon=6,\\delta=10^{-5}",
+            "display": false
+          },
+          {
+            "tex": "\\epsilon=0.25",
+            "display": false
+          }
+        ]
       },
       {
         "file": "papers/2023-zhang-adalora/notes.md",
         "math": 32,
-        "tables": 3
+        "tables": 3,
+        "html": "papers__2023-zhang-adalora__notes.md.html",
+        "math_formulas": [
+          {
+            "tex": "P,Q",
+            "display": false
+          },
+          {
+            "tex": "\\Lambda",
+            "display": false
+          },
+          {
+            "tex": "\\Delta T",
+            "display": false
+          },
+          {
+            "tex": "W=W^{(0)}+P\\Lambda Q,\n\\qquad\nR(P,Q)=\\lVert P^\\top P-I\\rVert_F^2+\\lVert QQ^\\top-I\\rVert_F^2.",
+            "display": true
+          },
+          {
+            "tex": "W^{(0)}\\in\\mathbb R^{d_1\\times d_2}",
+            "display": false
+          },
+          {
+            "tex": "P\\in\\mathbb R^{d_1\\times r}",
+            "display": false
+          },
+          {
+            "tex": "Q\\in\\mathbb R^{r\\times d_2}",
+            "display": false
+          },
+          {
+            "tex": "\\Lambda",
+            "display": false
+          },
+          {
+            "tex": "\\lambda_i",
+            "display": false
+          },
+          {
+            "tex": "r",
+            "display": false
+          },
+          {
+            "tex": "I",
+            "display": false
+          },
+          {
+            "tex": "\\lVert\\cdot\\rVert_F",
+            "display": false
+          },
+          {
+            "tex": "\\gamma\\sum_k R(P_k,Q_k)",
+            "display": false
+          },
+          {
+            "tex": "I_t(w)=\\lvert w\\nabla_w\\mathcal L\\rvert,\n\\quad\n\\bar I_t(w)=\\beta_1\\bar I_{t-1}(w)+(1-\\beta_1)I_t(w),",
+            "display": true
+          },
+          {
+            "tex": "\\bar U_t(w)=\\beta_2\\bar U_{t-1}(w)+(1-\\beta_2)\\lvert I_t(w)-\\bar I_t(w)\\rvert,\n\\qquad s_t(w)=\\bar I_t(w)\\bar U_t(w).",
+            "display": true
+          },
+          {
+            "tex": "k",
+            "display": false
+          },
+          {
+            "tex": "i",
+            "display": false
+          },
+          {
+            "tex": "S_{k,i}=s(\\lambda_{k,i})+\n\\frac1{d_1}\\sum_{j=1}^{d_1}s(P_{k,ji})+\n\\frac1{d_2}\\sum_{j=1}^{d_2}s(Q_{k,ij}).",
+            "display": true
+          },
+          {
+            "tex": "\\beta_1,\\beta_2",
+            "display": false
+          },
+          {
+            "tex": "b(t)",
+            "display": false
+          },
+          {
+            "tex": "S_{k,i}",
+            "display": false
+          },
+          {
+            "tex": "b(t)",
+            "display": false
+          },
+          {
+            "tex": "\\lambda_{k,i}",
+            "display": false
+          },
+          {
+            "tex": "t-t_i-t_f",
+            "display": false
+          },
+          {
+            "tex": "1-(t-t_i)/(T-t_i-t_f)",
+            "display": false
+          },
+          {
+            "tex": "p<0.05",
+            "display": false
+          },
+          {
+            "tex": "b(T)=72",
+            "display": false
+          },
+          {
+            "tex": "10^{-3}",
+            "display": false
+          },
+          {
+            "tex": "\\gamma=0.1",
+            "display": false
+          },
+          {
+            "tex": "t_i=5000",
+            "display": false
+          },
+          {
+            "tex": "\\Delta T=100",
+            "display": false
+          },
+          {
+            "tex": "t_f=50000",
+            "display": false
+          }
+        ]
       },
       {
         "file": "papers/2023-zhang-adalora/source.md",
         "math": 0,
-        "tables": 0
+        "tables": 0,
+        "html": "papers__2023-zhang-adalora__source.md.html",
+        "math_formulas": []
       },
       {
         "file": "papers/2024-kuo-flasc/notes.md",
         "math": 34,
-        "tables": 3
+        "tables": 3,
+        "html": "papers__2024-kuo-flasc__notes.md.html",
+        "math_formulas": [
+          {
+            "tex": "W=W_0+BA",
+            "display": false
+          },
+          {
+            "tex": "W_0",
+            "display": false
+          },
+          {
+            "tex": "B\\in\\mathbb R^{d\\times r}",
+            "display": false
+          },
+          {
+            "tex": "A\\in\\mathbb R^{r\\times k}",
+            "display": false
+          },
+          {
+            "tex": "r",
+            "display": false
+          },
+          {
+            "tex": "A,B",
+            "display": false
+          },
+          {
+            "tex": "P",
+            "display": false
+          },
+          {
+            "tex": "\\mathrm{Top}_d(P)",
+            "display": false
+          },
+          {
+            "tex": "d",
+            "display": false
+          },
+          {
+            "tex": "d_{\\mathrm{down}}",
+            "display": false
+          },
+          {
+            "tex": "d_{\\mathrm{up}}",
+            "display": false
+          },
+          {
+            "tex": "t",
+            "display": false
+          },
+          {
+            "tex": "P_i^t=P^t\\odot M_{\\mathrm{down}}^t,\n\\quad\nM_{\\mathrm{down}}^t=\\mathrm{Top}_{d_{\\mathrm{down}}}(P^t),",
+            "display": true
+          },
+          {
+            "tex": "P_i^{t\\prime}=\\mathrm{LocalSGD}(P_i^t,D_i),\n\\quad\n\\Delta P_i^t=P_i^t-P_i^{t\\prime},\n\\quad\n\\widetilde{\\Delta P_i^t}=\\Delta P_i^t\\odot\n\\mathrm{Top}_{d_{\\mathrm{up}}}(\\Delta P_i^t),",
+            "display": true
+          },
+          {
+            "tex": "g_t=\\frac1n\\sum_{i=1}^{n}\\widetilde{\\Delta P_i^t},\n\\qquad\nP^{t+1}=\\mathrm{AdamUpdate}(P^t,g_t).",
+            "display": true
+          },
+          {
+            "tex": "D_i",
+            "display": false
+          },
+          {
+            "tex": "n",
+            "display": false
+          },
+          {
+            "tex": "\\odot",
+            "display": false
+          },
+          {
+            "tex": "\\beta_1=0.9,\\beta_2=0.999",
+            "display": false
+          },
+          {
+            "tex": "r=16",
+            "display": false
+          },
+          {
+            "tex": "r=16",
+            "display": false
+          },
+          {
+            "tex": "\\alpha=0.01",
+            "display": false
+          },
+          {
+            "tex": "\\epsilon=2",
+            "display": false
+          },
+          {
+            "tex": "\\sigma=0.34",
+            "display": false
+          },
+          {
+            "tex": "\\epsilon",
+            "display": false
+          },
+          {
+            "tex": "\\sigma\\in\\{0,0.013,0.072,0.58\\}",
+            "display": false
+          },
+          {
+            "tex": "C=10^{-4}",
+            "display": false
+          },
+          {
+            "tex": "5\\times10^{-4}",
+            "display": false
+          },
+          {
+            "tex": "\\sigma\\in\\{0,0.34\\}",
+            "display": false
+          },
+          {
+            "tex": "C=5\\times10^{-3}",
+            "display": false
+          },
+          {
+            "tex": "10^{-2}",
+            "display": false
+          },
+          {
+            "tex": "\\delta",
+            "display": false
+          },
+          {
+            "tex": "r\\in\\{1,4,16\\}",
+            "display": false
+          },
+          {
+            "tex": "\\alpha\\in\\{100,1,0.01\\}",
+            "display": false
+          }
+        ]
       },
       {
         "file": "papers/2024-kuo-flasc/source.md",
         "math": 0,
-        "tables": 0
+        "tables": 0,
+        "html": "papers__2024-kuo-flasc__source.md.html",
+        "math_formulas": []
       },
       {
         "file": "papers/2024-sun-ffa-lora/notes.md",
         "math": 63,
-        "tables": 3
+        "tables": 3,
+        "html": "papers__2024-sun-ffa-lora__notes.md.html",
+        "math_formulas": [
+          {
+            "tex": "\\alpha",
+            "display": false
+          },
+          {
+            "tex": "A_0",
+            "display": false
+          },
+          {
+            "tex": "B",
+            "display": false
+          },
+          {
+            "tex": "\\epsilon=6",
+            "display": false
+          },
+          {
+            "tex": "39.46\\pm14.3\\%",
+            "display": false
+          },
+          {
+            "tex": "78.81\\pm0.8\\%",
+            "display": false
+          },
+          {
+            "tex": "\\alpha",
+            "display": false
+          },
+          {
+            "tex": "A",
+            "display": false
+          },
+          {
+            "tex": "B",
+            "display": false
+          },
+          {
+            "tex": "BA",
+            "display": false
+          },
+          {
+            "tex": "W_0",
+            "display": false
+          },
+          {
+            "tex": "A_0",
+            "display": false
+          },
+          {
+            "tex": "B_0=0",
+            "display": false
+          },
+          {
+            "tex": "B",
+            "display": false
+          },
+          {
+            "tex": "B",
+            "display": false
+          },
+          {
+            "tex": "A_0",
+            "display": false
+          },
+          {
+            "tex": "W=W_0+BA_0,\n\\qquad B\\in\\mathbb R^{d\\times r},\\quad A_0\\in\\mathbb R^{r\\times k}.",
+            "display": true
+          },
+          {
+            "tex": "r",
+            "display": false
+          },
+          {
+            "tex": "d,k",
+            "display": false
+          },
+          {
+            "tex": "\\alpha/r",
+            "display": false
+          },
+          {
+            "tex": "B",
+            "display": false
+          },
+          {
+            "tex": "A_0",
+            "display": false
+          },
+          {
+            "tex": "\\left(\\sum_i p_iB_i\\right)A_0=\\sum_i p_i(B_iA_0),\n\\qquad \\sum_i p_i=1.",
+            "display": true
+          },
+          {
+            "tex": "(B+\\xi_B)(A+\\xi_A)=BA+\\xi_BA+B\\xi_A+\\xi_B\\xi_A,",
+            "display": true
+          },
+          {
+            "tex": "(B+\\xi_B)A_0=BA_0+\\xi_BA_0.",
+            "display": true
+          },
+          {
+            "tex": "\\xi_A,\\xi_B",
+            "display": false
+          },
+          {
+            "tex": "A",
+            "display": false
+          },
+          {
+            "tex": "\\bar g=\\frac1{|\\mathcal B|}\n\\left[\\sum_{x\\in\\mathcal B}\\mathrm{Clip}(\\nabla\\ell_x,C)\n+z\\right],\n\\qquad z\\sim\\mathcal N(0,\\sigma^2C^2I).",
+            "display": true
+          },
+          {
+            "tex": "\\mathcal B",
+            "display": false
+          },
+          {
+            "tex": "C",
+            "display": false
+          },
+          {
+            "tex": "\\sigma",
+            "display": false
+          },
+          {
+            "tex": "W",
+            "display": false
+          },
+          {
+            "tex": "L",
+            "display": false
+          },
+          {
+            "tex": "A_0",
+            "display": false
+          },
+          {
+            "tex": "C_A",
+            "display": false
+          },
+          {
+            "tex": "B",
+            "display": false
+          },
+          {
+            "tex": "LC_A^2",
+            "display": false
+          },
+          {
+            "tex": "C_A",
+            "display": false
+          },
+          {
+            "tex": "r(d+k)",
+            "display": false
+          },
+          {
+            "tex": "rd",
+            "display": false
+          },
+          {
+            "tex": "d=k",
+            "display": false
+          },
+          {
+            "tex": "d/(d+k)",
+            "display": false
+          },
+          {
+            "tex": "r=8,\\alpha=8",
+            "display": false
+          },
+          {
+            "tex": "\\delta=10^{-5}",
+            "display": false
+          },
+          {
+            "tex": "\\epsilon=6,3,1",
+            "display": false
+          },
+          {
+            "tex": "C\\in\\{2,5,10\\}",
+            "display": false
+          },
+          {
+            "tex": "\\epsilon=6",
+            "display": false
+          },
+          {
+            "tex": "\\epsilon=3",
+            "display": false
+          },
+          {
+            "tex": "\\epsilon=1",
+            "display": false
+          },
+          {
+            "tex": "\\epsilon=6",
+            "display": false
+          },
+          {
+            "tex": "93.70\\pm0.5",
+            "display": false
+          },
+          {
+            "tex": "93.73\\pm0.3",
+            "display": false
+          },
+          {
+            "tex": "r=8",
+            "display": false
+          },
+          {
+            "tex": "r=16",
+            "display": false
+          },
+          {
+            "tex": "\\epsilon=1",
+            "display": false
+          },
+          {
+            "tex": "r=2",
+            "display": false
+          },
+          {
+            "tex": "\\alpha",
+            "display": false
+          },
+          {
+            "tex": "\\alpha",
+            "display": false
+          },
+          {
+            "tex": "\\alpha",
+            "display": false
+          },
+          {
+            "tex": "V",
+            "display": false
+          },
+          {
+            "tex": "W=W_0+Q_0VP_0",
+            "display": false
+          },
+          {
+            "tex": "A_0",
+            "display": false
+          },
+          {
+            "tex": "A_0",
+            "display": false
+          }
+        ]
       },
       {
         "file": "papers/2024-sun-ffa-lora/source.md",
         "math": 0,
-        "tables": 0
+        "tables": 0,
+        "html": "papers__2024-sun-ffa-lora__source.md.html",
+        "math_formulas": []
       },
       {
         "file": "papers/2024-wu-dr-encoder/notes.md",
         "math": 53,
-        "tables": 3
+        "tables": 3,
+        "html": "papers__2024-wu-dr-encoder__notes.md.html",
+        "math_formulas": [
+          {
+            "tex": "\\epsilon=4",
+            "display": false
+          },
+          {
+            "tex": "A,B",
+            "display": false
+          },
+          {
+            "tex": "m",
+            "display": false
+          },
+          {
+            "tex": "s",
+            "display": false
+          },
+          {
+            "tex": "\\hat G\\sim\\mathcal N(m,s^2),\\qquad\n\\min_{\\mathrm{Enc},\\mathrm{Dec}}\n\\mathbb E_{\\hat G}\\left[\\lVert\\mathrm{Dec}(\\mathrm{Enc}(\\hat G))-\\hat G\\rVert_2^2\\right].",
+            "display": true
+          },
+          {
+            "tex": "\\hat G",
+            "display": false
+          },
+          {
+            "tex": "s",
+            "display": false
+          },
+          {
+            "tex": "s^2",
+            "display": false
+          },
+          {
+            "tex": "\\mathcal N(m,s)",
+            "display": false
+          },
+          {
+            "tex": "\\beta_1=0.99",
+            "display": false
+          },
+          {
+            "tex": "\\beta_2=0.9",
+            "display": false
+          },
+          {
+            "tex": "h_1=10^{-5}",
+            "display": false
+          },
+          {
+            "tex": "h_2=10^{-3}",
+            "display": false
+          },
+          {
+            "tex": "\\mathcal M=\\mathrm{Dec}\\circ\\mathrm{Aggregation}\\circ\n\\mathrm{Noise}\\circ\\mathrm{Clip}\\circ\\mathrm{Enc}.",
+            "display": true
+          },
+          {
+            "tex": "4\\sigma_A^2/K^2",
+            "display": false
+          },
+          {
+            "tex": "4\\sigma_B^2/K^2",
+            "display": false
+          },
+          {
+            "tex": "\\sigma_A=\\sigma_B=\\sigma",
+            "display": false
+          },
+          {
+            "tex": "K",
+            "display": false
+          },
+          {
+            "tex": "M",
+            "display": false
+          },
+          {
+            "tex": "p=K/M",
+            "display": false
+          },
+          {
+            "tex": "T",
+            "display": false
+          },
+          {
+            "tex": "\\sigma",
+            "display": false
+          },
+          {
+            "tex": "C",
+            "display": false
+          },
+          {
+            "tex": "G_i^t\\approx A_i^tB_i^t",
+            "display": false
+          },
+          {
+            "tex": "W_{t+1}=W_t-\\eta^tG_t",
+            "display": false
+          },
+          {
+            "tex": "p\\sqrt T\\longrightarrow\\nu,\n\\qquad\n\\mu=\\nu\\sqrt{e^{1/\\sigma^2}-1}.",
+            "display": true
+          },
+          {
+            "tex": "\\mu",
+            "display": false
+          },
+          {
+            "tex": "(\\epsilon,\\delta)",
+            "display": false
+          },
+          {
+            "tex": "\\epsilon",
+            "display": false
+          },
+          {
+            "tex": "r=8",
+            "display": false
+          },
+          {
+            "tex": "1.5\\times10^{-4}",
+            "display": false
+          },
+          {
+            "tex": "3\\times10^{-4}",
+            "display": false
+          },
+          {
+            "tex": "\\epsilon\\in\\{0.25,0.5,1,2,4,8\\}",
+            "display": false
+          },
+          {
+            "tex": "\\delta",
+            "display": false
+          },
+          {
+            "tex": "10^{-5}",
+            "display": false
+          },
+          {
+            "tex": "\\epsilon=\\infty",
+            "display": false
+          },
+          {
+            "tex": "\\epsilon=0.25",
+            "display": false
+          },
+          {
+            "tex": "\\epsilon=1",
+            "display": false
+          },
+          {
+            "tex": "\\epsilon=4",
+            "display": false
+          },
+          {
+            "tex": "\\epsilon=8",
+            "display": false
+          },
+          {
+            "tex": "\\epsilon=\\infty",
+            "display": false
+          },
+          {
+            "tex": "\\epsilon=0.25",
+            "display": false
+          },
+          {
+            "tex": "\\epsilon=0.5",
+            "display": false
+          },
+          {
+            "tex": "\\epsilon=8",
+            "display": false
+          },
+          {
+            "tex": "6.10\\times10^{-5}",
+            "display": false
+          },
+          {
+            "tex": "\\sigma=1.63",
+            "display": false
+          },
+          {
+            "tex": "\\epsilon",
+            "display": false
+          },
+          {
+            "tex": "\\sigma=0.52",
+            "display": false
+          },
+          {
+            "tex": "\\epsilon",
+            "display": false
+          },
+          {
+            "tex": "\\delta",
+            "display": false
+          },
+          {
+            "tex": "K,N,M",
+            "display": false
+          },
+          {
+            "tex": "\\delta",
+            "display": false
+          },
+          {
+            "tex": "6.10\\times10^{-5}",
+            "display": false
+          }
+        ]
       },
       {
         "file": "papers/2024-wu-dr-encoder/source.md",
         "math": 0,
-        "tables": 0
+        "tables": 0,
+        "html": "papers__2024-wu-dr-encoder__source.md.html",
+        "math_formulas": []
       },
       {
         "file": "papers/2025-wang-svd-llm/notes.md",
         "math": 32,
-        "tables": 3
+        "tables": 3,
+        "html": "papers__2025-wang-svd-llm__notes.md.html",
+        "math_formulas": [
+          {
+            "tex": "WS",
+            "display": false
+          },
+          {
+            "tex": "XX^\\top",
+            "display": false
+          },
+          {
+            "tex": "X",
+            "display": false
+          },
+          {
+            "tex": "XX^\\top",
+            "display": false
+          },
+          {
+            "tex": "S",
+            "display": false
+          },
+          {
+            "tex": "WS",
+            "display": false
+          },
+          {
+            "tex": "W\\in\\mathbb R^{d\\times n}",
+            "display": false
+          },
+          {
+            "tex": "X\\in\\mathbb R^{n\\times N}",
+            "display": false
+          },
+          {
+            "tex": "N",
+            "display": false
+          },
+          {
+            "tex": "\\min_{\\mathrm{rank}(W')\\le r}\\lVert WX-W'X\\rVert_F.",
+            "display": true
+          },
+          {
+            "tex": "XX^\\top=SS^\\top,\\quad\n\\widetilde X=S^{-1}X,\\quad\n\\widetilde X\\widetilde X^\\top=I,\\quad\nWS=U\\Sigma V^\\top,",
+            "display": true
+          },
+          {
+            "tex": "W_u'=U_r\\Sigma_r^{1/2},\\qquad\nW_v'=\\Sigma_r^{1/2}V_r^\\top S^{-1},\\qquad\nW'=W_u'W_v'.",
+            "display": true
+          },
+          {
+            "tex": "S\\in\\mathbb R^{n\\times n}",
+            "display": false
+          },
+          {
+            "tex": "U_r,V_r",
+            "display": false
+          },
+          {
+            "tex": "\\Sigma_r",
+            "display": false
+          },
+          {
+            "tex": "W_u'\\in\\mathbb R^{d\\times r}",
+            "display": false
+          },
+          {
+            "tex": "W_v'\\in\\mathbb R^{r\\times n}",
+            "display": false
+          },
+          {
+            "tex": "\\lVert WX-W'X\\rVert_F^2=\\sum_{i>r}\\sigma_i^2.",
+            "display": true
+          },
+          {
+            "tex": "S",
+            "display": false
+          },
+          {
+            "tex": "W_u'\\leftarrow W_u'+B_uA_u,\n\\qquad\nW_v'\\leftarrow W_v'+B_vA_v.",
+            "display": true
+          },
+          {
+            "tex": "W_v'",
+            "display": false
+          },
+          {
+            "tex": "W_u'",
+            "display": false
+          },
+          {
+            "tex": "W_u'",
+            "display": false
+          },
+          {
+            "tex": "W_v'",
+            "display": false
+          },
+          {
+            "tex": "W'",
+            "display": false
+          },
+          {
+            "tex": "R_w=1-\\frac{r(d+n)}{dn}.",
+            "display": true
+          },
+          {
+            "tex": "R_w",
+            "display": false
+          },
+          {
+            "tex": "Y=W_u'(W_v'X)",
+            "display": false
+          },
+          {
+            "tex": "W'",
+            "display": false
+          },
+          {
+            "tex": "W_u'",
+            "display": false
+          },
+          {
+            "tex": "W_v'",
+            "display": false
+          },
+          {
+            "tex": "10^{-4}",
+            "display": false
+          }
+        ]
       },
       {
         "file": "papers/2025-wang-svd-llm/source.md",
         "math": 0,
-        "tables": 0
+        "tables": 0,
+        "html": "papers__2025-wang-svd-llm__source.md.html",
+        "math_formulas": []
       },
       {
         "file": "papers/2025-wu-cg-fedllm/notes.md",
         "math": 66,
-        "tables": 9
+        "tables": 9,
+        "html": "papers__2025-wu-cg-fedllm__notes.md.html",
+        "math_formulas": [
+          {
+            "tex": "\\epsilon=0.25",
+            "display": false
+          },
+          {
+            "tex": "D_1",
+            "display": false
+          },
+          {
+            "tex": "i",
+            "display": false
+          },
+          {
+            "tex": "t",
+            "display": false
+          },
+          {
+            "tex": "G_i^t",
+            "display": false
+          },
+          {
+            "tex": "D_2",
+            "display": false
+          },
+          {
+            "tex": "F_i=\\mathrm{Enc}(G_i),\\qquad\n\\widetilde G_i=\\mathrm{Dec}(F_i),\\qquad\n\\mathcal L_{\\mathrm{recons}}=\\lVert G-\\widetilde G\\rVert_2^2.",
+            "display": true
+          },
+          {
+            "tex": "2\\times10^{-4}",
+            "display": false
+          },
+          {
+            "tex": "A\\in\\mathbb R^{8\\times4096}",
+            "display": false
+          },
+          {
+            "tex": "B\\in\\mathbb R^{4096\\times8}",
+            "display": false
+          },
+          {
+            "tex": "G=BA",
+            "display": false
+          },
+          {
+            "tex": "4096\\times8\\times2\\times4\\times32=8{,}388{,}608.",
+            "display": true
+          },
+          {
+            "tex": "A^\\top,B",
+            "display": false
+          },
+          {
+            "tex": "2048\\times4096",
+            "display": false
+          },
+          {
+            "tex": "[A_i,B_i]",
+            "display": false
+          },
+          {
+            "tex": "[\\bar A_i,\\bar B_i]=\\mathrm{Enc}([A_i,B_i]),\\qquad\n[\\widetilde A_i,\\widetilde B_i]=\\mathrm{Dec}([\\bar A_i,\\bar B_i]),",
+            "display": true
+          },
+          {
+            "tex": "\\widetilde A=\\sum_i\\widetilde A_i,\\quad\n\\widetilde B=\\sum_i\\widetilde B_i,\\quad\nW_{\\mathrm{global}}^{t+1}=W_{\\mathrm{global}}^t+\\eta\\widetilde B\\widetilde A.",
+            "display": true
+          },
+          {
+            "tex": "\\eta",
+            "display": false
+          },
+          {
+            "tex": "I_t",
+            "display": false
+          },
+          {
+            "tex": "8.94\\times10^{-4}",
+            "display": false
+          },
+          {
+            "tex": "1.60\\times10^4",
+            "display": false
+          },
+          {
+            "tex": "5.06\\times10^{-12}",
+            "display": false
+          },
+          {
+            "tex": "2.82\\times10^{12}",
+            "display": false
+          },
+          {
+            "tex": "1.04\\times10^{-11}",
+            "display": false
+          },
+          {
+            "tex": "1.37\\times10^{12}",
+            "display": false
+          },
+          {
+            "tex": "\\alpha=0.5",
+            "display": false
+          },
+          {
+            "tex": "3\\times10^{-4}",
+            "display": false
+          },
+          {
+            "tex": "2\\times10^{-4}",
+            "display": false
+          },
+          {
+            "tex": "1.5\\times10^{-4}",
+            "display": false
+          },
+          {
+            "tex": "1.5\\times10^{-4}",
+            "display": false
+          },
+          {
+            "tex": "3.5\\times10^{-4}",
+            "display": false
+          },
+          {
+            "tex": "\\alpha",
+            "display": false
+          },
+          {
+            "tex": "\\epsilon",
+            "display": false
+          },
+          {
+            "tex": "\\delta",
+            "display": false
+          },
+          {
+            "tex": "\\epsilon=0.25",
+            "display": false
+          },
+          {
+            "tex": "\\epsilon=2",
+            "display": false
+          },
+          {
+            "tex": "\\epsilon=8",
+            "display": false
+          },
+          {
+            "tex": "\\sigma=5\\times10^{-4}",
+            "display": false
+          },
+          {
+            "tex": "\\sigma=5\\times10^{-1}",
+            "display": false
+          },
+          {
+            "tex": "5\\times10^{-4}",
+            "display": false
+          },
+          {
+            "tex": "5\\times10^{-2}",
+            "display": false
+          },
+          {
+            "tex": "\\sigma=5\\times10^{-2}",
+            "display": false
+          },
+          {
+            "tex": "5.24\\times10^{-7}",
+            "display": false
+          },
+          {
+            "tex": "2.73\\times10^7",
+            "display": false
+          },
+          {
+            "tex": "2.50\\times10^{-3}",
+            "display": false
+          },
+          {
+            "tex": "5.72\\times10^3",
+            "display": false
+          },
+          {
+            "tex": "5\\times10^{-5}",
+            "display": false
+          },
+          {
+            "tex": "4.59\\times10^{-7}",
+            "display": false
+          },
+          {
+            "tex": "2.50\\times10^{-9}",
+            "display": false
+          },
+          {
+            "tex": "\\mathcal M=\\mathrm{Aggre}\\circ\\mathrm{Noise}\\circ\\mathrm{Clip},\\qquad\n\\widetilde{\\mathcal M}=\\mathrm{Dec}\\circ\\mathcal M\\circ\\mathrm{Enc}.",
+            "display": true
+          },
+          {
+            "tex": "\\mathrm{Clip}(A,C)=A\\min(1,C/\\lVert A\\rVert_2)",
+            "display": false
+          },
+          {
+            "tex": "A+n_A,\\ n_A\\sim\\mathcal N(0,\\sigma I)",
+            "display": false
+          },
+          {
+            "tex": "C/K",
+            "display": false
+          },
+          {
+            "tex": "K",
+            "display": false
+          },
+          {
+            "tex": "K",
+            "display": false
+          },
+          {
+            "tex": "p\\sqrt T\\longrightarrow\\nu,\\qquad\n\\mu=\\nu\\sqrt{e^{1/\\sigma^2}-1},",
+            "display": true
+          },
+          {
+            "tex": "\\delta(\\epsilon)=\\Phi\\left(-\\frac\\epsilon\\mu+\\frac\\mu2\\right)\n-e^\\epsilon\\Phi\\left(-\\frac\\epsilon\\mu-\\frac\\mu2\\right).",
+            "display": true
+          },
+          {
+            "tex": "\\Phi",
+            "display": false
+          },
+          {
+            "tex": "T",
+            "display": false
+          },
+          {
+            "tex": "p=K/M",
+            "display": false
+          },
+          {
+            "tex": "M",
+            "display": false
+          },
+          {
+            "tex": "\\sigma I",
+            "display": false
+          },
+          {
+            "tex": "\\sigma^2",
+            "display": false
+          },
+          {
+            "tex": "\\delta",
+            "display": false
+          },
+          {
+            "tex": "\\sigma",
+            "display": false
+          },
+          {
+            "tex": "(B_1+B_2)(A_1+A_2)\n=B_1A_1+B_2A_2+B_1A_2+B_2A_1.",
+            "display": true
+          }
+        ]
       },
       {
         "file": "papers/2025-wu-cg-fedllm/source.md",
         "math": 0,
-        "tables": 0
+        "tables": 0,
+        "html": "papers__2025-wu-cg-fedllm__source.md.html",
+        "math_formulas": []
       },
       {
         "file": "papers/2025-xie-powersgd-plus/notes.md",
         "math": 57,
-        "tables": 8
+        "tables": 8,
+        "html": "papers__2025-xie-powersgd-plus__notes.md.html",
+        "math_formulas": [
+          {
+            "tex": "\\min_{X\\in\\mathbb R^{m\\times n}} f(X),\\qquad\nf(X)=\\frac1N\\sum_{i=1}^{N}f_i(X),\\qquad\nf_i(X)=\\mathbb E_{\\xi^{(i)}\\sim D_i}F(X;\\xi^{(i)}),\\quad m\\ge n.",
+            "display": true
+          },
+          {
+            "tex": "N",
+            "display": false
+          },
+          {
+            "tex": "r",
+            "display": false
+          },
+          {
+            "tex": "1\\le r\\le n",
+            "display": false
+          },
+          {
+            "tex": "\\mathbb E_{\\mathcal C}\\lVert\\mathcal C(\\Delta)-\\Delta\\rVert_F^2\n\\le (1-\\delta)\\lVert\\Delta\\rVert_F^2,\\qquad 0<\\delta\\le1.",
+            "display": true
+          },
+          {
+            "tex": "\\mathcal C_P(W)=PP^\\top W,\\qquad P^\\top P=I_r,\\qquad\n\\lVert\\mathcal C_P(W)-W\\rVert_F^2+\\lVert\\mathcal C_P(W)\\rVert_F^2=\\lVert W\\rVert_F^2.",
+            "display": true
+          },
+          {
+            "tex": "W=U\\Sigma V^\\top",
+            "display": false
+          },
+          {
+            "tex": "r",
+            "display": false
+          },
+          {
+            "tex": "P",
+            "display": false
+          },
+          {
+            "tex": "\\delta=r/n",
+            "display": false
+          },
+          {
+            "tex": "G^2=\\sigma^2+\\omega^2",
+            "display": false
+          },
+          {
+            "tex": "\\delta=r/n",
+            "display": false
+          },
+          {
+            "tex": "\\sigma^2",
+            "display": false
+          },
+          {
+            "tex": "\\epsilon",
+            "display": false
+          },
+          {
+            "tex": "g_t^{(i)}=\\nabla F(X_t;\\xi_t^{(i)}),\\qquad\n\\Delta_t^{(i)}=g_t^{(i)}+e_t^{(i)},\\qquad\n\\Delta_t=\\frac1N\\sum_i\\Delta_t^{(i)}.",
+            "display": true
+          },
+          {
+            "tex": "e_{t+1}^{(i)}=\\Delta_t^{(i)}-\\widehat\\Delta_t^{(i)},\\qquad\nm_t=\\mu m_{t-1}+\\widehat\\Delta_t,\\qquad\nX_{t+1}=X_t-\\eta m_t.",
+            "display": true
+          },
+          {
+            "tex": "e_0^{(i)}=0",
+            "display": false
+          },
+          {
+            "tex": "m_{-1}=0",
+            "display": false
+          },
+          {
+            "tex": "0\\le\\mu<1",
+            "display": false
+          },
+          {
+            "tex": "Q_{-1}\\in\\mathbb R^{n\\times r}",
+            "display": false
+          },
+          {
+            "tex": "m\\times n",
+            "display": false
+          },
+          {
+            "tex": "P_t^{(i)}=\\Delta_t^{(i)}Q_{t-1}",
+            "display": false
+          },
+          {
+            "tex": "m\\times r",
+            "display": false
+          },
+          {
+            "tex": "n\\times r",
+            "display": false
+          },
+          {
+            "tex": "P_t=\\frac1N\\sum_i\\Delta_t^{(i)}Q_{t-1},\\qquad\n\\widetilde P_t=\\mathrm{QR}(P_t),\\qquad\nQ_t^{(i)}=(\\Delta_t^{(i)})^\\top\\widetilde P_t,\\qquad\nQ_t=\\frac1N\\sum_i Q_t^{(i)}.",
+            "display": true
+          },
+          {
+            "tex": "\\widehat\\Delta_t^{(i)}=\\widetilde P_t(Q_t^{(i)})^\\top,\\qquad\n\\widehat\\Delta_t=\\widetilde P_tQ_t^\\top\n=\\widetilde P_t\\widetilde P_t^\\top\\Delta_t.",
+            "display": true
+          },
+          {
+            "tex": "t\\bmod\\tau=0",
+            "display": false
+          },
+          {
+            "tex": "t=0",
+            "display": false
+          },
+          {
+            "tex": "\\Delta_t^{(i)}",
+            "display": false
+          },
+          {
+            "tex": "\\Delta_t",
+            "display": false
+          },
+          {
+            "tex": "Q_t^{(i)}",
+            "display": false
+          },
+          {
+            "tex": "Q_t",
+            "display": false
+          },
+          {
+            "tex": "X\\in\\mathbb R^{2\\times2}",
+            "display": false
+          },
+          {
+            "tex": "D=(1,-1)^\\top",
+            "display": false
+          },
+          {
+            "tex": "f_i(X)=\\psi(D^\\top XD)",
+            "display": false
+          },
+          {
+            "tex": "|s|\\le1",
+            "display": false
+          },
+          {
+            "tex": "\\psi(s)=s^2",
+            "display": false
+          },
+          {
+            "tex": "\\psi(s)=2|s|-1",
+            "display": false
+          },
+          {
+            "tex": "g_t^{(i)}=\\nabla f(X_t)+\\xi_t^{(i)}\\bigl(\\sigma B-\\nabla f(X_t)\\bigr),\n\\qquad \\Pr(\\xi_t^{(i)}=1)=\\Pr(\\xi_t^{(i)}=-1)=\\frac12.",
+            "display": true
+          },
+          {
+            "tex": "A=DD^\\top",
+            "display": false
+          },
+          {
+            "tex": "2^{-N}",
+            "display": false
+          },
+          {
+            "tex": "\\mathbb E\\lVert\\nabla f(X_t)\\rVert_F^2\\ge\\epsilon_0>0",
+            "display": false
+          },
+          {
+            "tex": "\\mathbb E\\left\\lVert\\frac1N\\sum_i e_t^{(i)}\\right\\rVert_F^2\n\\le\\frac{45\\tau^2G^2}{\\delta^2},\\qquad\n\\mathbb E\\lVert m_t\\rVert_F^2\\le\\frac{92\\tau^2G^2}{(1-\\mu)^2\\delta^2}.",
+            "display": true
+          },
+          {
+            "tex": "\\eta\\le(1-\\mu)/(2L)",
+            "display": false
+          },
+          {
+            "tex": "\\Delta F=f(X_0)-\\min_X f(X)",
+            "display": false
+          },
+          {
+            "tex": "\\frac1T\\sum_{t=0}^{T-1}\\mathbb E\\lVert\\nabla f(X_t)\\rVert_F^2\n\\le\\frac{4(1-\\mu)\\Delta F}{\\eta T}\n+\\frac{2L\\eta\\sigma^2}{(1-\\mu)N}\n+\\frac{548L^2\\eta^2\\tau^2G^2}{(1-\\mu)^4\\delta^2}.",
+            "display": true
+          },
+          {
+            "tex": "\\frac1T\\sum_{t=0}^{T-1}\\mathbb E\\lVert\\nabla f(X_t)\\rVert_F^2\n\\le\\sqrt{\\frac{32L\\sigma^2\\Delta F}{NT}}\n+\\frac{8L\\Delta F}{T}\n+\\frac{6\\sqrt[3]{274}(L\\tau G\\Delta F)^{2/3}}\n{T^{2/3}\\delta^{2/3}(1-\\mu)^{2/3}}.",
+            "display": true
+          },
+          {
+            "tex": "O(1/\\sqrt{NT})",
+            "display": false
+          },
+          {
+            "tex": "O(1/(N\\epsilon^2))",
+            "display": false
+          },
+          {
+            "tex": "mr+nr",
+            "display": false
+          },
+          {
+            "tex": "mr+nr",
+            "display": false
+          },
+          {
+            "tex": "nr+mn/\\tau",
+            "display": false
+          },
+          {
+            "tex": "mr+nr+mn/\\tau",
+            "display": false
+          },
+          {
+            "tex": "mr+nr",
+            "display": false
+          },
+          {
+            "tex": "r/m+r/n+1/\\tau",
+            "display": false
+          },
+          {
+            "tex": "\\frac{(\\tau-1)(mr+nr)+(mn+nr)}{\\tau}\n=mr+nr+\\frac{mn-mr}{\\tau}\n\\le mr+nr+\\frac{mn}{\\tau}.",
+            "display": true
+          },
+          {
+            "tex": "\\widetilde P_t\\left(\\frac1N\\sum_i Q_t^{(i)}\\right)^\\top\n=\\frac1N\\sum_i\\widetilde P_t(Q_t^{(i)})^\\top.",
+            "display": true
+          }
+        ]
       },
       {
         "file": "papers/2025-xie-powersgd-plus/source.md",
         "math": 0,
-        "tables": 0
+        "tables": 0,
+        "html": "papers__2025-xie-powersgd-plus__source.md.html",
+        "math_formulas": []
+      },
+      {
+        "file": "papers/2026-park-iser/notes.md",
+        "math": 34,
+        "tables": 15,
+        "html": "papers__2026-park-iser__notes.md.html",
+        "math_formulas": [
+          {
+            "tex": "W=W_0+\\Delta W=W_0+U\\Sigma V^{\\mathsf T}.",
+            "display": true
+          },
+          {
+            "tex": "U\\in\\mathbb R^{d\\times r}",
+            "display": false
+          },
+          {
+            "tex": "\\Sigma\\in\\mathbb R^{r\\times r}",
+            "display": false
+          },
+          {
+            "tex": "V\\in\\mathbb R^{k\\times r}",
+            "display": false
+          },
+          {
+            "tex": "U,\\Sigma,V",
+            "display": false
+          },
+          {
+            "tex": "\\Sigma",
+            "display": false
+          },
+          {
+            "tex": "U,V,W_0",
+            "display": false
+          },
+          {
+            "tex": "\\mathcal L=-\\log p(\\hat z)-\\log p(\\hat y\\mid\\hat z)+\\lambda d(x,\\hat x).",
+            "display": true
+          },
+          {
+            "tex": "x",
+            "display": false
+          },
+          {
+            "tex": "y",
+            "display": false
+          },
+          {
+            "tex": "z",
+            "display": false
+          },
+          {
+            "tex": "\\epsilon,\\delta",
+            "display": false
+          },
+          {
+            "tex": "\\delta",
+            "display": false
+          },
+          {
+            "tex": "\\tau",
+            "display": false
+          },
+          {
+            "tex": "\\mathcal K",
+            "display": false
+          },
+          {
+            "tex": "r_k^{(t)}",
+            "display": false
+          },
+          {
+            "tex": "s",
+            "display": false
+          },
+          {
+            "tex": "S_{k,i}^{(t)}=s(\\sigma_{k,i}^{(t)}).",
+            "display": true
+          },
+          {
+            "tex": "\\Delta^2S_{k,i}^{(t)}=\\left|S_{k,i}^{(t)}-2S_{k,i}^{(t-1)}+S_{k,i}^{(t-2)}\\right|.",
+            "display": true
+          },
+          {
+            "tex": "C^{(t)}=\\sum_{k\\in\\mathcal K}\\sum_{i=1}^{r_k^{(t-1)}}\\Delta^2S_{k,i}^{(t)}.",
+            "display": true
+          },
+          {
+            "tex": "C^{(t)}<\\tau",
+            "display": false
+          },
+          {
+            "tex": "m^{(t)}=\\max\\left(\\left\\lfloor\\rho\\sum_{k\\in\\mathcal K}r_k^{(t-1)}\\right\\rfloor,\\lvert\\mathcal K\\rvert r_{\\mathrm{target}}\\right).",
+            "display": true
+          },
+          {
+            "tex": "\\Delta^2S",
+            "display": false
+          },
+          {
+            "tex": "r_{\\mathrm{target}}=4",
+            "display": false
+          },
+          {
+            "tex": "4\\lvert\\mathcal K\\rvert",
+            "display": false
+          },
+          {
+            "tex": "\\lambda=2,1,0.5,0.2",
+            "display": false
+          },
+          {
+            "tex": "5\\times10^{-3}",
+            "display": false
+          },
+          {
+            "tex": "\\rho=0.8",
+            "display": false
+          },
+          {
+            "tex": "4\\times10^{-7},2\\times10^{-7},9\\times10^{-8},3\\times10^{-8}",
+            "display": false
+          },
+          {
+            "tex": "(52.86-49.51)/49.51\\times100\\%=6.77\\%",
+            "display": false
+          },
+          {
+            "tex": "(16.97-9.40)/16.97=44.61\\%",
+            "display": false
+          },
+          {
+            "tex": "(66.87-33.81)/33.81\\times100\\%=97.78\\%",
+            "display": false
+          },
+          {
+            "tex": "(29.1-23.5)/29.1=19.24\\%",
+            "display": false
+          },
+          {
+            "tex": "C^{(t)}",
+            "display": false
+          }
+        ]
+      },
+      {
+        "file": "papers/2026-park-iser/source.md",
+        "math": 0,
+        "tables": 0,
+        "html": "papers__2026-park-iser__source.md.html",
+        "math_formulas": []
+      },
+      {
+        "file": "papers/2026-singh-fedala-wr/notes.md",
+        "math": 31,
+        "tables": 9,
+        "html": "papers__2026-singh-fedala-wr__notes.md.html",
+        "math_formulas": [
+          {
+            "tex": "\\lambda",
+            "display": false
+          },
+          {
+            "tex": "s,p",
+            "display": false
+          },
+          {
+            "tex": "M_k^t",
+            "display": false
+          },
+          {
+            "tex": "M_k^{t+1}",
+            "display": false
+          },
+          {
+            "tex": "H(x)=-\\sum_{c=1}^{C}p(c\\mid x;\\Phi_k^t)\\log p(c\\mid x;\\Phi_k^t).",
+            "display": true
+          },
+          {
+            "tex": "M_k^{t+1}=\\mathrm{Top}_{x\\in D_k}\\left(H(x),\\lvert M_k\\rvert\\right).",
+            "display": true
+          },
+          {
+            "tex": "D_k",
+            "display": false
+          },
+          {
+            "tex": "\\lvert M_k\\rvert",
+            "display": false
+          },
+          {
+            "tex": "D_k",
+            "display": false
+          },
+          {
+            "tex": "B_k=B_k^{\\mathrm{new}}\\cup B_k^{\\mathrm{replay}},\\qquad\n\\lvert B_k^{\\mathrm{new}}\\rvert=(1-\\lambda)\\lvert B_k\\rvert,\\qquad\n\\lvert B_k^{\\mathrm{replay}}\\rvert=\\lambda\\lvert B_k\\rvert.",
+            "display": true
+          },
+          {
+            "tex": "\\mathcal L_k^t=(1-\\lambda)\\mathcal L_{\\mathrm{task}}(\\Phi_k^t;D_k)+\\lambda\\mathcal L_{\\mathrm{replay}}(\\Phi_k^t;M_k^t).",
+            "display": true
+          },
+          {
+            "tex": "\\lambda\\in[0,1]",
+            "display": false
+          },
+          {
+            "tex": "\\lambda=0.05",
+            "display": false
+          },
+          {
+            "tex": "\\lambda",
+            "display": false
+          },
+          {
+            "tex": "D_k",
+            "display": false
+          },
+          {
+            "tex": "\\mathrm{sim}(\\Phi_k^t,\\Phi^{t-1})=\n\\sum_{l=1}^{L}\\left[\\mathrm{cos}(\\Phi_k^{t(l)},\\Phi^{t-1(l)})-\n\\left\\lVert\\Phi_k^{t(l)}-\\Phi^{t-1(l)}\\right\\rVert_2\\right].",
+            "display": true
+          },
+          {
+            "tex": "a_k^t=\\frac{\\exp\\left(\\gamma\\mathrm{sim}(\\Phi_k^t,\\Phi^{t-1})\\right)}{\n\\sum_{j\\in\\mathcal K_t}\\exp\\left(\\gamma\\mathrm{sim}(\\Phi_j^t,\\Phi^{t-1})\\right)}.",
+            "display": true
+          },
+          {
+            "tex": "\\Phi^t=\\sum_{k\\in\\mathcal K_t}a_k^t\\Phi_k^t.",
+            "display": true
+          },
+          {
+            "tex": "\\gamma=1.0",
+            "display": false
+          },
+          {
+            "tex": "\\Phi^t",
+            "display": false
+          },
+          {
+            "tex": "\\Phi^{t+1}",
+            "display": false
+          },
+          {
+            "tex": "\\mathbb E\\left[\\left\\lVert g_k-\\nabla\\widetilde F_k(w)\\right\\rVert^2\\right]\\leq\\sigma^2,\n\\qquad \\mathbb E[g_k]=\\nabla\\widetilde F_k(w).",
+            "display": true
+          },
+          {
+            "tex": "\\sigma",
+            "display": false
+          },
+          {
+            "tex": "\\epsilon,\\delta",
+            "display": false
+          },
+          {
+            "tex": "\\beta=0.10",
+            "display": false
+          },
+          {
+            "tex": "T",
+            "display": false
+          },
+          {
+            "tex": "E",
+            "display": false
+          },
+          {
+            "tex": "\\Sigma",
+            "display": false
+          },
+          {
+            "tex": "(182.43-175.56)/182.43\\times100\\%=3.77\\%",
+            "display": false
+          },
+          {
+            "tex": "100\\times64\\times64\\times3\\times4=4{,}915{,}200",
+            "display": false
+          },
+          {
+            "tex": "\\nabla_{\\Phi}\\mathcal L_{\\mathrm{code}}=(1-\\lambda)\\nabla_{\\Phi}\\mathcal L_{\\mathrm{task}}.",
+            "display": true
+          }
+        ]
+      },
+      {
+        "file": "papers/2026-singh-fedala-wr/source.md",
+        "math": 0,
+        "tables": 0,
+        "html": "papers__2026-singh-fedala-wr__source.md.html",
+        "math_formulas": []
       },
       {
         "file": "verification.md",
         "math": 0,
-        "tables": 5
+        "tables": 6,
+        "html": "verification.md.html",
+        "math_formulas": []
       }
     ],
-    "math_count": 364,
-    "table_count": 45,
     "failures": [],
-    "table_errors": [],
-    "orphan_table_rows": []
+    "math_count": 429,
+    "table_count": 70
   },
-  "new_paper_math": {
-    "file": "papers/2025-xie-powersgd-plus/notes.md",
-    "math_expressions": 57,
-    "display_expressions": 13,
-    "inline_expressions": 44
-  },
+  "new_paper_math": [
+    {
+      "file": "papers/2026-park-iser/notes.md",
+      "math": 34,
+      "display_math": 6
+    },
+    {
+      "file": "papers/2026-singh-fedala-wr/notes.md",
+      "math": 31,
+      "display_math": 9
+    }
+  ],
   "github_compatibility_checks": {
-    "known_rejected_operatorname_in_math": 0,
-    "display_punctuation_escape_findings": 0,
-    "inline_delimiters": "Existing backtick-math dollar delimiters with outside spacing",
-    "display_delimiters": "Existing standalone double-dollar delimiters",
-    "multi_letter_function_names": "mathrm",
-    "scope": "Source scan and strict local KaTeX parsing only; not proof of final GitHub runtime output"
+    "known_rejected_operatorname_macro": "absent",
+    "display_punctuation_escapes": "absent",
+    "inline_math": "Dollar/backtick TeX format preserved",
+    "display_math": "Standalone double-dollar delimiters",
+    "multiletter_functions": "mathrm convention",
+    "current_local_strict_parse": "passed"
   },
   "previous_notes_preservation": [
     {
       "file": "papers/2023-zhang-adalora/notes.md",
-      "math": 32,
-      "formula_order_and_source_unchanged": true,
-      "previous_content_preserved": true
+      "formula_count": 32,
+      "source_and_order_unchanged": true
     },
     {
       "file": "papers/2024-kuo-flasc/notes.md",
-      "math": 34,
-      "formula_order_and_source_unchanged": true,
-      "previous_content_preserved": true
+      "formula_count": 34,
+      "source_and_order_unchanged": true
     },
     {
       "file": "papers/2024-sun-ffa-lora/notes.md",
-      "math": 63,
-      "formula_order_and_source_unchanged": true,
-      "previous_content_preserved": true
+      "formula_count": 63,
+      "source_and_order_unchanged": true
     },
     {
       "file": "papers/2024-wu-dr-encoder/notes.md",
-      "math": 53,
-      "formula_order_and_source_unchanged": true,
-      "previous_content_preserved": true
+      "formula_count": 53,
+      "source_and_order_unchanged": true
     },
     {
       "file": "papers/2025-wang-svd-llm/notes.md",
-      "math": 32,
-      "formula_order_and_source_unchanged": true,
-      "previous_content_preserved": true
+      "formula_count": 32,
+      "source_and_order_unchanged": true
     },
     {
       "file": "papers/2025-wu-cg-fedllm/notes.md",
-      "math": 66,
-      "formula_order_and_source_unchanged": true,
-      "previous_content_preserved": true
+      "formula_count": 66,
+      "source_and_order_unchanged": true
+    },
+    {
+      "file": "papers/2025-xie-powersgd-plus/notes.md",
+      "formula_count": 57,
+      "source_and_order_unchanged": true
     }
   ],
   "local_print_preview": {
     "checked_on": "2026-10-12",
-    "renderer": "Local HTML / KaTeX with WeasyPrint 70.0; not live GitHub",
+    "renderer": "Local HTML/KaTeX + WeasyPrint 70.0; not live GitHub",
     "files": [
       {
-        "file": "papers/2025-xie-powersgd-plus/notes.md",
-        "preview_pages": 7,
+        "file": "papers/2026-park-iser/notes.md",
+        "preview_pages": 8,
         "text_extracted": true,
         "replacement_characters": 0
       },
       {
-        "file": "papers/2025-xie-powersgd-plus/source.md",
+        "file": "papers/2026-park-iser/source.md",
+        "preview_pages": 1,
+        "text_extracted": true,
+        "replacement_characters": 0
+      },
+      {
+        "file": "papers/2026-singh-fedala-wr/notes.md",
+        "preview_pages": 8,
+        "text_extracted": true,
+        "replacement_characters": 0
+      },
+      {
+        "file": "papers/2026-singh-fedala-wr/source.md",
         "preview_pages": 1,
         "text_extracted": true,
         "replacement_characters": 0
@@ -183,7 +1992,7 @@
       },
       {
         "file": "comparison.md",
-        "preview_pages": 4,
+        "preview_pages": 5,
         "text_extracted": true,
         "replacement_characters": 0
       },
@@ -195,300 +2004,185 @@
       },
       {
         "file": "verification.md",
-        "preview_pages": 6,
+        "preview_pages": 7,
         "text_extracted": true,
         "replacement_characters": 0
       },
       {
         "file": "UPLOAD.md",
-        "preview_pages": 3,
+        "preview_pages": 4,
         "text_extracted": true,
         "replacement_characters": 0
       }
     ],
     "display_formula_review_pages": 2,
-    "display_formulas": 13,
-    "previous_notes_preservation": [
-      {
-        "file": "papers/2023-zhang-adalora/notes.md",
-        "math": 32,
-        "formula_order_and_source_unchanged": true,
-        "previous_content_preserved": true
-      },
-      {
-        "file": "papers/2024-kuo-flasc/notes.md",
-        "math": 34,
-        "formula_order_and_source_unchanged": true,
-        "previous_content_preserved": true
-      },
-      {
-        "file": "papers/2024-sun-ffa-lora/notes.md",
-        "math": 63,
-        "formula_order_and_source_unchanged": true,
-        "previous_content_preserved": true
-      },
-      {
-        "file": "papers/2024-wu-dr-encoder/notes.md",
-        "math": 53,
-        "formula_order_and_source_unchanged": true,
-        "previous_content_preserved": true
-      },
-      {
-        "file": "papers/2025-wang-svd-llm/notes.md",
-        "math": 32,
-        "formula_order_and_source_unchanged": true,
-        "previous_content_preserved": true
-      },
-      {
-        "file": "papers/2025-wu-cg-fedllm/notes.md",
-        "math": 66,
-        "formula_order_and_source_unchanged": true,
-        "previous_content_preserved": true
-      }
-    ],
-    "scope": "All new-note pages and new display formulas rendered for internal review; local output only. Visual inspection is recorded separately after images are examined.",
-    "bibtex": [
-      {
-        "file": "papers/2023-zhang-adalora/citation.bib",
-        "entries": 2,
-        "keys": [
-          "zhang2023adaptive_iclr",
-          "zhang2023adalora_arxiv_v2"
-        ],
-        "errors": []
-      },
-      {
-        "file": "papers/2024-kuo-flasc/citation.bib",
-        "entries": 2,
-        "keys": [
-          "kuo2024federated_arxiv_v1",
-          "kuo2026flasc_cais"
-        ],
-        "errors": []
-      },
-      {
-        "file": "papers/2024-sun-ffa-lora/citation.bib",
-        "entries": 2,
-        "keys": [
-          "sun2024improving_iclr",
-          "sun2024improving_arxiv_v1"
-        ],
-        "errors": []
-      },
-      {
-        "file": "papers/2024-wu-dr-encoder/citation.bib",
-        "entries": 2,
-        "keys": [
-          "wu2025drencoder_aaai",
-          "wu2024drencoder_arxiv_v1"
-        ],
-        "errors": []
-      },
-      {
-        "file": "papers/2025-wang-svd-llm/citation.bib",
-        "entries": 2,
-        "keys": [
-          "wang2025svdllm_iclr",
-          "wang2025svdllm_arxiv_v5"
-        ],
-        "errors": []
-      },
-      {
-        "file": "papers/2025-wu-cg-fedllm/citation.bib",
-        "entries": 2,
-        "keys": [
-          "wu2025cgfedllm_arxiv_v3",
-          "wu2025cgfedllm_ecai"
-        ],
-        "errors": []
-      },
-      {
-        "file": "papers/2025-xie-powersgd-plus/citation.bib",
-        "entries": 2,
-        "keys": [
-          "xie2025powersgdplus_arxiv_v1",
-          "xie2026powersgdplus_icassp"
-        ],
-        "errors": []
-      }
-    ]
+    "display_formulas": 15,
+    "visual_inspection_status": "passed: all 16 new-note preview pages and 15 display formulas viewed; full index/comparison/NOTICE and source previews, current UPLOAD and final verification pages reviewed; changed ISER pages rechecked after final edits."
   },
   "visual_review": {
-    "reviewed_on": "2026-10-12",
-    "scope": "All seven pages of the local new-note preview and all 13 new display formulas were inspected, including algorithm/theory and GLUE/C4 tables. README/comparison/NOTICE representative pages reviewed. Source/verification/UPLOAD previews generated; not all of their pages visually inspected. Local previews are not the final GitHub site."
+    "status": "passed",
+    "notes": "All 8 ISER and 8 FedALA-WR preview pages viewed, all 15 new display formulas viewed on two dedicated pages. Root index / comparison / NOTICE / UPLOAD and new source previews checked; final changed preview pages rerendered and rechecked.",
+    "scope": "Local rendering only; not GitHub server runtime and not model reproduction."
   },
   "source_pdf_review": {
-    "file": "From PowerSGD to PowerSGD+ Low-Rank Gradient Compression.pdf",
-    "physical_pages": 19,
-    "full_text_reference_appendices_read": true,
-    "visually_reviewed_physical_pages": [
-      1,
-      4,
-      6,
-      7,
-      8,
-      9,
-      11,
-      18,
-      19
-    ],
-    "sha256": "42d02bd274f8054293cb99634b3d78a1184719c92e4a5635341ce1f92b7de5d0",
-    "official_arxiv_pdf_byte_comparison": "not performed; official PDF header only was sampled",
-    "formal_conference_full_text": "not obtained",
-    "model_experiments_run": false,
-    "independent_formal_proof_verification": false
+    "ISER": {
+      "full_text_pages_read": 33,
+      "reference_pages": [
+        30,
+        31,
+        32,
+        33
+      ],
+      "visually_reviewed_physical_pages": [
+        1,
+        12,
+        13,
+        18,
+        20,
+        28,
+        29
+      ],
+      "publisher_byte_identical": true
+    },
+    "FedALA-WR": {
+      "full_text_pages_read": 17,
+      "reference_pages": [
+        16,
+        17
+      ],
+      "visually_reviewed_physical_pages": [
+        7,
+        8,
+        12,
+        15
+      ],
+      "publisher_pdf_byte_comparison": false
+    },
+    "PowerSGD_duplicate": {
+      "exact_byte_identity": true,
+      "pages": 19,
+      "additional_unique_paper": false,
+      "already_fully_read_as_paper_id": 7
+    }
   },
   "quantitative_cross_checks": {
-    "scope": "Arithmetic and source-transcription checks only; not reproduction experiments",
-    "glue_source": "Uploaded PDF physical p. 6 Table 1",
-    "glue_order": [
-      "CoLA",
-      "STS-B",
-      "MRPC",
-      "RTE",
-      "SST-2",
-      "MNLI",
-      "QQP",
-      "QNLI"
+    "iser_loracomp_open_seg_gain_relative_percent": 6.76630983639669,
+    "iser_transTIC_depth_gain_relative_percent": 97.78172138420585,
+    "iser_max_closed_detection_encoding_reduction_percent": 44.60813199764289,
+    "iser_depth_decoding_reduction_percent": 19.243986254295535,
+    "iser_reported_SV_overhead_unweighted_mean_percent": 0.9808333333333333,
+    "iser_Q1_SV_over_image_from_rounded_bpp_percent": 2.0388349514563107,
+    "iser_Q1_SV_over_total_from_rounded_bpp_percent": 2.0,
+    "fedala_WR_vs_FedALA_runtime_reduction_percent": 3.765827988817631,
+    "fedala_WR_main_table_accuracy_gains_percentage_points": [
+      0.28,
+      0.37,
+      0.77,
+      0.15,
+      0.54,
+      0.63
     ],
-    "glue": {
-      "Full precision": {
-        "scores": [
-          "62.89",
-          "90.29",
-          "92.41",
-          "79.78",
-          "94.38",
-          "87.20",
-          "91.74",
-          "92.42"
-        ],
-        "reported_avg": "86.35",
-        "calculated_mean": "86.38875"
-      },
-      "PowerSGD": {
-        "scores": [
-          "60.58",
-          "90.65",
-          "91.68",
-          "78.33",
-          "94.15",
-          "87.47",
-          "91.17",
-          "92.07"
-        ],
-        "reported_avg": "85.73",
-        "calculated_mean": "85.76250"
-      },
-      "GaLore": {
-        "scores": [
-          "62.64",
-          "89.68",
-          "91.96",
-          "77.62",
-          "94.15",
-          "87.50",
-          "90.53",
-          "92.07"
-        ],
-        "reported_avg": "85.70",
-        "calculated_mean": "85.76875"
-      },
-      "PowerSGD+": {
-        "scores": [
-          "62.85",
-          "90.67",
-          "92.54",
-          "79.42",
-          "94.38",
-          "87.08",
-          "91.14",
-          "92.13"
-        ],
-        "reported_avg": "86.28",
-        "calculated_mean": "86.27625"
-      }
-    },
-    "mean_discrepancy": "First three reported averages differ from the arithmetic mean of the eight displayed scores beyond ordinary two-decimal rounding; source values retained and marked pending.",
-    "c4_source": "Uploaded PDF physical p. 9 Table 3 and p. 19 Table 5",
-    "c4_ppl_difference_vs_powersgd": [
-      "-0.65",
-      "+0.06",
-      "-0.24",
-      "-0.13"
-    ],
-    "c4_token_arithmetic": {
-      "60M": 1310720000,
-      "130M": 2621440000
-    },
-    "communication": "Original coarse mr+nr+mn/tau and organizer-calculated replacement-cycle mr+nr+(mn-mr)/tau explicitly distinguished; no empirical byte/wall-clock claim"
+    "buffer_float32_100_RGB64_images_bytes": 4915200,
+    "interpretation": "Organizer calculations from reported rounded table values; not reproduction. Percentages of BD savings distinguished from percentage-point differences; zero TTFT times remain unreported."
   },
   "current_local_checks": {
-    "relative_links": 181,
-    "relative_errors": [],
-    "json_files": [
-      {
-        "file": "metadata/link-checks.json",
-        "valid": true
-      },
-      {
-        "file": "metadata/markdown-checks.json",
-        "valid": true
-      },
-      {
-        "file": "metadata/papers.json",
-        "valid": true
-      },
-      {
-        "file": "metadata/publication-verification.json",
-        "valid": true
-      }
-    ],
+    "markdown": 23,
+    "math": 429,
+    "tables": 70,
+    "relative_links": 231,
+    "bibtex_entries": 18,
+    "json_files": 4,
+    "public_pdfs": 4
+  },
+  "previous_published_github_runtime_check": {
+    "checked_on": "2026-10-12",
+    "published_commit": "1c580e38b1acfdbcecbf7da7b30a621d1e6b93dc",
+    "update_package_byte_identical_files": 17,
+    "sha256_checks_passed": 33,
+    "index_papers": 7,
+    "uploaded_version_pages": 138,
     "bibtex_entries": 14,
-    "public_pdf_identities": [
+    "browser_math_checks": [
       {
-        "file": "papers/2024-sun-ffa-lora/paper.pdf",
-        "pages": 17,
-        "bytes": 423335,
-        "sha256": "8c69b08e409ec1751d10268a4c73463aa0b5d93d159086d329da94b2e801ff1c"
+        "page": "PowerSGD+",
+        "components": 57,
+        "mathml_outputs": 57,
+        "errors": 0,
+        "pending": 0
       },
       {
-        "file": "papers/2024-wu-dr-encoder/paper.pdf",
-        "pages": 17,
-        "bytes": 4773361,
-        "sha256": "3cbc64725b916b8634ebf2984172dd82e0c691cc9d74322c6d680fd783dc5f7b"
+        "page": "CG-FedLLM",
+        "components": 66,
+        "mathml_outputs": 66,
+        "errors": 0,
+        "pending": 0
       },
       {
-        "file": "papers/2025-wu-cg-fedllm/paper.pdf",
-        "pages": 27,
-        "bytes": 8788962,
-        "sha256": "b878337481740d7343413b72cf9a54dca5ca3bf1f339ed6007526fc6cf889e4e"
+        "page": "FLASC",
+        "components": 34,
+        "mathml_outputs": 34,
+        "errors": 0,
+        "pending": 0
+      },
+      {
+        "page": "FFA-LoRA",
+        "components": 63,
+        "mathml_outputs": 63,
+        "errors": 0,
+        "pending": 0
+      },
+      {
+        "page": "DR-Encoder",
+        "components": 53,
+        "mathml_outputs": 53,
+        "errors": 0,
+        "pending": 0
+      },
+      {
+        "page": "SVD-LLM",
+        "components": 32,
+        "mathml_outputs": 32,
+        "errors": 0,
+        "pending": 0
+      },
+      {
+        "page": "AdaLoRA",
+        "components": 32,
+        "mathml_outputs": 32,
+        "errors": 0,
+        "pending": 0
+      },
+      {
+        "page": "comparison",
+        "components": 27,
+        "mathml_outputs": 27,
+        "errors": 0,
+        "pending": 0
       }
     ],
-    "new_attachment_identity": {
-      "pages": 19,
-      "bytes": 659326,
-      "sha256": "42d02bd274f8054293cb99634b3d78a1184719c92e4a5635341ce1f92b7de5d0",
-      "version": "2509.11254v1",
-      "repository_pdf_present": false
-    },
-    "uploaded_papers": 7,
-    "uploaded_pages": 138,
-    "checksums_expected": 33,
-    "new_pdf_in_repository": false
+    "browser_math_total": 364,
+    "cg_eta_symbol_correct": true,
+    "cg_gdp_visible_exclamation_marks": 0,
+    "representative_power_formula_screenshot_visually_reviewed": true,
+    "remote_mutations_performed": false
   },
   "github_online_display_verified": false,
   "github_online_display_attempt": {
-    "status": "not_completed_service_error",
-    "url": "https://github.com/zindigo321/paper-CGFedllm/blob/667cb40b1a81d7ed964cb7801dde4cfa5b65af04/papers/2025-wu-cg-fedllm/notes.md",
-    "attempts": 2,
-    "visible_message": "We're having a really bad day. The Unicorns have taken over.",
-    "scope": "Read-only attempt to inspect already-published prior fixes; no mathematical output obtained. Newly edited/added content not yet pushed and remains unverified online."
+    "status": "not executed for new unpublished notes",
+    "reason": "User will Commit/Push; previous published seven-paper success applies only to that scope."
   },
   "github_markdown_api_preview": {
-    "status": "not_requested",
-    "scope": "No unpublished Markdown sent to an external preview API; local preview used."
+    "status": "not executed for unpublished documents",
+    "note": "Local renderer used; prior approval rejection history retained, no attempted external preview transfer."
   },
+  "not_executed": [
+    "New GitHub runtime validation before user push",
+    "Author-code training or reproduction",
+    "Checkpoint/data verification",
+    "Real network timing",
+    "Privacy/adversarial attacks",
+    "Formal convergence proof"
+  ],
   "previous_snapshots": [
     {
       "checked_on": "2026-10-11",
@@ -1451,6 +3145,498 @@
         "scope": "Published baseline was checked with a read-only browser; corrected files were checked locally. No corrected unpublished Markdown was sent to a preview API."
       },
       "historical_validation_limitation": "KaTeX parsing and the presence of math-renderer placeholders do not prove that the final GitHub runtime rendered the formulas successfully. Earlier dated results are preserved below with that limited scope."
+    },
+    {
+      "checked_on": "2026-10-12",
+      "stage": "Seventh paper: complete uploaded PowerSGD+ arXiv v1 reading and local knowledge-base update",
+      "tracked_base_commit": "667cb40b1a81d7ed964cb7801dde4cfa5b65af04",
+      "syntax_renderer": "markdown-it 15.0.2 + KaTeX 0.19.0 strict",
+      "syntax": {
+        "files": [
+          {
+            "file": "NOTICE.md",
+            "math": 0,
+            "tables": 2
+          },
+          {
+            "file": "README.md",
+            "math": 0,
+            "tables": 2
+          },
+          {
+            "file": "UPLOAD.md",
+            "math": 0,
+            "tables": 0
+          },
+          {
+            "file": "comparison.md",
+            "math": 27,
+            "tables": 4
+          },
+          {
+            "file": "papers/2023-zhang-adalora/notes.md",
+            "math": 32,
+            "tables": 3
+          },
+          {
+            "file": "papers/2023-zhang-adalora/source.md",
+            "math": 0,
+            "tables": 0
+          },
+          {
+            "file": "papers/2024-kuo-flasc/notes.md",
+            "math": 34,
+            "tables": 3
+          },
+          {
+            "file": "papers/2024-kuo-flasc/source.md",
+            "math": 0,
+            "tables": 0
+          },
+          {
+            "file": "papers/2024-sun-ffa-lora/notes.md",
+            "math": 63,
+            "tables": 3
+          },
+          {
+            "file": "papers/2024-sun-ffa-lora/source.md",
+            "math": 0,
+            "tables": 0
+          },
+          {
+            "file": "papers/2024-wu-dr-encoder/notes.md",
+            "math": 53,
+            "tables": 3
+          },
+          {
+            "file": "papers/2024-wu-dr-encoder/source.md",
+            "math": 0,
+            "tables": 0
+          },
+          {
+            "file": "papers/2025-wang-svd-llm/notes.md",
+            "math": 32,
+            "tables": 3
+          },
+          {
+            "file": "papers/2025-wang-svd-llm/source.md",
+            "math": 0,
+            "tables": 0
+          },
+          {
+            "file": "papers/2025-wu-cg-fedllm/notes.md",
+            "math": 66,
+            "tables": 9
+          },
+          {
+            "file": "papers/2025-wu-cg-fedllm/source.md",
+            "math": 0,
+            "tables": 0
+          },
+          {
+            "file": "papers/2025-xie-powersgd-plus/notes.md",
+            "math": 57,
+            "tables": 8
+          },
+          {
+            "file": "papers/2025-xie-powersgd-plus/source.md",
+            "math": 0,
+            "tables": 0
+          },
+          {
+            "file": "verification.md",
+            "math": 0,
+            "tables": 5
+          }
+        ],
+        "math_count": 364,
+        "table_count": 45,
+        "failures": [],
+        "table_errors": [],
+        "orphan_table_rows": []
+      },
+      "new_paper_math": {
+        "file": "papers/2025-xie-powersgd-plus/notes.md",
+        "math_expressions": 57,
+        "display_expressions": 13,
+        "inline_expressions": 44
+      },
+      "github_compatibility_checks": {
+        "known_rejected_operatorname_in_math": 0,
+        "display_punctuation_escape_findings": 0,
+        "inline_delimiters": "Existing backtick-math dollar delimiters with outside spacing",
+        "display_delimiters": "Existing standalone double-dollar delimiters",
+        "multi_letter_function_names": "mathrm",
+        "scope": "Source scan and strict local KaTeX parsing only; not proof of final GitHub runtime output"
+      },
+      "previous_notes_preservation": [
+        {
+          "file": "papers/2023-zhang-adalora/notes.md",
+          "math": 32,
+          "formula_order_and_source_unchanged": true,
+          "previous_content_preserved": true
+        },
+        {
+          "file": "papers/2024-kuo-flasc/notes.md",
+          "math": 34,
+          "formula_order_and_source_unchanged": true,
+          "previous_content_preserved": true
+        },
+        {
+          "file": "papers/2024-sun-ffa-lora/notes.md",
+          "math": 63,
+          "formula_order_and_source_unchanged": true,
+          "previous_content_preserved": true
+        },
+        {
+          "file": "papers/2024-wu-dr-encoder/notes.md",
+          "math": 53,
+          "formula_order_and_source_unchanged": true,
+          "previous_content_preserved": true
+        },
+        {
+          "file": "papers/2025-wang-svd-llm/notes.md",
+          "math": 32,
+          "formula_order_and_source_unchanged": true,
+          "previous_content_preserved": true
+        },
+        {
+          "file": "papers/2025-wu-cg-fedllm/notes.md",
+          "math": 66,
+          "formula_order_and_source_unchanged": true,
+          "previous_content_preserved": true
+        }
+      ],
+      "local_print_preview": {
+        "checked_on": "2026-10-12",
+        "renderer": "Local HTML / KaTeX with WeasyPrint 70.0; not live GitHub",
+        "files": [
+          {
+            "file": "papers/2025-xie-powersgd-plus/notes.md",
+            "preview_pages": 7,
+            "text_extracted": true,
+            "replacement_characters": 0
+          },
+          {
+            "file": "papers/2025-xie-powersgd-plus/source.md",
+            "preview_pages": 1,
+            "text_extracted": true,
+            "replacement_characters": 0
+          },
+          {
+            "file": "README.md",
+            "preview_pages": 3,
+            "text_extracted": true,
+            "replacement_characters": 0
+          },
+          {
+            "file": "comparison.md",
+            "preview_pages": 4,
+            "text_extracted": true,
+            "replacement_characters": 0
+          },
+          {
+            "file": "NOTICE.md",
+            "preview_pages": 2,
+            "text_extracted": true,
+            "replacement_characters": 0
+          },
+          {
+            "file": "verification.md",
+            "preview_pages": 6,
+            "text_extracted": true,
+            "replacement_characters": 0
+          },
+          {
+            "file": "UPLOAD.md",
+            "preview_pages": 3,
+            "text_extracted": true,
+            "replacement_characters": 0
+          }
+        ],
+        "display_formula_review_pages": 2,
+        "display_formulas": 13,
+        "previous_notes_preservation": [
+          {
+            "file": "papers/2023-zhang-adalora/notes.md",
+            "math": 32,
+            "formula_order_and_source_unchanged": true,
+            "previous_content_preserved": true
+          },
+          {
+            "file": "papers/2024-kuo-flasc/notes.md",
+            "math": 34,
+            "formula_order_and_source_unchanged": true,
+            "previous_content_preserved": true
+          },
+          {
+            "file": "papers/2024-sun-ffa-lora/notes.md",
+            "math": 63,
+            "formula_order_and_source_unchanged": true,
+            "previous_content_preserved": true
+          },
+          {
+            "file": "papers/2024-wu-dr-encoder/notes.md",
+            "math": 53,
+            "formula_order_and_source_unchanged": true,
+            "previous_content_preserved": true
+          },
+          {
+            "file": "papers/2025-wang-svd-llm/notes.md",
+            "math": 32,
+            "formula_order_and_source_unchanged": true,
+            "previous_content_preserved": true
+          },
+          {
+            "file": "papers/2025-wu-cg-fedllm/notes.md",
+            "math": 66,
+            "formula_order_and_source_unchanged": true,
+            "previous_content_preserved": true
+          }
+        ],
+        "scope": "All new-note pages and new display formulas rendered for internal review; local output only. Visual inspection is recorded separately after images are examined.",
+        "bibtex": [
+          {
+            "file": "papers/2023-zhang-adalora/citation.bib",
+            "entries": 2,
+            "keys": [
+              "zhang2023adaptive_iclr",
+              "zhang2023adalora_arxiv_v2"
+            ],
+            "errors": []
+          },
+          {
+            "file": "papers/2024-kuo-flasc/citation.bib",
+            "entries": 2,
+            "keys": [
+              "kuo2024federated_arxiv_v1",
+              "kuo2026flasc_cais"
+            ],
+            "errors": []
+          },
+          {
+            "file": "papers/2024-sun-ffa-lora/citation.bib",
+            "entries": 2,
+            "keys": [
+              "sun2024improving_iclr",
+              "sun2024improving_arxiv_v1"
+            ],
+            "errors": []
+          },
+          {
+            "file": "papers/2024-wu-dr-encoder/citation.bib",
+            "entries": 2,
+            "keys": [
+              "wu2025drencoder_aaai",
+              "wu2024drencoder_arxiv_v1"
+            ],
+            "errors": []
+          },
+          {
+            "file": "papers/2025-wang-svd-llm/citation.bib",
+            "entries": 2,
+            "keys": [
+              "wang2025svdllm_iclr",
+              "wang2025svdllm_arxiv_v5"
+            ],
+            "errors": []
+          },
+          {
+            "file": "papers/2025-wu-cg-fedllm/citation.bib",
+            "entries": 2,
+            "keys": [
+              "wu2025cgfedllm_arxiv_v3",
+              "wu2025cgfedllm_ecai"
+            ],
+            "errors": []
+          },
+          {
+            "file": "papers/2025-xie-powersgd-plus/citation.bib",
+            "entries": 2,
+            "keys": [
+              "xie2025powersgdplus_arxiv_v1",
+              "xie2026powersgdplus_icassp"
+            ],
+            "errors": []
+          }
+        ]
+      },
+      "visual_review": {
+        "reviewed_on": "2026-10-12",
+        "scope": "All seven pages of the local new-note preview and all 13 new display formulas were inspected, including algorithm/theory and GLUE/C4 tables. README/comparison/NOTICE representative pages reviewed. Source/verification/UPLOAD previews generated; not all of their pages visually inspected. Local previews are not the final GitHub site."
+      },
+      "source_pdf_review": {
+        "file": "From PowerSGD to PowerSGD+ Low-Rank Gradient Compression.pdf",
+        "physical_pages": 19,
+        "full_text_reference_appendices_read": true,
+        "visually_reviewed_physical_pages": [
+          1,
+          4,
+          6,
+          7,
+          8,
+          9,
+          11,
+          18,
+          19
+        ],
+        "sha256": "42d02bd274f8054293cb99634b3d78a1184719c92e4a5635341ce1f92b7de5d0",
+        "official_arxiv_pdf_byte_comparison": "not performed; official PDF header only was sampled",
+        "formal_conference_full_text": "not obtained",
+        "model_experiments_run": false,
+        "independent_formal_proof_verification": false
+      },
+      "quantitative_cross_checks": {
+        "scope": "Arithmetic and source-transcription checks only; not reproduction experiments",
+        "glue_source": "Uploaded PDF physical p. 6 Table 1",
+        "glue_order": [
+          "CoLA",
+          "STS-B",
+          "MRPC",
+          "RTE",
+          "SST-2",
+          "MNLI",
+          "QQP",
+          "QNLI"
+        ],
+        "glue": {
+          "Full precision": {
+            "scores": [
+              "62.89",
+              "90.29",
+              "92.41",
+              "79.78",
+              "94.38",
+              "87.20",
+              "91.74",
+              "92.42"
+            ],
+            "reported_avg": "86.35",
+            "calculated_mean": "86.38875"
+          },
+          "PowerSGD": {
+            "scores": [
+              "60.58",
+              "90.65",
+              "91.68",
+              "78.33",
+              "94.15",
+              "87.47",
+              "91.17",
+              "92.07"
+            ],
+            "reported_avg": "85.73",
+            "calculated_mean": "85.76250"
+          },
+          "GaLore": {
+            "scores": [
+              "62.64",
+              "89.68",
+              "91.96",
+              "77.62",
+              "94.15",
+              "87.50",
+              "90.53",
+              "92.07"
+            ],
+            "reported_avg": "85.70",
+            "calculated_mean": "85.76875"
+          },
+          "PowerSGD+": {
+            "scores": [
+              "62.85",
+              "90.67",
+              "92.54",
+              "79.42",
+              "94.38",
+              "87.08",
+              "91.14",
+              "92.13"
+            ],
+            "reported_avg": "86.28",
+            "calculated_mean": "86.27625"
+          }
+        },
+        "mean_discrepancy": "First three reported averages differ from the arithmetic mean of the eight displayed scores beyond ordinary two-decimal rounding; source values retained and marked pending.",
+        "c4_source": "Uploaded PDF physical p. 9 Table 3 and p. 19 Table 5",
+        "c4_ppl_difference_vs_powersgd": [
+          "-0.65",
+          "+0.06",
+          "-0.24",
+          "-0.13"
+        ],
+        "c4_token_arithmetic": {
+          "60M": 1310720000,
+          "130M": 2621440000
+        },
+        "communication": "Original coarse mr+nr+mn/tau and organizer-calculated replacement-cycle mr+nr+(mn-mr)/tau explicitly distinguished; no empirical byte/wall-clock claim"
+      },
+      "current_local_checks": {
+        "relative_links": 181,
+        "relative_errors": [],
+        "json_files": [
+          {
+            "file": "metadata/link-checks.json",
+            "valid": true
+          },
+          {
+            "file": "metadata/markdown-checks.json",
+            "valid": true
+          },
+          {
+            "file": "metadata/papers.json",
+            "valid": true
+          },
+          {
+            "file": "metadata/publication-verification.json",
+            "valid": true
+          }
+        ],
+        "bibtex_entries": 14,
+        "public_pdf_identities": [
+          {
+            "file": "papers/2024-sun-ffa-lora/paper.pdf",
+            "pages": 17,
+            "bytes": 423335,
+            "sha256": "8c69b08e409ec1751d10268a4c73463aa0b5d93d159086d329da94b2e801ff1c"
+          },
+          {
+            "file": "papers/2024-wu-dr-encoder/paper.pdf",
+            "pages": 17,
+            "bytes": 4773361,
+            "sha256": "3cbc64725b916b8634ebf2984172dd82e0c691cc9d74322c6d680fd783dc5f7b"
+          },
+          {
+            "file": "papers/2025-wu-cg-fedllm/paper.pdf",
+            "pages": 27,
+            "bytes": 8788962,
+            "sha256": "b878337481740d7343413b72cf9a54dca5ca3bf1f339ed6007526fc6cf889e4e"
+          }
+        ],
+        "new_attachment_identity": {
+          "pages": 19,
+          "bytes": 659326,
+          "sha256": "42d02bd274f8054293cb99634b3d78a1184719c92e4a5635341ce1f92b7de5d0",
+          "version": "2509.11254v1",
+          "repository_pdf_present": false
+        },
+        "uploaded_papers": 7,
+        "uploaded_pages": 138,
+        "checksums_expected": 33,
+        "new_pdf_in_repository": false
+      },
+      "github_online_display_verified": false,
+      "github_online_display_attempt": {
+        "status": "not_completed_service_error",
+        "url": "https://github.com/zindigo321/paper-CGFedllm/blob/667cb40b1a81d7ed964cb7801dde4cfa5b65af04/papers/2025-wu-cg-fedllm/notes.md",
+        "attempts": 2,
+        "visible_message": "We're having a really bad day. The Unicorns have taken over.",
+        "scope": "Read-only attempt to inspect already-published prior fixes; no mathematical output obtained. Newly edited/added content not yet pushed and remains unverified online."
+      },
+      "github_markdown_api_preview": {
+        "status": "not_requested",
+        "scope": "No unpublished Markdown sent to an external preview API; local preview used."
+      }
     }
   ]
 }

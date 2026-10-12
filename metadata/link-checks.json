@@ -1,7 +1,7 @@
 {
   "checked_on": "2026-10-12",
-  "markdown_files": 19,
-  "internal_links_checked": 181,
+  "markdown_files": 23,
+  "internal_links_checked": 231,
   "internal_errors": [],
   "bibtex": [
     {
@@ -66,6 +66,24 @@
         "xie2026powersgdplus_icassp"
       ],
       "errors": []
+    },
+    {
+      "file": "papers/2026-park-iser/citation.bib",
+      "entries": 2,
+      "keys": [
+        "park2026iser_electronics",
+        "park2025loracomp_cvpr"
+      ],
+      "errors": []
+    },
+    {
+      "file": "papers/2026-singh-fedala-wr/citation.bib",
+      "entries": 2,
+      "keys": [
+        "singh2026fedalawr_cluster",
+        "zhang2023fedala_aaai"
+      ],
+      "errors": []
     }
   ],
   "json": [
@@ -106,20 +124,45 @@
       "pages": 27,
       "bytes": 8788962,
       "sha256": "b878337481740d7343413b72cf9a54dca5ca3bf1f339ed6007526fc6cf889e4e"
+    },
+    {
+      "file": "papers/2026-park-iser/paper.pdf",
+      "pages": 33,
+      "bytes": 7130708,
+      "sha256": "b103275dbb10330b6decfd99be18a3ecd711019defb11dd7669d05fb25f83fe5"
     }
   ],
-  "existing_cg_pdf_byte_identical": true,
-  "original_pdfs": 7,
-  "public_pdfs": 3,
-  "bibtex_entries": 14,
-  "tracked_base_commit": "667cb40b1a81d7ed964cb7801dde4cfa5b65af04",
+  "tracked_base_commit": "1c580e38b1acfdbcecbf7da7b30a621d1e6b93dc",
+  "new_attachment_identities": [
+    {
+      "paper_id": 8,
+      "uploaded_filename": "ISER Instance-Specific Early Stopping with Dynamic Low-Rank Adaptation for Learned Image Compression.pdf",
+      "pages": 33,
+      "bytes": 7130708,
+      "sha256": "b103275dbb10330b6decfd99be18a3ecd711019defb11dd7669d05fb25f83fe5",
+      "public_pdf": true
+    },
+    {
+      "paper_id": 9,
+      "uploaded_filename": "FedALA-WR.pdf",
+      "pages": 17,
+      "bytes": 2701745,
+      "sha256": "f8b0ceabe7394e2011b29e5db4ef05f8b17d6988d25b50ddec8e9997e4c0a653",
+      "public_pdf": false
+    },
+    {
+      "paper_id": 7,
+      "uploaded_filename": "From PowerSGD to PowerSGD.pdf",
+      "pages": 19,
+      "bytes": 659326,
+      "sha256": "42d02bd274f8054293cb99634b3d78a1184719c92e4a5635341ce1f92b7de5d0",
+      "public_pdf": false
+    }
+  ],
+  "duplicate_upload_exact_byte_identity": true,
   "preserved_files": [
     {
       "file": "papers/2023-zhang-adalora/citation.bib",
-      "unchanged": true
-    },
-    {
-      "file": "papers/2023-zhang-adalora/notes.md",
       "unchanged": true
     },
     {
@@ -155,6 +198,10 @@
       "unchanged": true
     },
     {
+      "file": "papers/2024-wu-dr-encoder/notes.md",
+      "unchanged": true
+    },
+    {
       "file": "papers/2024-wu-dr-encoder/paper.pdf",
       "unchanged": true
     },
@@ -181,84 +228,171 @@
     {
       "file": "papers/2025-wu-cg-fedllm/source.md",
       "unchanged": true
+    },
+    {
+      "file": "papers/2025-xie-powersgd-plus/citation.bib",
+      "unchanged": true
+    },
+    {
+      "file": "papers/2025-xie-powersgd-plus/notes.md",
+      "unchanged": true
     }
   ],
-  "new_attachment_identity": {
-    "pages": 19,
-    "bytes": 659326,
-    "sha256": "42d02bd274f8054293cb99634b3d78a1184719c92e4a5635341ce1f92b7de5d0",
-    "version": "2509.11254v1",
-    "repository_pdf_present": false
-  },
+  "previous_notes_math_preservation": [
+    {
+      "file": "papers/2023-zhang-adalora/notes.md",
+      "formula_count": 32,
+      "source_and_order_unchanged": true
+    },
+    {
+      "file": "papers/2024-kuo-flasc/notes.md",
+      "formula_count": 34,
+      "source_and_order_unchanged": true
+    },
+    {
+      "file": "papers/2024-sun-ffa-lora/notes.md",
+      "formula_count": 63,
+      "source_and_order_unchanged": true
+    },
+    {
+      "file": "papers/2024-wu-dr-encoder/notes.md",
+      "formula_count": 53,
+      "source_and_order_unchanged": true
+    },
+    {
+      "file": "papers/2025-wang-svd-llm/notes.md",
+      "formula_count": 32,
+      "source_and_order_unchanged": true
+    },
+    {
+      "file": "papers/2025-wu-cg-fedllm/notes.md",
+      "formula_count": 66,
+      "source_and_order_unchanged": true
+    },
+    {
+      "file": "papers/2025-xie-powersgd-plus/notes.md",
+      "formula_count": 57,
+      "source_and_order_unchanged": true
+    }
+  ],
+  "unique_uploaded_papers": 9,
+  "total_uploaded_pages": 188,
+  "public_pdfs": 4,
+  "bibtex_entries": 18,
   "known_github_macro_and_display_escape_checks": "passed",
-  "stage": "PowerSGD+ addition: current local structure and only newly introduced external URL samples",
-  "scope": "Current seven-paper relative links, full JSON/BibTeX and unchanged public PDF identities. New external URLs sampled; original URL responses and their dates preserved in previous_snapshots. HTTP status alone does not establish full-text or math-rendering success.",
+  "scope": "Nine unique uploaded papers /188 pages, all current local relative links, tables, JSON/BibTeX, four public PDFs. 18 new URL samples only; prior scopes/dates retained. Live display of new documents not verified before user push.",
   "external_links": [
     {
-      "url": "https://api.crossref.org/works/10.1109/ICASSP55912.2026.11465020",
-      "status": null,
-      "note": "<urlopen error timed out>; the earlier separate bibliographic request succeeded and its full JSON was read and saved."
+      "url": "https://api.crossref.org/works/10.1007/s10586-026-06366-5",
+      "status": 200,
+      "final_url": "https://api.crossref.org/works/10.1007/s10586-026-06366-5",
+      "content_type": "application/json"
     },
     {
-      "url": "https://arxiv.org/abs/2509.11254v1",
+      "url": "https://api.crossref.org/works/10.3390/electronics15173807",
       "status": 200,
-      "final_url": "https://arxiv.org/abs/2509.11254v1",
+      "final_url": "https://api.crossref.org/works/10.3390/electronics15173807",
+      "content_type": "application/json"
+    },
+    {
+      "url": "https://docs.pytorch.org/docs/2.14/generated/torch.Tensor.detach.html",
+      "status": 200,
+      "final_url": "https://docs.pytorch.org/docs/2.14/generated/torch.Tensor.detach.html",
       "content_type": "text/html; charset=utf-8"
     },
     {
-      "url": "https://arxiv.org/pdf/2509.11254v1",
+      "url": "https://doi.org/10.1007/s10586-026-06366-5",
       "status": 200,
-      "final_url": "https://arxiv.org/pdf/2509.11254v1",
+      "final_url": "https://link.springer.com/article/10.1007/s10586-026-06366-5?error=cookies_not_supported&code=9f904ef5-b5ef-47ec-831a-3ff553199545",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://doi.org/10.1609/aaai.v37i9.26330",
+      "status": 200,
+      "final_url": "https://ojs.aaai.org/index.php/AAAI/article/view/26330",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://doi.org/10.3390/electronics15173807",
+      "status": 200,
+      "final_url": "https://www.mdpi.com/2079-9292/15/17/3807",
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://github.com/TsingZ0/FedALA",
+      "status": 200,
+      "final_url": "https://github.com/TsingZ0/FedALA",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/tinku1984/FedALA_WR",
+      "status": 200,
+      "final_url": "https://github.com/tinku1984/FedALA_WR",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/tinku1984/FedALA_WR/commit/90b5038a4b48220d0e4912e0ef9e37a7b145fd09",
+      "status": 200,
+      "final_url": "https://github.com/tinku1984/FedALA_WR/commit/90b5038a4b48220d0e4912e0ef9e37a7b145fd09",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/unkipark/ISER",
+      "status": 200,
+      "final_url": "https://github.com/unkipark/ISER",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/unkipark/ISER/commit/1c66c38d3a4c92b5aae767f15d94473955c50928",
+      "status": 200,
+      "final_url": "https://github.com/unkipark/ISER/commit/1c66c38d3a4c92b5aae767f15d94473955c50928",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/zindigo321/paper-CGFedllm/commit/1c580e38b1acfdbcecbf7da7b30a621d1e6b93dc",
+      "status": 200,
+      "final_url": "https://github.com/zindigo321/paper-CGFedllm/commit/1c580e38b1acfdbcecbf7da7b30a621d1e6b93dc",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://link.springer.com/article/10.1007/s10586-026-06366-5",
+      "status": null,
+      "note": "<urlopen error timed out>"
+    },
+    {
+      "url": "https://link.springer.com/content/pdf/10.1007/s10586-026-06366-5.pdf",
+      "status": null,
+      "note": "<urlopen error timed out>"
+    },
+    {
+      "url": "https://ojs.aaai.org/index.php/AAAI/article/view/26330",
+      "status": 200,
+      "final_url": "https://ojs.aaai.org/index.php/AAAI/article/view/26330",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Park_Test-Time_Fine-Tuning_of_Image_Compression_Models_for_Multi-Task_Adaptability_CVPR_2025_paper.html",
+      "status": 200,
+      "final_url": "https://openaccess.thecvf.com/content/CVPR2025/html/Park_Test-Time_Fine-Tuning_of_Image_Compression_Models_for_Multi-Task_Adaptability_CVPR_2025_paper.html",
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.mdpi.com/2079-9292/15/17/3807",
+      "status": 200,
+      "final_url": "https://www.mdpi.com/2079-9292/15/17/3807",
+      "content_type": "text/html;charset=utf-8"
+    },
+    {
+      "url": "https://www.mdpi.com/2079-9292/15/17/3807/pdf",
+      "status": 200,
+      "final_url": "https://mdpi-res.com/d_attachment/electronics/electronics-15-03807/article_deploy/electronics-15-03807.pdf?version=1787650006",
       "content_type": "application/pdf",
       "pdf_header": true
-    },
-    {
-      "url": "https://doi.org/10.1109/ICASSP55912.2026.11465020",
-      "status": 202,
-      "final_url": "https://ieeexplore.ieee.org/document/11465020/",
-      "content_type": "text/html; charset=UTF-8",
-      "note": "HTTP 202 HTML; search reader separately displayed a JavaScript/robot verification wall. Formal full text was not obtained."
-    },
-    {
-      "url": "https://doi.org/10.48550/arXiv.2509.11254",
-      "status": 200,
-      "final_url": "https://arxiv.org/abs/2509.11254",
-      "content_type": "text/html; charset=utf-8"
-    },
-    {
-      "url": "https://github.com/epfml/powersgd",
-      "status": 200,
-      "final_url": "https://github.com/epfml/powersgd",
-      "content_type": "text/html; charset=utf-8",
-      "note": "HTTP response sample only; repository metadata/readme was available through the GitHub plugin. This does not validate browser math output."
-    },
-    {
-      "url": "https://github.com/zindigo321/paper-CGFedllm/commit/667cb40b1a81d7ed964cb7801dde4cfa5b65af04",
-      "status": 200,
-      "final_url": "https://github.com/zindigo321/paper-CGFedllm/commit/667cb40b1a81d7ed964cb7801dde4cfa5b65af04",
-      "content_type": "text/html; charset=utf-8",
-      "note": "HTTP response sample only; repository metadata/readme was available through the GitHub plugin. This does not validate browser math output."
-    },
-    {
-      "url": "https://ieeexplore.ieee.org/document/11465020/",
-      "status": 202,
-      "final_url": "https://ieeexplore.ieee.org/document/11465020/",
-      "content_type": "text/html; charset=UTF-8",
-      "note": "HTTP 202 HTML; search reader separately displayed a JavaScript/robot verification wall. Formal full text was not obtained."
-    },
-    {
-      "url": "https://www.cmsworkshops.com/ICASSP2026/view_paper.php?PaperNum=6804&bare=1",
-      "status": null,
-      "note": "<urlopen error timed out>; the official schedule metadata was read through the search reader."
     }
   ],
-  "external_links_check": {
-    "scope": "9 newly introduced Markdown URLs only; unchanged URLs not rechecked",
-    "status_200": 5,
-    "status_202": 2,
-    "timeouts": 2,
-    "metadata_reader_difference": "Earlier direct Crossref bibliographic request succeeded and was fully read; later link sample timed out. Official conference schedule metadata was read through search, while its later direct link sample timed out. IEEE search reader displayed an explicit JavaScript/robot verification page."
-  },
+  "external_check_scope": "New Markdown URLs only; unchanged responses retained in dated historical snapshots. HTTP sampling is separate from earlier successful primary metadata reads.",
+  "stage": "ISER / FedALA-WR addition and duplicate PowerSGD identity, current nine-paper local checks",
+  "current_table_count": 70,
   "previous_snapshots": [
     {
       "markdown_files": 15,
@@ -1169,6 +1303,351 @@
         "previous_results": "previous_snapshots",
         "reason": "No paper source, DOI, license or code links changed. GitHub mathematical-expression documentation and the public macro issue were read separately as technical evidence."
       }
+    },
+    {
+      "checked_on": "2026-10-12",
+      "markdown_files": 19,
+      "internal_links_checked": 181,
+      "internal_errors": [],
+      "bibtex": [
+        {
+          "file": "papers/2023-zhang-adalora/citation.bib",
+          "entries": 2,
+          "keys": [
+            "zhang2023adaptive_iclr",
+            "zhang2023adalora_arxiv_v2"
+          ],
+          "errors": []
+        },
+        {
+          "file": "papers/2024-kuo-flasc/citation.bib",
+          "entries": 2,
+          "keys": [
+            "kuo2024federated_arxiv_v1",
+            "kuo2026flasc_cais"
+          ],
+          "errors": []
+        },
+        {
+          "file": "papers/2024-sun-ffa-lora/citation.bib",
+          "entries": 2,
+          "keys": [
+            "sun2024improving_iclr",
+            "sun2024improving_arxiv_v1"
+          ],
+          "errors": []
+        },
+        {
+          "file": "papers/2024-wu-dr-encoder/citation.bib",
+          "entries": 2,
+          "keys": [
+            "wu2025drencoder_aaai",
+            "wu2024drencoder_arxiv_v1"
+          ],
+          "errors": []
+        },
+        {
+          "file": "papers/2025-wang-svd-llm/citation.bib",
+          "entries": 2,
+          "keys": [
+            "wang2025svdllm_iclr",
+            "wang2025svdllm_arxiv_v5"
+          ],
+          "errors": []
+        },
+        {
+          "file": "papers/2025-wu-cg-fedllm/citation.bib",
+          "entries": 2,
+          "keys": [
+            "wu2025cgfedllm_arxiv_v3",
+            "wu2025cgfedllm_ecai"
+          ],
+          "errors": []
+        },
+        {
+          "file": "papers/2025-xie-powersgd-plus/citation.bib",
+          "entries": 2,
+          "keys": [
+            "xie2025powersgdplus_arxiv_v1",
+            "xie2026powersgdplus_icassp"
+          ],
+          "errors": []
+        }
+      ],
+      "json": [
+        {
+          "file": "metadata/link-checks.json",
+          "valid": true
+        },
+        {
+          "file": "metadata/markdown-checks.json",
+          "valid": true
+        },
+        {
+          "file": "metadata/papers.json",
+          "valid": true
+        },
+        {
+          "file": "metadata/publication-verification.json",
+          "valid": true
+        }
+      ],
+      "table_errors": [],
+      "row_errors": [],
+      "pdfs": [
+        {
+          "file": "papers/2024-sun-ffa-lora/paper.pdf",
+          "pages": 17,
+          "bytes": 423335,
+          "sha256": "8c69b08e409ec1751d10268a4c73463aa0b5d93d159086d329da94b2e801ff1c"
+        },
+        {
+          "file": "papers/2024-wu-dr-encoder/paper.pdf",
+          "pages": 17,
+          "bytes": 4773361,
+          "sha256": "3cbc64725b916b8634ebf2984172dd82e0c691cc9d74322c6d680fd783dc5f7b"
+        },
+        {
+          "file": "papers/2025-wu-cg-fedllm/paper.pdf",
+          "pages": 27,
+          "bytes": 8788962,
+          "sha256": "b878337481740d7343413b72cf9a54dca5ca3bf1f339ed6007526fc6cf889e4e"
+        }
+      ],
+      "existing_cg_pdf_byte_identical": true,
+      "original_pdfs": 7,
+      "public_pdfs": 3,
+      "bibtex_entries": 14,
+      "tracked_base_commit": "667cb40b1a81d7ed964cb7801dde4cfa5b65af04",
+      "preserved_files": [
+        {
+          "file": "papers/2023-zhang-adalora/citation.bib",
+          "unchanged": true
+        },
+        {
+          "file": "papers/2023-zhang-adalora/notes.md",
+          "unchanged": true
+        },
+        {
+          "file": "papers/2023-zhang-adalora/source.md",
+          "unchanged": true
+        },
+        {
+          "file": "papers/2024-kuo-flasc/citation.bib",
+          "unchanged": true
+        },
+        {
+          "file": "papers/2024-kuo-flasc/notes.md",
+          "unchanged": true
+        },
+        {
+          "file": "papers/2024-kuo-flasc/source.md",
+          "unchanged": true
+        },
+        {
+          "file": "papers/2024-sun-ffa-lora/citation.bib",
+          "unchanged": true
+        },
+        {
+          "file": "papers/2024-sun-ffa-lora/paper.pdf",
+          "unchanged": true
+        },
+        {
+          "file": "papers/2024-sun-ffa-lora/source.md",
+          "unchanged": true
+        },
+        {
+          "file": "papers/2024-wu-dr-encoder/citation.bib",
+          "unchanged": true
+        },
+        {
+          "file": "papers/2024-wu-dr-encoder/paper.pdf",
+          "unchanged": true
+        },
+        {
+          "file": "papers/2024-wu-dr-encoder/source.md",
+          "unchanged": true
+        },
+        {
+          "file": "papers/2025-wang-svd-llm/citation.bib",
+          "unchanged": true
+        },
+        {
+          "file": "papers/2025-wang-svd-llm/source.md",
+          "unchanged": true
+        },
+        {
+          "file": "papers/2025-wu-cg-fedllm/citation.bib",
+          "unchanged": true
+        },
+        {
+          "file": "papers/2025-wu-cg-fedllm/paper.pdf",
+          "unchanged": true
+        },
+        {
+          "file": "papers/2025-wu-cg-fedllm/source.md",
+          "unchanged": true
+        }
+      ],
+      "new_attachment_identity": {
+        "pages": 19,
+        "bytes": 659326,
+        "sha256": "42d02bd274f8054293cb99634b3d78a1184719c92e4a5635341ce1f92b7de5d0",
+        "version": "2509.11254v1",
+        "repository_pdf_present": false
+      },
+      "known_github_macro_and_display_escape_checks": "passed",
+      "stage": "PowerSGD+ addition: current local structure and only newly introduced external URL samples",
+      "scope": "Current seven-paper relative links, full JSON/BibTeX and unchanged public PDF identities. New external URLs sampled; original URL responses and their dates preserved in previous_snapshots. HTTP status alone does not establish full-text or math-rendering success.",
+      "external_links": [
+        {
+          "url": "https://api.crossref.org/works/10.1109/ICASSP55912.2026.11465020",
+          "status": null,
+          "note": "<urlopen error timed out>; the earlier separate bibliographic request succeeded and its full JSON was read and saved."
+        },
+        {
+          "url": "https://arxiv.org/abs/2509.11254v1",
+          "status": 200,
+          "final_url": "https://arxiv.org/abs/2509.11254v1",
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://arxiv.org/pdf/2509.11254v1",
+          "status": 200,
+          "final_url": "https://arxiv.org/pdf/2509.11254v1",
+          "content_type": "application/pdf",
+          "pdf_header": true
+        },
+        {
+          "url": "https://doi.org/10.1109/ICASSP55912.2026.11465020",
+          "status": 202,
+          "final_url": "https://ieeexplore.ieee.org/document/11465020/",
+          "content_type": "text/html; charset=UTF-8",
+          "note": "HTTP 202 HTML; search reader separately displayed a JavaScript/robot verification wall. Formal full text was not obtained."
+        },
+        {
+          "url": "https://doi.org/10.48550/arXiv.2509.11254",
+          "status": 200,
+          "final_url": "https://arxiv.org/abs/2509.11254",
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://github.com/epfml/powersgd",
+          "status": 200,
+          "final_url": "https://github.com/epfml/powersgd",
+          "content_type": "text/html; charset=utf-8",
+          "note": "HTTP response sample only; repository metadata/readme was available through the GitHub plugin. This does not validate browser math output."
+        },
+        {
+          "url": "https://github.com/zindigo321/paper-CGFedllm/commit/667cb40b1a81d7ed964cb7801dde4cfa5b65af04",
+          "status": 200,
+          "final_url": "https://github.com/zindigo321/paper-CGFedllm/commit/667cb40b1a81d7ed964cb7801dde4cfa5b65af04",
+          "content_type": "text/html; charset=utf-8",
+          "note": "HTTP response sample only; repository metadata/readme was available through the GitHub plugin. This does not validate browser math output."
+        },
+        {
+          "url": "https://ieeexplore.ieee.org/document/11465020/",
+          "status": 202,
+          "final_url": "https://ieeexplore.ieee.org/document/11465020/",
+          "content_type": "text/html; charset=UTF-8",
+          "note": "HTTP 202 HTML; search reader separately displayed a JavaScript/robot verification wall. Formal full text was not obtained."
+        },
+        {
+          "url": "https://www.cmsworkshops.com/ICASSP2026/view_paper.php?PaperNum=6804&bare=1",
+          "status": null,
+          "note": "<urlopen error timed out>; the official schedule metadata was read through the search reader."
+        }
+      ],
+      "external_links_check": {
+        "scope": "9 newly introduced Markdown URLs only; unchanged URLs not rechecked",
+        "status_200": 5,
+        "status_202": 2,
+        "timeouts": 2,
+        "metadata_reader_difference": "Earlier direct Crossref bibliographic request succeeded and was fully read; later link sample timed out. Official conference schedule metadata was read through search, while its later direct link sample timed out. IEEE search reader displayed an explicit JavaScript/robot verification page."
+      }
     }
-  ]
+  ],
+  "previous_publication_browser_math_check": {
+    "checked_on": "2026-10-12",
+    "published_commit": "1c580e38b1acfdbcecbf7da7b30a621d1e6b93dc",
+    "update_package_byte_identical_files": 17,
+    "sha256_checks_passed": 33,
+    "index_papers": 7,
+    "uploaded_version_pages": 138,
+    "bibtex_entries": 14,
+    "browser_math_checks": [
+      {
+        "page": "PowerSGD+",
+        "components": 57,
+        "mathml_outputs": 57,
+        "errors": 0,
+        "pending": 0
+      },
+      {
+        "page": "CG-FedLLM",
+        "components": 66,
+        "mathml_outputs": 66,
+        "errors": 0,
+        "pending": 0
+      },
+      {
+        "page": "FLASC",
+        "components": 34,
+        "mathml_outputs": 34,
+        "errors": 0,
+        "pending": 0
+      },
+      {
+        "page": "FFA-LoRA",
+        "components": 63,
+        "mathml_outputs": 63,
+        "errors": 0,
+        "pending": 0
+      },
+      {
+        "page": "DR-Encoder",
+        "components": 53,
+        "mathml_outputs": 53,
+        "errors": 0,
+        "pending": 0
+      },
+      {
+        "page": "SVD-LLM",
+        "components": 32,
+        "mathml_outputs": 32,
+        "errors": 0,
+        "pending": 0
+      },
+      {
+        "page": "AdaLoRA",
+        "components": 32,
+        "mathml_outputs": 32,
+        "errors": 0,
+        "pending": 0
+      },
+      {
+        "page": "comparison",
+        "components": 27,
+        "mathml_outputs": 27,
+        "errors": 0,
+        "pending": 0
+      }
+    ],
+    "browser_math_total": 364,
+    "cg_eta_symbol_correct": true,
+    "cg_gdp_visible_exclamation_marks": 0,
+    "representative_power_formula_screenshot_visually_reviewed": true,
+    "remote_mutations_performed": false
+  },
+  "publisher_pdf_byte_check": {
+    "url": "https://www.mdpi.com/2079-9292/15/17/3807/pdf",
+    "final_url": "https://mdpi-res.com/d_attachment/electronics/electronics-15-03807/article_deploy/electronics-15-03807.pdf?version=1787650006",
+    "status": 200,
+    "content_type": "application/pdf",
+    "pages": 33,
+    "bytes": 7130708,
+    "sha256": "b103275dbb10330b6decfd99be18a3ecd711019defb11dd7669d05fb25f83fe5",
+    "attachment_byte_identical": true,
+    "checked_on": "2026-10-12"
+  }
 }

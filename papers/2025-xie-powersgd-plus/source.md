@@ -18,4 +18,10 @@
 
 IEEE Xplore 直接页面出现验证限制，正式 5 页 PDF 未取得；阅读仍依据 19 页 v1，不宣称完成两版内容对照。Crossref 的正式许可链接为 IEEE policy-029 / policy-037，未将其当作 CC 许可或上传 v1 的再分发授权。正式年份 2026 不改变本目录年份。
 
+## 2026-10-12：重复上传件核对
+
+本次附件 `From PowerSGD to PowerSGD.pdf` 与先前的 `From PowerSGD to PowerSGD+ Low-Rank Gradient Compression.pdf` **逐字节一致**：19页、659,326 bytes、相同 SHA-256 `42d02bd274f8054293cb99634b3d78a1184719c92e4a5635341ce1f92b7de5d0`。仅文件名不同，不是另一篇 PowerSGD 论文或新版本。
+
+沿用编号7、原目录 / 笔记 / 双版本引用，metadata 记录本次文件名别名；不重复增加论文数 / 页数，不重新公开复制非独占许可 PDF。既有作者、日期和正式出版区别保持。
+
 [阅读笔记](notes.md) · [BibTeX](citation.bib) · [仓库总览](../../README.md) · [跨论文比较](../../comparison.md)

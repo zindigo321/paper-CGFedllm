@@ -4,15 +4,18 @@
 
 ## 已收录的原始 PDF
 
-以下三个文件仅将上传件改名为 `paper.pdf`，内容和字节保持不变；完整作者、题名、原始文件名、版本、来源、SHA-256 与许可证据见相应 `source.md`。
+以下四个文件仅将上传件改名为 `paper.pdf`，内容和字节保持不变；完整作者、题名、原始文件名、版本、来源、SHA-256 与许可证据见相应 `source.md`。
 
 | 文件 | 作者署名 | 上传版本 | 论文适用许可 |
 | --- | --- | --- | --- |
 | [DR-Encoder PDF](papers/2024-wu-dr-encoder/paper.pdf) | Huiwen Wu, Deyi Zhang, Xiaohan Li, Xiaogang Xu, Jiafei Wu, Zhe Liu | arXiv:2412.17053v1 | [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)，本仓库非商业原样分享，保留署名 / 来源，不分发改编 PDF |
 | [FFA-LoRA PDF](papers/2024-sun-ffa-lora/paper.pdf) | Youbang Sun, Zitao Li, Yaliang Li, Bolin Ding | arXiv:2403.12313v1 | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)，保留署名、来源与许可链接；PDF 未作修改 |
 | [CG-FedLLM 扩展版 PDF](papers/2025-wu-cg-fedllm/paper.pdf) | Huiwen Wu, Xiaogang Xu, Deyi Zhang, Xiaohan Li, Jiafei Wu, Zhe Liu | arXiv:2405.13746v3 | [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)，本仓库非商业原样分享，保留署名 / 来源 / 许可；若分发改编材料，遵循相同方式共享要求 |
+| [ISER 期刊 PDF](papers/2026-park-iser/paper.pdf) | Unki Park, Seongmoon Jeong, Sangmin Kim, Jeungsub Lee, Gyeong-Moon Park, Jong Hwan Ko | Electronics 2026, 15(17), article 3807，33页 | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)，首页 CC BY 与出版社提交的 Crossref VOR 许可一致，2026-10-12 核对；原样复制，保留署名 / 来源 / 许可 |
 
-这里的版本许可依据 arXiv **对应版本页**的 “view license” 链接，DR-Encoder / FFA-LoRA 核对日期为 2026-10-11，CG-FedLLM v3 为 2026-10-12（并核对 PDF 内嵌 License）。
+ISER 的期刊 PDF 原样分享，不单独抽取或改编其中注明 IEEE 转载许可的材料；代码 Apache-2.0、任务网络 / 数据 / 权重各自许可不混同。
+
+这里原三篇的版本许可依据 arXiv **对应版本页**的 “view license” 链接，DR-Encoder / FFA-LoRA 核对日期为 2026-10-11，CG-FedLLM v3 为 2026-10-12（并核对 PDF 内嵌 License）。
 
 CG-FedLLM 的正式 ECAI 出版记录 / 当前出版网页为 CC BY-NC 4.0，上传 v3 为 CC BY-NC-SA 4.0；本仓库 `paper.pdf` 依据后者。原样论文、独立阅读笔记和作者代码分别处理，未将论文许可自动扩展为全仓库统一许可证；具体来源和版本差异见 [source.md](papers/2025-wu-cg-fedllm/source.md)。
 
@@ -24,10 +27,13 @@ CG-FedLLM 的正式 ECAI 出版记录 / 当前出版网页为 CC BY-NC 4.0，上
 | [Federated LoRA with Sparse Communication](papers/2024-kuo-flasc/source.md) | arXiv:2406.05233v1 | 同上；2026 正式 VOR 的 CC BY 记录不自动覆盖上传的 2024 年版 |
 | [SVD-LLM](papers/2025-wang-svd-llm/source.md) | arXiv:2403.07378v5 | arXiv 非独占分发许可；不把其他版本 / 官方代码的许可当作上传 PDF 的许可 |
 | [PowerSGD+](papers/2025-xie-powersgd-plus/source.md) | arXiv:2509.11254v1，2025 年 19 页完整预印本 | arXiv 非独占分发许可，2026-10-12 核对对应版本页与 PDF metadata；仅保留全文链接、中文笔记和附件身份记录，不复制公开 PDF |
+| [FedALA-WR](papers/2026-singh-fedala-wr/source.md) | Cluster Computing 2026, 29(9), article 580，17页期刊版 | PDF pp.1、17 与 Springer Rights and permissions 明确 exclusive licence；Crossref 的 TDM policy 不是公开再分发授权，仅保留阅读整理、身份校验和官方全文入口 |
 
-[arXiv 非独占许可正文](https://arxiv.org/licenses/nonexclusive-distrib/1.0/)所列分发权授予 arXiv，而非自动授予所有第三方。上述文件未提交到 Git 历史，也未创建空白或虚假的 `paper.pdf`。获得这些特定上传版本的明确再分发许可后，可原样补充。
+[arXiv 非独占许可正文](https://arxiv.org/licenses/nonexclusive-distrib/1.0/)所列分发权授予 arXiv，而非自动授予所有第三方。上述四个 arXiv 非独占许可 PDF 和 FedALA-WR 的专有许可 PDF 未加入本次公开 Git 更新，也未创建空白或虚假的 `paper.pdf`。获得这些特定上传版本的明确再分发许可后，可原样补充。
 
 PowerSGD+ 的 ICASSP 2026 正式出版记录与上传 v1 分开。IEEE 提交的 Crossref 记录列 IEEE policy-029 / policy-037，并非本次核实的 CC 再分发许可；未将正式记录、早期 PowerSGD 代码或其他版本的许可替代上传 PDF 的许可。该附件字节未被修改，也未放入本次增量包 / 补丁。独立阅读整理不改变作者、出版者的权利。
+
+FedALA-WR 的作者代码根许可为 GPL-2.0，继承文件标注 GPLv2-or-later；README 的将来改 Apache 声明不等于当前许可，也不授权公开复制 Springer PDF。全文依据用户提供的附件阅读，不绕过订阅入口。本次 PowerSGD 附件仅换名、与原件逐字节相同，不新增 PDF 或改变其许可处理。
 
 ## 整理原则
 

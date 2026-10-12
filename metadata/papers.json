@@ -159,10 +159,96 @@
       "formal_doi": "10.1109/ICASSP55912.2026.11465020",
       "formal_pages": "921-925",
       "repository_pdf_handling": "Official full-text link and original identity recorded; no PDF copied into repository or update package under existing redistribution policy."
+    },
+    {
+      "id": 8,
+      "directory": "papers/2026-park-iser",
+      "title_uploaded": "ISER: Instance-Specific Early Stopping with Dynamic Low-Rank Adaptation for Learned Image Compression",
+      "uploaded_filename": "ISER Instance-Specific Early Stopping with Dynamic Low-Rank Adaptation for Learned Image Compression.pdf",
+      "uploaded_version": "Electronics journal Version of Record, 2026-08-25",
+      "version_year": 2026,
+      "publication_year": 2026,
+      "pages": 33,
+      "bytes": 7130708,
+      "sha256_uploaded": "b103275dbb10330b6decfd99be18a3ecd711019defb11dd7669d05fb25f83fe5",
+      "full_text": true,
+      "public_pdf": true,
+      "arxiv_source": null,
+      "pdf_source": "https://www.mdpi.com/2079-9292/15/17/3807/pdf",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "verified_on": "2026-10-12",
+      "formal_doi": "10.3390/electronics15173807",
+      "publisher_source": "https://www.mdpi.com/2079-9292/15/17/3807",
+      "publication_date": "2026-08-25",
+      "pdf_creation_date": "D:20260825171248+08'00'",
+      "pdf_modification_date": "D:20260825112646+02'00'",
+      "full_text_reading_basis": "Actual user-uploaded complete journal PDF, including references; no separately labelled appendix.",
+      "publisher_pdf_byte_comparison_performed": true,
+      "repository_pdf_handling": "Original attachment copied without byte changes under journal VOR CC BY 4.0, preserving attribution and embedded notices.",
+      "publisher_pdf_byte_identical_to_attachment": true
+    },
+    {
+      "id": 9,
+      "directory": "papers/2026-singh-fedala-wr",
+      "title_uploaded": "FedALA-WR: personalized federated learning with adaptive local aggregation and weighted replay",
+      "uploaded_filename": "FedALA-WR.pdf",
+      "uploaded_version": "Cluster Computing journal Version of Record, 2026-07-24",
+      "version_year": 2026,
+      "publication_year": 2026,
+      "pages": 17,
+      "bytes": 2701745,
+      "sha256_uploaded": "f8b0ceabe7394e2011b29e5db4ef05f8b17d6988d25b50ddec8e9997e4c0a653",
+      "full_text": true,
+      "public_pdf": false,
+      "arxiv_source": null,
+      "pdf_source": "https://link.springer.com/content/pdf/10.1007/s10586-026-06366-5.pdf",
+      "license": "Exclusive licence to Springer Science+Business Media, LLC; no public redistribution grant verified",
+      "license_url": null,
+      "verified_on": "2026-10-12",
+      "formal_doi": "10.1007/s10586-026-06366-5",
+      "publisher_source": "https://link.springer.com/article/10.1007/s10586-026-06366-5",
+      "publication_date": "2026-07-24",
+      "pdf_creation_date": "D:20260821202603+05'30'",
+      "pdf_modification_date": "D:20260821202702+05'30'",
+      "full_text_reading_basis": "Actual user-uploaded complete journal PDF, including references; no separately labelled appendix.",
+      "publisher_pdf_byte_comparison_performed": false,
+      "repository_pdf_handling": "No PDF copied to public repository, ZIP or patch; identity and official full-text link retained under existing redistribution policy."
     }
   ],
   "previous_verified_on": "2026-10-11",
-  "paper_count": 6,
-  "total_uploaded_pages": 119,
-  "public_pdf_count": 3
+  "paper_count": 9,
+  "total_uploaded_pages": 188,
+  "public_pdf_count": 4,
+  "aggregate_correction_history": [
+    {
+      "verified_on": "2026-10-12",
+      "base_commit": "1c580e38b1acfdbcecbf7da7b30a621d1e6b93dc",
+      "previous_summary_fields": {
+        "paper_count": 6,
+        "total_uploaded_pages": 119,
+        "public_pdf_count": 3
+      },
+      "actual_previous_records": {
+        "paper_count": 7,
+        "total_uploaded_pages": 138,
+        "public_pdf_count": 3
+      },
+      "note": "Previous aggregate fields still said six / 119 while seven unchanged records summed to 138. Corrected current totals from actual records, preserving old records and recording the discrepancy."
+    }
+  ],
+  "duplicate_uploads": [
+    {
+      "paper_id": 7,
+      "directory": "papers/2025-xie-powersgd-plus",
+      "uploaded_filename": "From PowerSGD to PowerSGD.pdf",
+      "original_uploaded_filename": "From PowerSGD to PowerSGD+ Low-Rank Gradient Compression.pdf",
+      "verified_on": "2026-10-12",
+      "pages": 19,
+      "bytes": 659326,
+      "sha256_uploaded": "42d02bd274f8054293cb99634b3d78a1184719c92e4a5635341ce1f92b7de5d0",
+      "byte_comparison": "exactly identical to earlier upload",
+      "decision": "Record filename alias only; no new paper id, directory, page count, bibliography entry or public PDF."
+    }
+  ]
 }

@@ -1,8 +1,46 @@
 # 验证记录、文件清单与待补充信息
 
-当前阅读范围为七份实际上传全文、138 页：此前六篇 119 页，加 PowerSGD+ arXiv v1 的 19 页（本次核对日期 2026-10-12）。以下保留原核对日期、检查范围与历史发布记录。
+当前阅读范围为**九篇独立上传全文、188页**：此前七篇138页，加 ISER 期刊版33页和 FedALA-WR 期刊版17页。此次三个附件中的 PowerSGD 与第七篇原件逐字节相同，记录别名、不重复计数。核对日期2026-10-12；以下保留原日期、原范围和历史发布记录。
 
-## 2026-10-12：新增第七篇 PowerSGD+
+## 2026-10-12：三份附件整理，新增 ISER / FedALA-WR
+
+- 通过 GitHub 插件确认当前 `main` 为 [1c580e3](https://github.com/zindigo321/paper-CGFedllm/commit/1c580e38b1acfdbcecbf7da7b30a621d1e6b93dc)，新工作副本基于该提交；未发现 AGENTS.md。保留原README开头、已有内容及提交历史，按用户自行Commit/Push的偏好提供更新包，未写远程或创建PR。
+- 新增7文件：ISER的notes/source/citation/原样PDF，FedALA-WR的notes/source/citation；修改根6文件、metadata四个、AdaLoRA/SVD-LLM/FFA-LoRA/CG四篇必要阅读联系及PowerSGD+ source别名，共15修改、0删除；定稿范围41文件，checksums应覆盖除自身外的40项。
+- 新两篇全文共50页均已读，含完整正文 / 参考文献，无另列附录。额外目视核对ISER物理pp.1、12、13、18、20、28、29，FedALA-WR pp.7、8、12、15的题名 / 许可、公式、算法和结果；没有把“渲染了页面”写成逐页目视全部源图。
+- ISER：33页、7,130,708 bytes、SHA-256 `b103275dbb10330b6decfd99be18a3ecd711019defb11dd7669d05fb25f83fe5`；MDPI / Crossref核实 Electronics 15(17),3807、2026-08-25及CC BY 4.0。早期页面读取429，后续直接官方PDF请求成功；完整出版社PDF与附件 / 仓库副本逐字节一致。PDF未经编辑。
+- FedALA-WR：17页、2,701,745 bytes、SHA-256 `f8b0ceabe7394e2011b29e5db4ef05f8b17d6988d25b50ddec8e9997e4c0a653`；Springer / Crossref核实29(9),article580、VOR 2026-07-24；附件文档生成日期2026-08-21单记。出版社页面为subscription preview，全文来自附件，未获取官方PDF作字节对照；exclusive licence不授权本次公开复制，ZIP / 补丁无该PDF。
+- 重复PowerSGD附件19页、659,326 bytes，SHA与原件同为 `42d02bd274f8054293cb99634b3d78a1184719c92e4a5635341ce1f92b7de5d0`；实际二进制比较相同，仅名称不同，编号7 / 笔记 / 引用 / 许可处理不变。
+- metadata原有汇总字段仍为6篇 /119页，但实际7条记录合计138页；本次按记录和可取得附件 / 公开PDF修正当前汇总为9 /188 /4份公开PDF，并新增纠错历史。前七论文记录和前七正式出版记录逐项保持；不把两个关联前作算新已读附件。
+- 官方代码已核实为 `unkipark/ISER` 和 `tinku1984/FedALA_WR`，固定commit、许可和静态检查范围记在笔记 / publication-verification；没有运行作者程序或复现实验。ISER的前作CVPR LoRA-comp、FedALA的前作AAAI仅核对相关书目 / 摘要 / 方法实现，不宣称另外完整阅读。
+
+### 本次实际检查结果
+
+| 检查 | 已执行结果与范围 |
+| --- | --- |
+| 全文 / 版本 / 许可 | 两篇50页已读；两个2026期刊记录、日期与权利核对；PowerSGD重复件逐字节去重；独立9篇 /188页 |
+| 数字口径 | ISER的7% /98%为BD-Rate节省幅度相对增长，额外码率平均0.98%不代表每例低于1%；FedALA精度百分点、五次std、3.77%计时差与原文报告分开；冲突表格 / 配置保留 |
+| 数学 / Markdown | 23个Markdown、429个数学表达式通过本地严格KaTeX解析；65个新增（ISER34、FedALA-WR31），多字母函数用mathrm，无已知被拒绝宏 / 块级标点转义；旧七篇公式源码 / 次序保持 |
+| 相对链接 / 表格 / 引用 | 本次定稿后重新检查所有相对目标、70个Markdown表格、4个JSON、9份BibTeX共18条（含两条关联前作）；实际链接计数与逐项结果见metadata检查记录 |
+| PDF / 旧内容 | 四份公开PDF均与元数据匹配；原三份字节保持，ISER与附件 / 官网三方相同；旧七份citation及未改source/PDF保持，四旧notes只增相关段落，其余三旧notes逐字节保持 |
+| 本地排版 / 目视 | 两篇notes本地A3预览各8页已逐页查看，15个新增块公式另生成两页并逐项查看；检查中文、表格、数学上下标 / 取整 / 范数 / 分母，未见裁切 / 乱码；最终小改动另重新渲染检查 |
+| 外部入口 | 新引入的18个Markdown URL作HTTP采样：16个200、两个Springer入口超时；MDPI PDF返回真实PDF且完整下载校验成功。官方Springer元数据已由另一只读reader取得；访问结果分开，不以HTTP200断言订阅全文取得 |
+| GitHub显示 | 新文件尚未用户推送，**最终GitHub渲染未执行**；本地检查不替代在线运行时。上一已发布七篇364公式的成功检查另记下方，不覆盖未发布新增内容 |
+| 打包 / 校验 | 40项SHA-256全部通过；增量复制和binarypatch均在全新基准副本成功应用，文件清单一致，全部41份定稿文件逐字节一致；ZIP完整性与仅含获许可ISER新PDF检查通过。写入此结果后再次生成清单与更新包，最后变更亦纳入校验 |
+
+### 新增待核实 / 未执行项
+
+- ISER的跨层全局秩预算与每层rank4 / 无index信令的关系；SV/image vsSV/total分母、被剪位置的熵估计 / 实际字节流；sum vsscaledmean、floor vsround和post-loop未见退出的公开实现差异；AdaLoRA不能按其宽泛表述改写为静态算法。
+- FedALA-WR的localALA与serverattention、轮内回放 / 轮末纠正 / buffer更新顺序、表2 Dir0.1的68.02 vs表3的57.53、正文跨列数字及private best-test / HPO /停止口径；公开代码detach replay、cosine+norm、lr0.01、testaccuracy patience与期刊描述不同，正式修订对应代码尚需确认。
+- ISER checkpoint / evaluator / 数据未下载校验；FedALA-WR独立publisherPDF未取得；两篇没有跑训练、计时、网络部署、攻击或形式化证明。代码可访问仅是复现入口，不是复现成功。
+- 新增文件的最终GitHub页面需用户推送后检查实际数学输出、宏 / parse错误和等待状态。未向外部Markdown预览API发送未发布内容。
+
+## 2026-10-12：第七篇已推送后的真实检查
+
+用户已推送提交 [1c580e3](https://github.com/zindigo321/paper-CGFedllm/commit/1c580e38b1acfdbcecbf7da7b30a621d1e6b93dc)。此前包的17个变更文件与发布版逐字节一致，33项SHA-256全部通过，七篇source合计138页，14条BibTeX可解析。
+
+实际GitHub页面逐篇检查PowerSGD+57、CG66、FLASC34、FFA63、DR53、SVD32、Ada32个数学表达式，comparison27个，共**364个输出MathML，0错误、0等待**。CG步长已显示希腊η，GDP公式无多余感叹号；代表PowerSGD+公式截图亦目视核对。本记录属于已发布七篇范围，不是对本次未发布两篇的在线验证；早期服务错误 / pending记录作为当时结果保留。
+
+## 2026-10-12：新增第七篇 PowerSGD+（增量准备，历史）
 
 - 通过 GitHub 插件确认最新 `main` 为 [667cb40](https://github.com/zindigo321/paper-CGFedllm/commit/667cb40b1a81d7ed964cb7801dde4cfa5b65af04)，已含上一轮宏兼容修正；另在该提交上检出独立工作副本。未发现 AGENTS.md，沿用既有目录、物理页码、引用、许可边界与检查记录。未写入远程或创建 PR，按用户现有偏好交付自行更新包。
 - 新增 `papers/2025-xie-powersgd-plus/` 的 notes / source / citation 共 3 个文件；修改根目录 6 个文件、metadata 4 个文件、CG / DR / FFA / SVD 四篇 notes 的阅读联系，共 14 个修改、0 个删除；定稿为 34 个仓库文件，SHA-256 清单 33 项。

@@ -537,9 +537,415 @@
         "Crossref API was unavailable to the search reader; a direct read-only HTTP request succeeded and supplied the full publisher-deposited metadata.",
         "Conference schedule metadata was readable; no formal five-page PDF was obtained."
       ]
+    },
+    {
+      "paper": "ISER",
+      "source": "https://api.crossref.org/works/10.3390/electronics15173807",
+      "publisher_page": "https://www.mdpi.com/2079-9292/15/17/3807",
+      "doi": "10.3390/electronics15173807",
+      "publication_year": 2026,
+      "publisher_deposited_metadata": {
+        "title": [
+          "ISER: Instance-Specific Early Stopping with Dynamic Low-Rank Adaptation for Learned Image Compression"
+        ],
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0009-0004-0520-3234",
+            "authenticated-orcid": false,
+            "given": "Unki",
+            "family": "Park",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Department of Semiconductor and Display Engineering, Sungkyunkwan University, Suwon 16419, Republic of Korea"
+              },
+              {
+                "name": "Samsung Institute of Technology, Hwaseong 18448, Republic of Korea"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0002-4859-5093",
+            "authenticated-orcid": false,
+            "given": "Seongmoon",
+            "family": "Jeong",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Artificial Intelligence, Sungkyunkwan University, Suwon 16419, Republic of Korea"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Sangmin",
+            "family": "Kim",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Hanwha Systems, Seongnam 13524, Republic of Korea"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Jeungsub",
+            "family": "Lee",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Hanwha Systems, Seongnam 13524, Republic of Korea"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Gyeong-Moon",
+            "family": "Park",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Artificial Intelligence, Korea University, Seoul 02841, Republic of Korea"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Jong Hwan",
+            "family": "Ko",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "College of Information and Communication Engineering, Sungkyunkwan University, Suwon 16419, Republic of Korea"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "Electronics"
+        ],
+        "publisher": "MDPI AG",
+        "type": "journal-article",
+        "published": {
+          "date-parts": [
+            [
+              2026,
+              8,
+              25
+            ]
+          ]
+        },
+        "published-online": {
+          "date-parts": [
+            [
+              2026,
+              8,
+              25
+            ]
+          ]
+        },
+        "volume": "15",
+        "issue": "17",
+        "page": "3807",
+        "article-number": null,
+        "DOI": "10.3390/electronics15173807",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2026,
+                  8,
+                  25
+                ]
+              ],
+              "date-time": "2026-08-25T00:00:00Z",
+              "timestamp": 1787616000000
+            },
+            "content-version": "vor",
+            "delay-in-days": 0,
+            "URL": "https://creativecommons.org/licenses/by/4.0/"
+          }
+        ],
+        "URL": "https://doi.org/10.3390/electronics15173807",
+        "link": [
+          {
+            "URL": "https://www.mdpi.com/2079-9292/15/17/3807/pdf",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ]
+      },
+      "read_full_text_version": "Electronics journal Version of Record, 2026-08-25",
+      "uploaded_physical_pages": 33,
+      "formal_full_text_obtained": true,
+      "formal_pdf_obtained": true,
+      "formal_pdf_acquisition_route": "user attachment and later successful official publisher PDF GET, exact byte match",
+      "publisher_pdf_downloaded": true,
+      "publisher_pdf_byte_comparison_performed": true,
+      "verified_on": "2026-10-12",
+      "uploaded_license": "CC BY 4.0",
+      "directory_year": "2026, actual uploaded journal PDF year",
+      "version_difference": "Uploaded 33-page journal PDF exactly matches the official publisher PDF downloaded 2026-10-12; journal VOR metadata / licence verified. Distinct CVPR 2025 prior work not read in full or treated as content-identical.",
+      "article_number": "3807",
+      "published": "2026-08-25",
+      "license_evidence": "PDF page 1 CC BY; publisher-deposited Crossref VOR CC BY 4.0 URL and start date agree.",
+      "related_prior_work": {
+        "title": "Test-Time Fine-Tuning of Image Compression Models for Multi-Task Adaptability",
+        "venue": "CVPR 2025",
+        "pages": "4430-4440",
+        "authors": [
+          "Unki Park",
+          "Seongmoon Jeong",
+          "Youngchan Jang",
+          "Gyeong-Moon Park",
+          "Jong Hwan Ko"
+        ],
+        "source": "https://openaccess.thecvf.com/content/CVPR2025/html/Park_Test-Time_Fine-Tuning_of_Image_Compression_Models_for_Multi-Task_Adaptability_CVPR_2025_paper.html",
+        "full_text_separately_read": false,
+        "relationship": "Uploaded journal page 1 explicitly says revised and expanded version; new ISER results and six-author list are not attributed to the CVPR prior work."
+      },
+      "official_code": {
+        "url": "https://github.com/unkipark/ISER",
+        "commit": "1c66c38d3a4c92b5aae767f15d94473955c50928",
+        "commit_date": "2026-08-03",
+        "license": "Apache-2.0",
+        "verification": "Paper page 30, author README, repository metadata, relevant configs and code read statically. Weights not downloaded, environment not installed, training not run."
+      },
+      "code_paper_differences": [
+        "sum vs scaled mean convergence indicator",
+        "floor vs round rank budget and additional cubic schedule",
+        "default full-image / closed-set settings vs MSTS / open-set main experiment",
+        "post-training loop lacks observed exit at reported stopping point in inspected path",
+        "SV likelihood estimates with zero locations assigned probability 1; full bitstream round trip not verified"
+      ],
+      "access_limitations": [
+        "Initial direct MDPI web reader returned HTTP 429; official search and Crossref metadata were readable. Later direct GET of the same official PDF URL returned PDF bytes and completed exact byte comparison."
+      ],
+      "publisher_pdf_byte_identical_to_attachment": true,
+      "publisher_pdf_sha256": "b103275dbb10330b6decfd99be18a3ecd711019defb11dd7669d05fb25f83fe5",
+      "publisher_pdf_bytes": 7130708
+    },
+    {
+      "paper": "FedALA-WR",
+      "source": "https://api.crossref.org/works/10.1007/s10586-026-06366-5",
+      "publisher_page": "https://link.springer.com/article/10.1007/s10586-026-06366-5",
+      "doi": "10.1007/s10586-026-06366-5",
+      "publication_year": 2026,
+      "publisher_deposited_metadata": {
+        "title": [
+          "FedALA-WR: personalized federated learning with adaptive local aggregation and weighted replay"
+        ],
+        "author": [
+          {
+            "given": "Tinku",
+            "family": "Singh",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Nguyen",
+            "family": "Khoa",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Bhawnesh",
+            "family": "Kumar",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Taehong",
+            "family": "Kim",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "Cluster Computing"
+        ],
+        "publisher": "Springer Science and Business Media LLC",
+        "type": "journal-article",
+        "published": {
+          "date-parts": [
+            [
+              2026,
+              7
+            ]
+          ]
+        },
+        "published-online": {
+          "date-parts": [
+            [
+              2026,
+              7,
+              24
+            ]
+          ]
+        },
+        "volume": "29",
+        "issue": "9",
+        "page": null,
+        "article-number": "580",
+        "DOI": "10.1007/s10586-026-06366-5",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2026,
+                  7,
+                  1
+                ]
+              ],
+              "date-time": "2026-07-01T00:00:00Z",
+              "timestamp": 1782864000000
+            },
+            "content-version": "tdm",
+            "delay-in-days": 0,
+            "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2026,
+                  7,
+                  1
+                ]
+              ],
+              "date-time": "2026-07-01T00:00:00Z",
+              "timestamp": 1782864000000
+            },
+            "content-version": "vor",
+            "delay-in-days": 0,
+            "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+          }
+        ],
+        "URL": "https://doi.org/10.1007/s10586-026-06366-5",
+        "link": [
+          {
+            "URL": "https://link.springer.com/content/pdf/10.1007/s10586-026-06366-5.pdf",
+            "content-type": "application/pdf",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          },
+          {
+            "URL": "https://link.springer.com/article/10.1007/s10586-026-06366-5",
+            "content-type": "text/html",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          },
+          {
+            "URL": "https://link.springer.com/content/pdf/10.1007/s10586-026-06366-5.pdf",
+            "content-type": "application/pdf",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ]
+      },
+      "read_full_text_version": "Cluster Computing journal Version of Record, 2026-07-24",
+      "uploaded_physical_pages": 17,
+      "formal_full_text_obtained": true,
+      "formal_pdf_obtained": true,
+      "formal_pdf_acquisition_route": "user attachment",
+      "publisher_pdf_downloaded": false,
+      "publisher_pdf_byte_comparison_performed": false,
+      "verified_on": "2026-10-12",
+      "uploaded_license": "Exclusive licence to Springer Science+Business Media, LLC; no public redistribution grant verified",
+      "directory_year": "2026, actual uploaded journal PDF year",
+      "version_difference": "Reading object is the uploaded journal PDF corresponding to the verified journal VOR; no invented distinct arXiv entry. Publisher PDF not separately downloaded or compared byte-for-byte.",
+      "article_number": "580",
+      "published": "2026-07-24",
+      "license_evidence": "Uploaded PDF pages 1 and 17, Springer Rights and permissions: exclusive rights. Crossref TDM policy is not a public redistribution grant.",
+      "pdf_document_date": "2026-08-21; generation metadata, distinct from VOR date 2026-07-24",
+      "related_prior_work": {
+        "title": "FedALA: Adaptive Local Aggregation for Personalized Federated Learning",
+        "doi": "10.1609/aaai.v37i9.26330",
+        "source": "https://ojs.aaai.org/index.php/AAAI/article/view/26330",
+        "full_text_separately_read": false,
+        "verification": "Official metadata / abstract and inherited ALA implementation checked; original method performs client-side element-wise initialization, not the new paper server cosine definition."
+      },
+      "official_code": {
+        "url": "https://github.com/tinku1984/FedALA_WR",
+        "commit": "90b5038a4b48220d0e4912e0ef9e37a7b145fd09",
+        "commit_date": "2025-10-25",
+        "license": "Root GPL-2.0; inherited headers permit GPLv2 or later; future Apache promise not current licence.",
+        "verification": "Paper page 16, Springer Code availability, repository metadata and relevant main / client / server / ALA code read statically. No training or reproduction."
+      },
+      "code_paper_differences": [
+        "detached replay loss has no model gradient in inspected branch",
+        "no lambda-composed replay minibatches",
+        "cosine plus norm vs paper cosine minus L2 norm",
+        "hard-coded client SGD 0.01 vs paper local rates",
+        "test-accuracy patience auto-break vs model-change threshold narrative"
+      ],
+      "access_limitations": [
+        "Springer official page is subscription preview; full text read only from the user attachment.",
+        "No subscription bypass or formal publisher PDF byte comparison."
+      ]
     }
   ],
   "previous_verified_on": "2026-10-11",
   "existing_records_last_verified_on": "2026-10-11",
-  "new_record_last_verified_on": "2026-10-12"
+  "new_record_last_verified_on": "2026-10-12",
+  "latest_update_scope": "Two new uploaded journal PDFs verified; previous seven publication records preserved. Duplicate PowerSGD upload shares the existing v1 identity."
 }

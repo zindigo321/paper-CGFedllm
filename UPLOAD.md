@@ -8,7 +8,30 @@
 
 最初自动环境的写入接口曾返回 `403 Resource not accessible by integration`，因此改用 GitHub Desktop 发布。该历史错误不能再被当作当前仓库“未推送”的状态。
 
-## 2026-10-12：新增第七篇 PowerSGD+（当前更新）
+## 2026-10-12：三份附件增量整理（当前更新，新增两篇）
+
+基于用户已推送的 [1c580e3](https://github.com/zindigo321/paper-CGFedllm/commit/1c580e38b1acfdbcecbf7da7b30a621d1e6b93dc) 准备。此前 PowerSGD+ 的17项变更与发布文件逐字节一致、33项校验通过；七篇 notes 和 comparison 的364个公式已在实际 GitHub 页面输出 MathML，0错误、0等待，CG 的 eta / GDP 显示也正确。下方原有准备 / 访问失败记录保留为当时的历史范围。
+
+`ISER-FedALA-WR-update.zip` 处理三个附件：ISER 为新增编号8（33页），FedALA-WR 为新增编号9（17页）；`From PowerSGD to PowerSGD.pdf` 与第七篇旧附件逐字节相同，只记录文件名别名。更新后**九篇独立论文、188页、四份公开PDF**；metadata 原有六篇/119页旧汇总与实际七记录/138页不一致，本次按文件记录修正并保留纠错历史。
+
+新增7个文件：ISER目录 notes/source/citation/原样paper.pdf，FedALA-WR目录 notes/source/citation。修改15个文件：根6个、metadata四个、AdaLoRA / SVD-LLM / FFA-LoRA / CG-FedLLM四篇必要阅读联系及PowerSGD+ source重复件记录；0删除。全部41个仓库文件中，checksums覆盖除自身外的40项。
+
+ISER期刊版为CC BY 4.0；其33页PDF与附件字节保持一致。FedALA-WR为Springer独占出版许可，包内只有来源/笔记/引用，不含该PDF；四篇已有非独占许可PDF也不新增复制。两个新目录年份均为上传期刊版2026年，没有把关联前作当新附件或虚构arXiv版本。
+
+1. 将ZIP解压到仓库外，先读START_HERE.txt。在GitHub Desktop打开已有仓库，Fetch origin并同步；保留自己的未提交修改。如基准后修改过本包涉及文件，先比较再合并。
+2. 将**files/里面的内容**按相同相对路径合并到仓库根目录，合并papers/metadata并保留其他内容，不把files文件夹本身套入仓库，不删除或整目录替换。
+3. START_HERE.txt、CHANGESET.json、changes.patch留在仓库外；不复制.git、不重建仓库。补丁与复制二选一；含ISER原样PDF的binarypatch，应先用`git apply --check`，通过后再`git apply --binary`。
+4. 回到Changes核对22项：7新增、15修改、0删除。ISER有四个文件，FedALA-WR只有三个文档，PowerSGD仍沿用原目录。在Git Bash仓库根运行`sha256sum -c checksums.sha256`，40项应全部通过。
+5. Summary使用下面提交说明，Commit后再Push origin；Commit与Push是两步。
+
+```text
+docs: add ISER and FedALA-WR literature notes
+```
+
+6. View on GitHub检查九篇/188页索引、来源/引用/比较表、PDF及全部笔记相对链接。新增公式须实际显示且无宏错误；重点看秩预算取整、范数、注意力分母和replay梯度，不能只统计数学组件。
+7. 新增内容在交付前执行本地结构/数学/排版及复制/补丁一致性检查；**尚未推送，最终GitHub渲染待你推送后核对**。作者代码仅静态阅读，未执行训练/测速/隐私攻击，不宣称复现成功。
+
+## 2026-10-12：新增第七篇 PowerSGD+（已推送，增量准备历史）
 
 基于用户已推送公式修正后的 [667cb40](https://github.com/zindigo321/paper-CGFedllm/commit/667cb40b1a81d7ed964cb7801dde4cfa5b65af04) 准备。保持既有仓库与历史，由用户自行 Commit / Push；本次未写入远程或创建 PR。
 

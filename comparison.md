@@ -1,6 +1,6 @@
-# 七篇论文的条件化比较
+# 九篇论文的条件化比较
 
-本表是**整理者归纳**，具体方法与数字以各篇笔记和其所标上传 PDF 页码为准。比较范围仅限七个实际上传全文；不是全领域综述。它们分别优化适配器容量、私有梯度压缩、学习传输压缩、传输稀疏性、聚合一致性、主干压缩与同步梯度压缩的收敛控制，不能按一个 Accuracy / 通信倍数做统一排名。
+本表是**整理者归纳**，具体方法与数字以各篇笔记和其所标上传 PDF 页码为准。比较范围仅限九篇独立上传全文（本次 PowerSGD 重复件不重复计数）；不是全领域综述。它们分别优化适配器容量、私有梯度压缩、学习传输压缩、传输稀疏性、聚合一致性、主干压缩、同步梯度压缩的收敛控制、每实例图像码流适配与客户端 replay 稳定性，不能按一个 Accuracy / 通信倍数做统一排名。
 
 ## 问题、方法、条件与局限
 
@@ -13,6 +13,8 @@
 | [SVD-LLM](papers/2025-wang-svd-llm/notes.md)，2025 v5 / ICLR | 权重 SVD 截断与校准输出误差不对应，截断后恢复不足 | Gram matrix 白化、 $`WS`$  的 SVD、两个低秩因子顺序 LoRA 恢复；压缩主干与可选 KV cache | 7 个模型、10 任务；256 校准样本、50K Alpaca 恢复；A100 / EPYC 7643 实测 | LLaMA-7B，40% 参数删减：WikiText-2 PPL 9.27 vs ASVD 1407；原模型 5.68；p. 6 表 1 | 高比例精度下降；恢复耗时；KV 展开延迟；PPL 不能完全代表生成质量；与早期版 / V2 不同 |
 | [CG-FedLLM](papers/2025-wu-cg-fedllm/notes.md)，2025 v3 扩展版 | 联邦 LoRA 更新仍昂贵，动态联合训练压缩器困难 | 真实时间序列梯度 → TGAP AutoEncoder；FAF 编码 / 重建两个因子再聚合 | LLaMA / Alpaca / Qwen 7B，Dolly / C-Eval / MMLU，RTX 4090 单机模拟；作者分析 client-level DP | Qwen / MMLU，GDP  $`\epsilon=0.25`$ ：56.37 vs 带噪 LoRA 25.22；p. 7 表 2；二维 CR 1.56% 为元素保留比 | TGAP 真实梯度隐私、算子顺序、客户端数、泛化描述有疑点；分别聚合因子的交叉项；未测完整网络成本 |
 | [PowerSGD+](papers/2025-xie-powersgd-plus/notes.md)，2025 v1；正式 ICASSP 2026 | 单步子空间跟踪即使配 EF 仍可能失去收敛控制 | 同步全参数梯度 / EF 校正更新；共同基底、单步 power iteration、周期 SVD safeguard | 4 × RTX 4090；RoBERTa-Base / GLUE；LLaMA-60M / 130M / C4；无 DP，非联邦 LoRA 实验 | GLUE 原表 Avg 86.28 vs PowerSGD 85.73，p. 6 表 1，前三个基线均值有核算差异；C4 130M / rank 8 PPL 26.11 vs 26.24，p. 9 表 3 | 理论针对 MSGD，实验 Adam / AdamW；刷新传完整矩阵；有限步依赖 tau / rank；证明记号、配置与官方代码待核实，未测 wall-clock |
+| [ISER](papers/2026-park-iser/notes.md)，2026 Electronics 期刊版33页 | 图像 codec 在新任务 / 每图实例上的适配与 TTFT 开销 | SVD-LoRA，decoder SV 动态全局预算、ISES、patch→全图 MSTS；压缩图像码流 | TIC / Cheng2020，COCO / ImageNet / KITTI；每图已知目标 evaluator，无 DP；4090 | TIC open segmentation BD-Rate −52.86% vs LoRA-comp −49.51%，相对节省幅度约6.77%，p.17表2；最大44%编码减少为另一 closed detection 条件 | 秒级编码 / 毫秒解码分开；预算 / 信令与公开代码不完全一致；小 TTFT 预算不逐项领先，不是梯度压缩 |
+| [FedALA-WR](papers/2026-singh-fedala-wr/notes.md)，2026 Cluster Computing 期刊版17页 | non-IID pFL 的轮内遗忘 / 聚合稳定性 | 本地 entropy replay、mixture loss、逐层 attention 聚合完整 CNN 参数；不压缩消息 | 4-layer CNN，20 / 50 / 100 clients，private test；五次重复，单机2×3080，无 DP | CIFAR-100 Dir0.10 / 20 clients，57.53±0.15% vs FedALA56.99±0.19%，p.12表3；Tiny时间175.56 vs182.43min，p.15表5 | 正文 / 表格及公开代码 replay detach、距离符号、stop规则有差异；无完整收敛证明 / 网络时间 / LLM验证 |
 
 ## 哪些资源数字可以比较
 
@@ -25,6 +27,8 @@
 | SVD-LLM 的  $`R_w`$  | 主干权重**删减比例**： $`1-r(d+n)/(dn)`$  | 保留比例、量化位宽、运行时 peak memory 或 KV cache 占用 |
 | CG-FedLLM 的 CR / 元素压缩比 | 表 1 的编码输出 / 输入元素数；二维 131,072 / 8,388,608 = 1.5625%，其倒数为 64（整理者计算） | 不含 TGAP 梯度收集、压缩器分发、下行和协议成本；1D 形状计算为 3.125%，原表写 3.21%（pp. 4–5） |
 | PowerSGD+ 的每步通信量级 | 原表为  $`mr+nr+mn/\tau`$ ，刷新步对完整 EF 校正矩阵做 All-Reduce；表内元素保留比为  $`r/m+r/n+1/\tau`$ （整理者计算，pp. 4、7–8） | 不是协议 / 拓扑后的累计字节或网络速度；伪代码替换刷新步的精细摊销为  $`mr+nr+(mn-mr)/\tau`$ ；未消除完整 EF / 优化器状态 |
+| ISER 的 BD-Rate / SV overhead | 相对 human-centric codec 的 RD 曲线码率差；p.29表14的 SV 比例报告平均0.98%、范围0.29%–2.05%，涉及 image / total 分母差异 | 不是全程联邦通信节省、主干删减或每图均低于1%；表中 MACs 不含累计 TTFT 训练；码流位置成本待核实 |
+| FedALA-WR 的 TΣ / buffer size | 上下行完整模型参数个数累计到 T 轮；buffer容量按本地样本数，不增加 sample 消息 | 不是字节 / 稀疏密度 / rank；须计客户端数、实际停止轮数、位宽 / 协议；wall-clock 为单机计算 + 调度，不是公网传输 |
 
 这些比例的对象、阶段和分母不同，不能将 10×、64 倍元素比、一半、40%、 $`6.10\times10^{-5}`$  与一个矩阵的秩 / 刷新元素比例排为“哪个方法最省资源”。
 
@@ -39,6 +43,8 @@
 | SVD-LLM | 未提供 DP；使用校准和微调数据 | 离线压缩 / 恢复 | 不能视为私有压缩算法 |
 | CG-FedLLM | 作者分析 add/remove-client DP / GDP；第 4.5 节为编码后裁剪加噪聚合解码，附录 D.2 为因子先加噪再编码 | 第 3.4 节假设 honest server / semi-honest client；TGAP 用真实梯度，基本 FAF 先逐客户端解码再聚合 | TGAP 与压缩器权重发布的覆盖范围、完整  $`\delta`$ 、A/B 联合预算、采样与噪声单位、机制次序（pp. 5–6、8–9、20–21） |
 | PowerSGD+ | 未定义 DP / 加密 / secure aggregation；普通步骤发布投影与坐标，刷新交换完整校正更新 | 同步 workers 的共同基底 / All-Reduce；理论为优化收敛 | delta 为收缩系数、sigma 为随机梯度方差、epsilon 为优化精度；加入 DP 后须重做发布范围与核算，原定理不提供隐私保证（pp. 3–8、16–18） |
+| ISER | 未提供 DP / 加密；图像与实例 SV 是数据相关输出 | 单图 TTFT、已知任务 evaluator 和共同初始化；无联邦服务器 | 输入 Gaussian noise 是鲁棒性测试；delta 是学习率，不能视为隐私预算；原始码流 / SV 发布隐私另需研究（pp.7–9、16、27–28） |
+| FedALA-WR | 未提供 DP / secure aggregation；buffer存本地原样输入，服务器收完整模型 | 经典单机 FL 模拟；不发 raw buffer 不等于输出具有形式化隐私保证 | replay重复使用数据、HPO / test-based stop 的隐私成本若引入DP须另算；sigma是梯度方差上界（pp.7–9、15–16） |
 
 相同  $`\epsilon`$  在不同邻接关系、 $`\delta`$ 、轮数、采样率和信任模型下不能直接比较。FFA-LoRA 在自己的 cross-silo DP-SGD 条件下受益，而 FLASC 在 central client-level DP-FedAdam 下发现冻结  $`A`$  可能降低效用（分别 p. 7 表 1 与 pp. 10–11 图 7–8）；两个结果不是同条件复现，也不构成简单互相否定。
 
@@ -56,6 +62,10 @@
 | CG-FedLLM | C-Eval Average 26.6 vs 25.8 / 24.9 | LLaMA，表 2 第 1 组 Compress / LoRA / Cent；同表第 7 组基本 Compress 为 26.2，分别保留；p. 7 | 配置 / 行标签不同；不能推广为所有任务都比 CL / FL 高约 3 分 |
 | PowerSGD+ | GLUE 原表 Avg 86.28 vs 85.73 / 85.70 | RoBERTa-Base，rank 4，4 GPUs，AdamW，10 epochs，无 DP；p. 6 表 1。按表内八项重算为 86.27625 vs 85.76250 / 85.76875；Full precision 也有均值差异 | 原文报告与整理者计算分列；无多 seed 不确定性，不能用差值证明显著性 |
 | PowerSGD+ | C4 validation PPL 32.63 vs 32.57 | LLaMA-60M，rank 8，10k steps，restart 200，无 DP；p. 9 表 3 | 此配置 PowerSGD+ 比 PowerSGD 稍差；四个模型 / rank 配置并非全部领先 |
+| ISER | Depth BD-Rate −66.87% vs TransTIC−33.81%；节省幅度相对增大97.78%（整理者计算） | TIC / KITTI / Depth Anything，四质量点，无DP；p.21表3，相同 TIC 基准；不是误差下降98% | 每图任务适配 / RD评估，与训练梯度通信无共同分母 |
+| ISER | 5 epochs：mAP35.083、1.47s vs LoRA-comp35.278、1.18s | TIC open detection quality1，无DP；p.26表9；前者码率0.1050 vs0.1063 | 小预算存在速度 / 质量取舍，不能推广“始终全面领先” |
+| FedALA-WR | practical CIFAR-10：91.40±0.25% vs FedALA91.25±0.14% | 4-layer CNN、20 clients、Dir0.10、private local test、五次重复、无DP；p.12表3 | +0.15百分点（整理者计算），未报告配对显著性；不是 LLM或统一全局test |
+| FedALA-WR | 175.56±5.340min vs FedALA182.43±5.340min | Tiny-ImageNet、4-layer CNN、单节点2GPU、auto-break、无DP；p.15表5；同表FedAMP147.20min更快 | 约3.77%计时下降（整理者计算），排除公网延迟；不是所有基线最快 |
 
 ## 可借鉴思路与未验证组合
 
@@ -82,8 +92,16 @@ PowerSGD+ 在同一步对 workers 使用共同投影基底，平均的是该基�
 
 本篇的最优 SVD 压缩满足收缩条件，其普通投影加周期刷新控制平均残差（pp. 3、13–18）。CG / DR 的 AutoEncoder 不因重建误差小就自动满足同一统一收缩条件；预训练成本、隐私发布范围与自适应基底的组合都需要另证。以上为有文献依据的整理者比较，方法组合仍为未验证研究设想。
 
+### ISER 的秩预算与 FedALA-WR 的本地优化
+
+ISER 借用 AdaLoRA 重要性与全局预算思想（ISER pp.11–13；AdaLoRA pp.4–6），区别是每图 TTFT / decoder SV 范围。原 ISER p.11 对 AdaLoRA“开始时一次定秩”的宽泛表述不符合 AdaLoRA 训练中动态调度，不能据此改写原方法。ISER 的 SVD-LoRA 分解适配增量，SVD-LLM 分解校准后的主干权重，任务、对象和预算不同。
+
+FedALA-WR 的 replay 与 CG TGAP 的真实梯度库 / DR 的统计量合成先验不同；一个控制本地样本访问和目标，一个训练传输压缩器。FedALA-WR attention 加权也不消除 FFA 所证明的双可训练因子聚合交叉项。公开作者代码的 replay detach / norm 符号 / test-based stop 与期刊正文有差异（见该篇notes的固定commit），不能据可访问代码称已复现。
+
+把 replay 与 FLASC / FFA / CG 组合、把 ISER 稳定性信号迁移到联邦停止均为**未验证研究设想**。应先统一模型 / 数据 / 参与 / 预算，验证 direction alignment、真实全流程字节、DP采样与发布范围，不作跨条件数值排名。
+
 ## 单光子 LiDAR 参数核查
 
-七篇均不涉及单光子 LiDAR。探测器类型、阵列规模、探测距离、目标速度、SNR/SBR、平均每像素光子数、采集时间、重建帧率、空间分辨率、定位误差均为**不适用**；没有仿真 / 实测 / 离线重建的 LiDAR 数值可比较。ViT 输入图像尺寸、LLM tokens/sec 和模型训练时长不能替代这些物理参数。CG-FedLLM 的 SNR 是梯度重建信号 / 误差比，不是光子信号 / 背景统计。
+九篇均不涉及单光子 LiDAR。探测器类型、阵列规模、探测距离、目标速度、SNR/SBR、平均每像素光子数、采集时间、重建帧率、空间分辨率、定位误差均为**不适用**；没有仿真 / 实测 / 离线重建的 LiDAR 数值可比较。ViT 输入图像尺寸、LLM tokens/sec 和模型训练时长不能替代这些物理参数。CG-FedLLM 的 SNR 是梯度重建信号 / 误差比，不是光子信号 / 背景统计。
 
 [返回总览](README.md) · [版本 / 版权](NOTICE.md) · [验证与待补充项](verification.md)

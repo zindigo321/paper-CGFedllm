@@ -133,6 +133,10 @@ GSM8K：LLaMA-7B 上 FFA 17.12%，本文 LoRA 最佳 15.68%，整理者计算提
 
 [PowerSGD+](../2025-xie-powersgd-plus/notes.md) 的各 workers 在同一步共享投影 P，平均其坐标后恰为各压缩更新的平均（其 p. 4 算法 1、p. 13）；与本篇共享冻结 A 的聚合线性有代数联系（本篇 pp. 4–6）。但 PowerSGD+ 的基底随数据 / 时间更新，训练完整模型梯度，采用同步 All-Reduce；它没有本篇的 record-level DP-SGD 机制。冻结 LoRA 与动态梯度压缩的组合未经本文或新论文共同验证。
 
+## 与 FedALA-WR 的阅读联系
+
+[FedALA-WR](../2026-singh-fedala-wr/notes.md) 用本地 entropy replay / mixture loss 和 attention 聚合完整 CNN 参数（其 pp.6–9），没有 LoRA / DP 验证。本篇 pp.4–6 的共享冻结因子解决双因子分别平均与增量平均不同的问题；给 A / B 同时加 attention 权重仍不自动消除乘积交叉项。结合 replay 的可微本地优化需要新的 LoRA / DP 实验，公开 WR 代码与论文的差异也须先确认。
+
 ## 单光子 LiDAR 参数
 
 不适用。Food-101 视觉分类扩展不涉及单光子 LiDAR 探测器、阵列、测距、光子统计、采集 / 重建时间或定位误差。

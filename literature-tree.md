@@ -4,7 +4,7 @@
 `innovation1`、`innovation2` 仅作为分类名称，不记录创新点说明。
 原有论文路径与 XMind 的 12 张分析工作表保留；模板不计入论文数量。
 
-当前：**14 篇独立论文 / 279 页 / 5 份公开 PDF**。
+当前：**19 篇独立论文 / 359 页 / 7 份公开 PDF**。
 
 [打开 XMind 文献树](CG-FedLLM-Literature-Trees-v3.xmind) · [自行上传说明](INNOVATION_UPLOAD.md)
 
@@ -38,7 +38,13 @@
 
 [分类目录](papers/innovation2/README.md) · [填写模板](papers/innovation2/_template/notes.md)
 
-暂无已入库论文。
+| 论文（阅读版本原题） | 阅读版年份 | 页数 | 中文笔记 | 来源 | 引用 | 全文 |
+| --- | --- | --- | --- | --- | --- | --- |
+| Entropy-Guided Tensor Compression for Multimodal Federated Learning on Edge Devices | 2026 | 12 | [notes.md](papers/innovation2/2026-phan-mesh-fl/notes.md) | [source.md](papers/innovation2/2026-phan-mesh-fl/source.md) | [citation.bib](papers/innovation2/2026-phan-mesh-fl/citation.bib) | [paper.pdf](papers/innovation2/2026-phan-mesh-fl/paper.pdf) |
+| Federated Multimodal Learning with Dual Adapters and Selective Pruning for Communication and Computational Efficiency | 2025 | 10 | [notes.md](papers/innovation2/2025-nguyen-feddlp/notes.md) | [source.md](papers/innovation2/2025-nguyen-feddlp/source.md) | [citation.bib](papers/innovation2/2025-nguyen-feddlp/citation.bib) | [paper.pdf](papers/innovation2/2025-nguyen-feddlp/paper.pdf) |
+| FedMLLM: Federated Fine-tuning MLLM on Multimodal Heterogeneity Data | 2025 | 15 | [notes.md](papers/innovation2/2025-xu-fedmllm/notes.md) | [source.md](papers/innovation2/2025-xu-fedmllm/source.md) | [citation.bib](papers/innovation2/2025-xu-fedmllm/citation.bib) | [来源链接](papers/innovation2/2025-xu-fedmllm/source.md) |
+| PFAdapter: Hierarchical LoRA Decomposition for Personalized Federated MLLMs | 2026 | 11 | [notes.md](papers/innovation2/2026-liu-pfadapter/notes.md) | [source.md](papers/innovation2/2026-liu-pfadapter/source.md) | [citation.bib](papers/innovation2/2026-liu-pfadapter/citation.bib) | [来源链接](papers/innovation2/2026-liu-pfadapter/source.md) |
+| You Only Communicate Once: One-shot Federated Low-Rank Adaptation of MLLM | 2025 | 32 | [notes.md](papers/innovation2/2025-xu-yoco/notes.md) | [source.md](papers/innovation2/2025-xu-yoco/source.md) | [citation.bib](papers/innovation2/2025-xu-yoco/citation.bib) | [来源链接](papers/innovation2/2025-xu-yoco/source.md) |
 
 ## 后续维护
 

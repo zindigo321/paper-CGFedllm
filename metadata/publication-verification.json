@@ -1081,6 +1081,128 @@
       ],
       "public_pdf": false,
       "license": "CVF Open Access accepted version; no explicit third-party public redistribution grant verified"
+    },
+    {
+      "paper": "MESH-FL",
+      "paper_id": 15,
+      "directory": "papers/innovation2/2026-phan-mesh-fl",
+      "uploaded_version": "2607.06651v1",
+      "verified_on": "2026-10-13",
+      "evidence": [
+        {
+          "url": "https://arxiv.org/abs/2607.06651v1",
+          "verified": [
+            "Exact title and two authors",
+            "v1 submitted 2026-07-07",
+            "License link points to CC BY-NC-ND 4.0",
+            "No formal journal/conference or publication DOI listed as checked"
+          ]
+        },
+        {
+          "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+          "verified": [
+            "Unmodified attributed noncommercial sharing permitted; upload internal License matches version page"
+          ]
+        }
+      ],
+      "public_pdf": true,
+      "license": "CC BY-NC-ND 4.0"
+    },
+    {
+      "paper": "FedDLP",
+      "paper_id": 16,
+      "directory": "papers/innovation2/2025-nguyen-feddlp",
+      "uploaded_version": "2503.07552v1",
+      "verified_on": "2026-10-13",
+      "evidence": [
+        {
+          "url": "https://arxiv.org/abs/2503.07552v1",
+          "verified": [
+            "Exact title, four authors, v1 date 2025-03-10",
+            "Comments Accepted at CCGrid 2025",
+            "Version license link points to CC BY 4.0"
+          ],
+          "caveat": "arXiv spells Munoz; uploaded first page spells Muñoz; upload spelling retained."
+        },
+        {
+          "url": "https://swapp.cs.iastate.edu/publications",
+          "verified": [
+            "Authors lab lists same paper at CCGrid 2025, pages 1-10",
+            "DOI link is 10.1109/CCGRID64434.2025.00011; IEEE document 11044852"
+          ],
+          "caveat": "Formal full-text and complete publisher author metadata not obtained; no assumption of byte identity or substitution of a formal author name variant."
+        },
+        {
+          "url": "https://creativecommons.org/licenses/by/4.0/",
+          "verified": [
+            "Attribution license permits redistribution; applies to actual arXiv v1 reading version"
+          ]
+        }
+      ],
+      "public_pdf": true,
+      "license": "CC BY 4.0"
+    },
+    {
+      "paper": "FedMLLM",
+      "paper_id": 17,
+      "directory": "papers/innovation2/2025-xu-fedmllm",
+      "uploaded_version": "2411.14717v2",
+      "verified_on": "2026-10-13",
+      "evidence": [
+        {
+          "url": "https://arxiv.org/abs/2411.14717v2",
+          "checked": [
+            "Full title and six authors match uploaded page 1",
+            "v2 revised 8 March 2025; first submitted 22 November 2024",
+            "arXiv DOI distinguished from a formal publication DOI",
+            "No independent formal conference/journal metadata supplied"
+          ]
+        }
+      ],
+      "public_pdf": false,
+      "license": "arXiv non-exclusive distribution"
+    },
+    {
+      "paper": "PFAdapter",
+      "paper_id": 18,
+      "directory": "papers/innovation2/2026-liu-pfadapter",
+      "uploaded_version": "2607.12111v2",
+      "verified_on": "2026-10-13",
+      "evidence": [
+        {
+          "url": "https://arxiv.org/abs/2607.12111v2",
+          "checked": [
+            "Full title and eight-author order",
+            "v2 revised 3 October 2026",
+            "Accepted by IEEE TCCN",
+            "Related DOI 10.1109/TCCN.2026.3740672; arXiv DOI separate",
+            "No independent IEEE VOR byte or volume/issue/page match claimed"
+          ]
+        }
+      ],
+      "public_pdf": false,
+      "license": "arXiv non-exclusive distribution"
+    },
+    {
+      "paper": "YOCO",
+      "paper_id": 19,
+      "directory": "papers/innovation2/2025-xu-yoco",
+      "uploaded_version": "NeurIPS 2025 32-page conference-format camera-ready version; no arXiv version identified",
+      "verified_on": "2026-10-13",
+      "evidence": [
+        {
+          "url": "https://papers.nips.cc/paper_files/paper/2025/hash/58e6c003c9fb3992265005ff6aef1913-Abstract-Conference.html",
+          "checked": [
+            "Full title",
+            "Nine-author order; uploaded Guo-Sen Xie corresponds to official Guosen Xie",
+            "NeurIPS 2025 Main Conference Track and volume 38",
+            "Formal DOI 10.52202/085713-2060",
+            "Uploaded page 1 displays NeurIPS 2025; full quantitative reading based on uploaded PDF, not a claimed byte-identical proceedings download"
+          ]
+        }
+      ],
+      "public_pdf": false,
+      "license": "Third-party redistribution permission for uploaded 32-page version not verified"
     }
   ],
   "previous_verified_on": "2026-10-12",

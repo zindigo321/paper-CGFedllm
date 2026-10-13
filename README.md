@@ -1,11 +1,11 @@
 # paper-CGFedllm
 some papers about CGFedllm
 
-中文文献知识库，整理与 **LoRA、federated learning、differential privacy、LLM compression、distributed optimization、learned image compression 和 personalized FL** 有关的 14 篇独立上传论文。保留上面原仓库说明及已有提交历史。逐篇笔记记录方法、核心公式、实验条件、定量结果、消融、局限与复现信息，并区分原文、整理者归纳和待核实内容。
+中文文献知识库，整理与 **LoRA、federated learning、differential privacy、LLM compression、distributed optimization、learned image compression 和 personalized FL** 有关的 19 篇独立上传论文。保留上面原仓库说明及已有提交历史。逐篇笔记记录方法、核心公式、实验条件、定量结果、消融、局限与复现信息，并区分原文、整理者归纳和待核实内容。
 
 ## 阅读范围与版本
 
-当前 **14 篇独立论文 / 279 个上传 PDF 物理页 / 5 份公开 PDF**：原九篇 188 页，加本批 5 篇 91 页。新论文按用户提供的压缩包分别归档，innovation1 为五篇 91 页；innovation2 尚未加入本批。已读取本次实际附件的全部页面，包括其中存在的正文、参考文献与附录；附件未包含的补充材料明确列为未取得，不把正式书目核对当作另一个版本全文已读。旧 PowerSGD 文件名别名继续不重复计数。页码统一使用**实际上传 PDF 的物理页码**。本仓库未实际执行论文模型训练或复现实验。
+当前 **19 篇独立论文 / 359 个上传 PDF 物理页 / 7 份公开 PDF**：原九篇 188 页，加本批 10 篇 171 页。新论文按用户提供的压缩包分别归档，innovation1 为五篇 91 页，innovation2 为五篇 80 页。已读取本次实际附件的全部页面，包括其中存在的正文、参考文献与附录；附件未包含的补充材料明确列为未取得，不把正式书目核对当作另一个版本全文已读。旧 PowerSGD 文件名别名继续不重复计数。页码统一使用**实际上传 PDF 的物理页码**。本仓库未实际执行论文模型训练或复现实验。
 
 上传内容没有单光子 LiDAR 论文，相关探测器、距离、速度、SNR/SBR、光子数、采集时间、重建帧率、分辨率与定位误差均标为“不适用”；不会将图像输入尺寸或 LLM 吞吐混作 LiDAR 参数。
 
@@ -41,12 +41,17 @@ ISER 和 FedALA-WR 均读取 2026 年完整期刊版，目录年为2026；两者
 | Federated Fine-Tuning on Heterogeneous LoRAs With Error-Compensated Aggregation | Wanyi Ning, Jingyu Wang, Qi Qi, Haifeng Sun, Daixuan Cheng, Cong Liu, Lei Zhang, Zirui Zhuang, Jianxin Liao | 2025 / 2025 | IEEE TNNLS 36(10), 17826–17840 | 重构BiAi按数据量平均，补偿服务器上一轮分解残差，RSVD并按客户端rank截断下发（pp.4–5） | [10.1109/TNNLS.2025.3586545](https://doi.org/10.1109/TNNLS.2025.3586545) | [来源链接，PDF 未入库](papers/innovation1/2025-ning-eclora/source.md) | [notes.md](papers/innovation1/2025-ning-eclora/notes.md) |
 | Learned Parameter Compression for Efficient and Privacy-Preserving Federated Learning | Yiming Chen, Lusine Abrahamyan, Hichem Sahli, Nikos Deligiannis | 2024 / 2024 | IEEE OJCOMS 5 (2024), 3503–3516 | 逐层Conv1D autoencoder；本地每次迭代替换为有损重建参数；35轮预热后一次共享decoder，常规只上传低维码并解码平均（pp.5-7）。 | [10.1109/OJCOMS.2024.3409191](https://doi.org/10.1109/OJCOMS.2024.3409191) | [paper.pdf](papers/innovation1/2024-chen-learned-parameter-compression/paper.pdf) | [notes.md](papers/innovation1/2024-chen-learned-parameter-compression/notes.md) |
 | Test-Time Fine-Tuning of Image Compression Models for Multi-Task Adaptability | Unki Park, Seongmoon Jeong, Youngchan Jang, Gyeong-Moon Park, Jong Hwan Ko | 2025 / 2025 | CVPR 2025，4430–4440；独立补充材料未取得 | SVD-LoRA W0+UΣVᵀ，两阶段初始化/每图TTFT；encoder更新全因子，decoder仅SV；量化/算术编码SV随图像位流发送（pp.4-5）。 | [10.1109/CVPR52734.2025.00418](https://doi.org/10.1109/CVPR52734.2025.00418) | [来源链接，PDF 未入库](papers/innovation1/2025-park-lora-comp/source.md) | [notes.md](papers/innovation1/2025-park-lora-comp/notes.md) |
+| Entropy-Guided Tensor Compression for Multimodal Federated Learning on Edge Devices | Quoc Bao Phan, Tuy Tan Nguyen | 未核实 / 2026 | arXiv 2026 v1；未核实独立正式发表 | top-q能量谱熵估计；r∝exp(H_hat/2)预算缩放与整数修正；三-core MPS，payload=m1r+m2r²+nr；服务器逐层eligible-client加权（pp.3-5）。 | [10.48550/arXiv.2607.06651](https://doi.org/10.48550/arXiv.2607.06651) | [paper.pdf](papers/innovation2/2026-phan-mesh-fl/paper.pdf) | [notes.md](papers/innovation2/2026-phan-mesh-fl/notes.md) |
+| Federated Multimodal Learning with Dual Adapters and Selective Pruning for Communication and Computational Efficiency | Duy Phuong Nguyen, J. Pablo Muñoz, Tanya Roosta, Ali Jannesari | 2025 / 2025 | CCGrid 2025；阅读 arXiv v1 | localrank4/globalrank2双LoRA，交替冻结+双向logitKD；localgateSoRA式剪枝；主协议onlyglobaladapterFedAvg（pp.2、5-6）；caption冲突保留。 | [10.1109/CCGRID64434.2025.00011](https://doi.org/10.1109/CCGRID64434.2025.00011)；[arXiv DOI](https://doi.org/10.48550/arXiv.2503.07552) | [paper.pdf](papers/innovation2/2025-nguyen-feddlp/paper.pdf) | [notes.md](papers/innovation2/2025-nguyen-feddlp/notes.md) |
+| FedMLLM: Federated Fine-tuning MLLM on Multimodal Heterogeneity Data | Binqian Xu, Xiangbo Shu, Haiyang Mei, Guosen Xie, Basura Fernando, Jinhui Tang | 未核实 / 2025 | arXiv 2025 v2；未核实独立正式发表 | MiniCPM量化MLLM+LoRA，多轮server-adaptive FL；模态无关prompt与只约束中间层的自适应近端正则，γ随实际模态缺失改变（pp.4–5、14）。 | [10.48550/arXiv.2411.14717](https://doi.org/10.48550/arXiv.2411.14717) | [来源链接，PDF 未入库](papers/innovation2/2025-xu-fedmllm/source.md) | [notes.md](papers/innovation2/2025-xu-fedmllm/notes.md) |
+| PFAdapter: Hierarchical LoRA Decomposition for Personalized Federated MLLMs | Jing Liu, Kun Yang, Yan Wang, Dingkang Yang, Xiaoshuai Hao, Wei Zhang, Yang Liu, Wei Zhou | 2026 / 2026 | IEEE TCCN 接收 / DOI 已核实；阅读 arXiv v2 | Q/K LoRA全局同步，V/O LoRA本地保存；effective updates Frobenius正交损失；server按样本量平均Q/K（pp.4–6）。 | [10.1109/TCCN.2026.3740672](https://doi.org/10.1109/TCCN.2026.3740672) | [来源链接，PDF 未入库](papers/innovation2/2026-liu-pfadapter/source.md) | [notes.md](papers/innovation2/2026-liu-pfadapter/notes.md) |
+| You Only Communicate Once: One-shot Federated Low-Rank Adaptation of MLLM | Binqian Xu, Haiyang Mei, Zechen Bai, Jinjin Gong, Rui Yan, Guo-Sen Xie, Yazhou Yao, Basura Fernando, Xiangbo Shu | 2025 / 2025 | NeurIPS 2025，Advances in Neural Information Processing Systems 38 | 共享SVD A/B初始化；B soft-sign一致性正则，A L1稀疏；A PCA坐标加权重建，B按场景选普通聚合器（pp.5–6、30–31）。 | [10.52202/085713-2060](https://doi.org/10.52202/085713-2060) | [来源链接，PDF 未入库](papers/innovation2/2025-xu-yoco/source.md) | [notes.md](papers/innovation2/2025-xu-yoco/notes.md) |
 
 ## 目录与引用
 
 新增分类目录：[innovation1](papers/innovation1/README.md)、[innovation2](papers/innovation2/README.md)。分类仅用这两个名称；各篇论文仍使用 `年份-第一作者-简短英文标题` 子目录及原有笔记 / 来源 / 引用格式。原有九篇论文保留原路径。
 
-新增论文的自行上传步骤见 [INNOVATION_UPLOAD.md](INNOVATION_UPLOAD.md)；目录索引见 [literature-tree.md](literature-tree.md)，导图见 [XMind 文献树](CG-FedLLM-Literature-Trees-v3.xmind)。导图保留原 12 张工作表，更新“13 文献目录”，新增 5 张逐篇分析工作表，共 18 张。innovation1 已归档五篇；innovation2 本批尚未归档论文。填写模板不计入论文统计。
+新增论文的自行上传步骤见 [INNOVATION_UPLOAD.md](INNOVATION_UPLOAD.md)；目录索引见 [literature-tree.md](literature-tree.md)，导图见 [XMind 文献树](CG-FedLLM-Literature-Trees-v3.xmind)。导图保留原 12 张工作表，更新“13 文献目录”，新增 10 张逐篇分析工作表，共 23 张。innovation1 已归档五篇，innovation2 已归档五篇。填写模板不计入论文统计。
 
 | 路径 | 用途 |
 | --- | --- |

@@ -173,6 +173,179 @@
           "只读取11页主文；补充材料未取得，CNN/更多实现不作已读结果（p.5提及supplement）"
         ]
       }
+    },
+    {
+      "id": 15,
+      "short_name": "MESH-FL",
+      "xmind_sections": {
+        "Abstract": [
+          "MESH-FL按谱熵/设备预算选MPS秩，压缩累计model delta（pp.1-5）",
+          "15Pi实机AV-MNIST：最大meanCR56.82×，最大accuracy97.73%属于不同levels（pp.9-11表I/II）",
+          "无DP或攻击评估；是通信/学习误差研究（pp.3-9，整理者）"
+        ],
+        "Introduction": [
+          "模态branch谱复杂度与设备预算不同，uniformrank可能误配（pp.1-2）",
+          "缺失模态客户端不应稀释该层有效updates（pp.3、5）",
+          "结合entropy-guidance、三-coreMPS与layer-wiseeligible聚合（pp.2-5）"
+        ],
+        "Method": [
+          "p_i=sigma_i²/sum(sigma²), H_hat=−sum(p_i logp_i), r∝exp(H_hat/2)；q10（p.4式9-17、p.9）",
+          "MPS三个cores；payload=m1r+m2r²+nr，budget单位scalar而非直接MB（p.3式5-8）",
+          "预算二分缩放、整数bounds与correction；仅在eligibleclients按n_k归一化聚合（pp.4-5）",
+          "Majorization支持熵/目标rank共同排序；entropyproxy不同于MPS unfoldings（p.7定理V.1）",
+          "连续surrogateKKT：ψ/r²=λ(a+2br)；实际expH/2只是proxy/线性缩放（pp.8-9定理V.3，整理者）"
+        ],
+        "Experiments": [
+          "AV-MNIST0.1、15Pi、50轮fullparticipation、E5；CNN/MLP/fusion（p.9）",
+          "Light97.73% vsFedAvg95.72%；Heavy96.20%/56.82×（p.10表I）",
+          "Heavy达到95%：40轮/0.51GB；FedAvg47轮/33.63GB，约66×累计传输差（pp.10-11表I/II）",
+          "Moderate相同budget：entropy96.47% vsuniformMPS94.88%；0.43s vs0.41s压缩+传输（pp.11-12图5）"
+        ],
+        "Limitation": [
+          "指数tail假设未全层验证；q10不保证tailmass小，原矩阵熵不是MPS谱等价量（pp.6-7、12）",
+          "Fullparticipation/精确delta均值理论；eligible-layer实际归一化需额外适用性分析（pp.6、8，整理者）",
+          "ContinuousKKT最优不等于实际expH/2整数法精确最优；rankbounds/预算不足需实现处理（pp.4、8-9，整理者）",
+          "单AV-MNIST、无多seed置信度；payload均值与累计计数口径/TopK阈值需核查（pp.9-12，整理者）"
+        ]
+      }
+    },
+    {
+      "id": 16,
+      "short_name": "FedDLP",
+      "xmind_sections": {
+        "Abstract": [
+          "真实方法FEDDLP=Federated Dual LoRA Pruning，CLIP个性化分类（pp.1-2）",
+          "local大adapter保留个性化/global小adapter共享；mutualKD+localpruning（pp.5-6）",
+          "标题Multimodal不代表已有missingmodality/MLLM生成实验（pp.7-10，整理者）"
+        ],
+        "Introduction": [
+          "同构LoRA非IID过拟合，SoRA client-specificpruning又造成结构不一致（pp.1、3-4）",
+          "用一致globaladapter聚合和独立localadapter解决共享/个性化冲突（pp.1-2）",
+          "SoRA preliminary：Flowers102/10clients/β0.1/rank2、不通信（p.3图2）"
+        ],
+        "Method": [
+          "Local CE+αKL(local||global)，global CE+KL(global||local)，交替冻结teacher分支（pp.5-6）",
+          "local初始rank4/globalrank2；g_next=Tξ(g−μ∇gL_local)，ξ5e−5（pp.6-8）",
+          "主协议只发送global并weightedFedAvg；local inference；图3caption说local也聚合与此冲突（pp.2、5-6）",
+          "CLIP标签prompt cosine分类；训练CE使用本地标签，不是整套无监督zero-shot（p.4、6）"
+        ],
+        "Experiments": [
+          "CLIPViT-B/32冻结，四图像dataset，text/image分开，10clients/100轮，seeds0/1/42（pp.7-8）",
+          "Image/β0.01四集均值87.15±0.88% vsFedDAT84.85±0.63%（p.7表II）",
+          "ImageFlowers/β0.1达90%：15.30MB vsFedDAT25.50/FLoRA48.45MB（p.9表VI）",
+          "Separate vscombined Image/β0.01DTD：86.48% vs75.51%；消融口径单独保留（p.9表VIII）"
+        ],
+        "Limitation": [
+          "Testset参与gridsearch选参；未说明独立validation（p.8）",
+          "Image/β0.01Pets最差client44.66% vsFedDAT52.72%，公平性非全项提升（p.8表IV）",
+          "local是否上传/图caption冲突；MB不是独立FLOPs/seconds证据（pp.2、5-6、9，整理者）",
+          "未给完整removepruning/KD组件消融、DP或convergence；任务不覆盖missingmodality生成（pp.9-10，整理者）"
+        ]
+      }
+    },
+    {
+      "id": 17,
+      "short_name": "FedMLLM",
+      "xmind_sections": {
+        "Abstract": [
+          "图文异质性MLLM联邦微调基准：4场景、5数据集、2轻量模型（pp.1–3）",
+          "量化主干+LoRA，多轮FL和模态无关prompt/regularization（pp.4–5）",
+          "CrisisMMD Hybrid p=60%：F1 53.45→58.46，仅该FedAdagrad条件（p.8表10）"
+        ],
+        "Introduction": [
+          "图像/文本不完整使传统标签非IID不足以表征机构差异（pp.1–3）",
+          "Aligned、Missing按样本、Cross单模态机构、Hybrid按机构保留模态（pp.3–4）",
+          "关注10–30客户端cross-silo；千设备cross-device尚未验证（p.8）"
+        ],
+        "Method": [
+          "w=w0+BA，冻结主干；服务器下发LoRA、客户端训练、server optimizer聚合（p.4）",
+          "mask排除前后S层，只对中间层global-local LoRA距离加L2正则（p.5式3）",
+          "γmax=0.1，S=4；cross γ=γmax，missing γ=γmax×β（pp.7–8、14）",
+          "prompt移除对完整图文的强依赖，不生成缺失模态（pp.4、15表14）"
+        ],
+        "Experiments": [
+          "10客户端/每轮2，rank8/alpha8/dropout0.05；3次划分mean±std（p.6）",
+          "Aligned α=0.5 Crisis F1：Local39.12±1.45，FedYogi61.46±0.95（p.5表2）",
+          "Hybrid p=60%两策略Crisis58.46；仅prompt53.86、仅reg53.82（p.8表10）",
+          "SLAKE p=60% overall57.05±0.59，低于zero-shot64.95（p.6表6）"
+        ],
+        "Limitation": [
+          "无DP会计/泄露攻击验证；原始数据留本地不等于形式化隐私（pp.1、4）",
+          "未见域医学开放问题可能下降；仅图文与cross-silo（pp.6、8）",
+          "表12通信617M口径未充分定义，不能直接视为MB/R（p.14）",
+          "SLAKE样本数和Hybrid基线表8/10存在差异；代码未运行（pp.5、7–8、13）"
+        ]
+      }
+    },
+    {
+      "id": 18,
+      "short_name": "PFAdapter",
+      "xmind_sections": {
+        "Abstract": [
+          "注意力投影级global/local LoRA拆分，以保留机构个性化知识（pp.1–2）",
+          "Q/K全局、V/O本地；Frobenius正交约束；只同步Q/K（pp.4–6）",
+          "Aligned α=0.5：VQA62.83±0.62%，pFedLoRA61.74±0.74%；315 vs617 MB/R（p.8表I）"
+        ],
+        "Introduction": [
+          "全适配器统一平均造成weight washing和冗余通信（pp.1–3）",
+          "Q/K共享attention关系，V/O保留本地内容变换；设计需匹配模型（pp.4–5）",
+          "原始数据本地不保证抵抗update inversion/membership inference（p.1）"
+        ],
+        "Method": [
+          "ΘG={各层q,k的A/B}；ΘLk={各层v,o的A/B}（p.4式6–7）",
+          "Lo=sum||Ug^T Uh||F²，Ltotal=Ltask+λoLo；矩阵维度须相容（p.5式11/15）",
+          "ΘG(t+1)=sum nk/sum nj × ΘGk(t+1)，本地V/O不上传（p.6式16）",
+          "通信比PPF/Pall=1/2需等秩匹配尺寸；客户端仍训练全部LoRA（pp.5–6）"
+        ],
+        "Experiments": [
+          "10客户端/每轮2，50轮，rank8/alpha16，λo0.1，3seeds本地测试mean±std（pp.7–8）",
+          "SLAKE PF60.08±0.38 vs pFedLoRA59.12±0.43，但zero-shot64.95（p.8表I）",
+          "取消正交：VQA61.33 vs62.83；取消selective aggregation60.93且617 MB/R（p.8表II）",
+          "PF10.8min/R、15.8GB；FedYogi10.3min/R、15.7GB；50轮流量15.75 vs30.85GB（p.9表IV）"
+        ],
+        "Limitation": [
+          "定理含C4 λo²Ho²+C5β²固定残差；有界不等于渐近为零（p.6式18）",
+          "11页上传未含独立supplement，证明/切分/paired tests未取得（pp.6–8）",
+          "固定各层QK/VO拆分并非所有域最优，无真实straggler/dropout测试（p.10）",
+          "local-private描述参数驻留，不是DP；无专属代码核实且未复现（pp.1、10）"
+        ]
+      }
+    },
+    {
+      "id": 19,
+      "short_name": "YOCO",
+      "xmind_sections": {
+        "Abstract": [
+          "真正一次客户端上传后聚合，无额外服务器数据/生成模型（pp.1–2）",
+          "预训练implicit supervision：B方向一致性，A稀疏适应性（pp.5–6）",
+          "约0.03%通信按轮数×层数×模块数归一化，非实测字节/时延（pp.7–8表1–3）"
+        ],
+        "Introduction": [
+          "多轮显式global supervision与严格one-shot定义冲突（pp.1–3）",
+          "方向约束较幅度约束干扰小；共同SVD+B约束减少冲突（pp.3–5图3–4）",
+          "YOCO只最后一层q，不与全28层多轮训练预算相同（p.7）"
+        ],
+        "Method": [
+          "A0=sqrt(Σr)Vr^T；B0=Ur sqrt(Σr)；Bs=sign(B0)（p.5式3）",
+          "Rsign=||tanh(γB)-Bs||2/(||Bs||2+ε)，Rsparse=λ||A||1；非平方范数（p.6式4）",
+          "A展平PCA，Zg=sum piZi，Ag=Zg P^T；均值/k需代码核对（p.6式5）",
+          "B聚合器按表7/8场景变化，不固定FedAvg（pp.30–31）"
+        ],
+        "Experiments": [
+          "10客户端10epochs，rank8/alpha8/batch1/accum4，选epoch5或10最佳；A40（p.7）",
+          "Crisis α5：完整PCA63.69 F1 vsMean62.47、多轮FedAdam61.80（p.7表1）",
+          "Crisis cross I3T7：PCA43.33 vsEnsemble51.48/无PCA52.40，存在退化（p.8表2）",
+          "50客户端两个模型YOCO68.15/69.83，多轮FedAdam66.67/68.64（p.28表5）",
+          "checklist明确不报告error bars；不能自行称3seeds或显著优势（p.17）"
+        ],
+        "Limitation": [
+          "强凸/符号幅度独立/无跨客户端协方差等条件不自动适用于MLLM（pp.23–28）",
+          "理论单轮界含初始误差项；N50以外扩展仅统计近似（pp.27–29）",
+          "SVD非零初始增量的残差补偿、PCA中心化与k未完整说明（pp.5–6）",
+          "一次上传仍可能泄露；无DP会计/攻击评估，通信代理非实网成本（pp.7–10）",
+          "官方仓库YOCO release仍TODO；本次未执行复现（官方README，2026-10-13核对）"
+        ]
+      }
     }
   ]
 }

@@ -1,10 +1,10 @@
 # GitHub Desktop 提交与后续更新
 
-## 2026-10-13：两包实际论文分批上传（当前本地准备，第 1 批）
+## 2026-10-13：两包实际论文分批上传（当前本地准备，第 2 批）
 
 按 [INNOVATION_UPLOAD.md](INNOVATION_UPLOAD.md) 的两批步骤操作：第一包 `innovation1-upload-update.zip` 含分类准备与 innovation1 五篇；第二包 `innovation2-upload-update.zip` 在第一包基础上增加 innovation2 五篇及对应共享索引。按次序分别合并、检查、Commit、Push，外层说明留在仓库外。
 
-当前包范围为 14 篇 / 279 页 / 5 份公开 PDF。XMind及元数据、来源、引用、条件化比较已配套准备，尚未上传。此前只有空分类的目录准备记录保留为历史。
+当前包范围为 19 篇 / 359 页 / 7 份公开 PDF。XMind及元数据、来源、引用、条件化比较已配套准备，尚未上传。此前只有空分类的目录准备记录保留为历史。
 
 ## 2026-10-13：新增 innovation1 / innovation2 目录与文献树（本地准备）
 

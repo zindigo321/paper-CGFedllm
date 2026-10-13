@@ -1,12 +1,12 @@
 # 验证记录、文件清单与待补充信息
 
-## 2026-10-13：innovation 分类实际论文整理（第 1 批，本地准备）
+## 2026-10-13：innovation 分类实际论文整理（第 2 批，本地准备）
 
-基于远程 main `aabb70f318e9e7c213df8452133aa2f50f448c22`，累计新增 5 篇 / 91 页，现共 14 篇 / 279 页 / 5 份公开 PDF。每篇附件按物理页码完整阅读，缺失 supplementary 明确标记未取得；未运行训练或实验复现。
+基于远程 main `aabb70f318e9e7c213df8452133aa2f50f448c22`，累计新增 10 篇 / 171 页，现共 19 篇 / 359 页 / 7 份公开 PDF。每篇附件按物理页码完整阅读，缺失 supplementary 明确标记未取得；未运行训练或实验复现。
 
 原九篇记录 / 论文文档与原四份公开 PDF 保留，新分类仅使用 innovation1 / innovation2，不生成创新点说明。十个附件哈希彼此不同，也不与旧九篇身份记录重复。
 
-XMind 保留原 12 个工作表，更新目录并新增 5 个 Abstract / Introduction / Method / Experiments / Limitation 工作表，共 18 张。ZIP、双格式结构与资源可检查；环境没有可用的 XMind 主程序，未执行桌面打开测试。
+XMind 保留原 12 个工作表，更新目录并新增 10 个 Abstract / Introduction / Method / Experiments / Limitation 工作表，共 23 张。ZIP、双格式结构与资源可检查；环境没有可用的 XMind 主程序，未执行桌面打开测试。
 
 实际本地校验范围与结果见 [metadata/innovation-checks.json](metadata/innovation-checks.json)。校验值指本地工作区字节，不代表不同 Git 换行配置的字节或最终 GitHub 渲染。新增页面需你推送后检查公式及链接。未提交、推送、创建 PR 或写入远程。
 

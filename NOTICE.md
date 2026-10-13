@@ -44,3 +44,17 @@ FedALA-WR 的作者代码根许可为 GPL-2.0，继承文件标注 GPLv2-or-late
 - 仓库用途是阅读与研究索引，不宣称实现、复现或作者背书。
 
 [返回总览](README.md) · [验证记录](verification.md)
+
+## 2026-10-13 新增论文的版本与 PDF 处理
+
+原四份公开 PDF 与原有仅链接全文的记录保留。新版本逐篇按以下证据处理；允许收录者只改名为 `paper.pdf`，不改字节、署名或内嵌许可。
+
+| 论文 / 阅读版本 | 此版本许可或核验边界 | 本次处理 |
+| --- | --- | --- |
+| [AE-PSL](papers/innovation1/2026-meuwissen-ae-psl/source.md)，2607.17913v1 | arXiv non-exclusive distribution；[许可](https://arxiv.org/licenses/nonexclusive-distrib/1.0/) | 仅保留官方全文入口与笔记 / 引用，不复制公开 PDF |
+| [SNC](papers/innovation1/2026-almanifi-snc/source.md)，Elsevier typeset journal article, Internet of Things 40 (2026) 102113 | Elsevier All rights reserved | 仅保留官方全文入口与笔记 / 引用，不复制公开 PDF |
+| [ECLoRA](papers/innovation1/2025-ning-eclora/source.md)，IEEE typeset October 2025 issue, current version dated 2025-10-09 | IEEE All rights reserved; redistribution requires permission；[许可](https://www.ieee.org/publications/rights/index.html) | 仅保留官方全文入口与笔记 / 引用，不复制公开 PDF |
+| [Learned Parameter Compression](papers/innovation1/2024-chen-learned-parameter-compression/source.md)，IEEE Open Journal of the Communications Society Version of Record; current version 2024-06-25 | CC BY-NC-ND 4.0；[许可](https://creativecommons.org/licenses/by-nc-nd/4.0/) | [原样 paper.pdf](papers/innovation1/2024-chen-learned-parameter-compression/paper.pdf) |
+| [LoRA-comp](papers/innovation1/2025-park-lora-comp/source.md)，CVF CVPR 2025 Open Access accepted version; printed pages 4430-4440; not the separately hosted supplementary material | CVF Open Access accepted version; no explicit third-party public redistribution grant verified | 仅保留官方全文入口与笔记 / 引用，不复制公开 PDF |
+
+版本许可核对日期为 2026-10-13；证据见逐篇 source。公开下载、录用声明与作者代码许可证不替代该版本 PDF 的再分发授权。

@@ -1,0 +1,14 @@
+{
+  "prepared_on": "2026-10-13",
+  "base_commit": "aabb70f318e9e7c213df8452133aa2f50f448c22",
+  "categories": [
+    {"name": "innovation1", "directory": "papers/innovation1", "template_directory": "papers/innovation1/_template"},
+    {"name": "innovation2", "directory": "papers/innovation2", "template_directory": "papers/innovation2/_template"}
+  ],
+  "paper_subdirectory_format": "version-year-first-author-short-title",
+  "paper_files": ["notes.md", "source.md", "citation.bib"],
+  "pdf_filename_when_included": "paper.pdf",
+  "count_templates_as_papers": false,
+  "paper_registry": "metadata/papers.json",
+  "category_descriptions": "Neutral category names only; no innovation descriptions recorded."
+}

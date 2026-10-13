@@ -1,5 +1,19 @@
 # GitHub Desktop 提交与后续更新
 
+## 2026-10-13：两包实际论文分批上传（当前本地准备，第 1 批）
+
+按 [INNOVATION_UPLOAD.md](INNOVATION_UPLOAD.md) 的两批步骤操作：第一包 `innovation1-upload-update.zip` 含分类准备与 innovation1 五篇；第二包 `innovation2-upload-update.zip` 在第一包基础上增加 innovation2 五篇及对应共享索引。按次序分别合并、检查、Commit、Push，外层说明留在仓库外。
+
+当前包范围为 14 篇 / 279 页 / 5 份公开 PDF。XMind及元数据、来源、引用、条件化比较已配套准备，尚未上传。此前只有空分类的目录准备记录保留为历史。
+
+## 2026-10-13：新增 innovation1 / innovation2 目录与文献树（本地准备）
+
+最新步骤见 [INNOVATION_UPLOAD.md](INNOVATION_UPLOAD.md)：先合并 `innovation-directories-update.zip` 的 `files/` 内容，再由用户自行通过 Git 或 GitHub Desktop 提交 / 推送；之后两分类论文分别准备、分别上传。本次没有提交、推送、创建 PR 或修改远程仓库。
+
+新增两个中性分类及笔记 / 来源 / 引用模板；原有九篇论文、188 页与四份公开 PDF 保留。未收到新论文附件，因此模板不代表已读论文、不增论文计数。更新 [literature-tree.md](literature-tree.md) 与原 XMind，保留其原 12 张分析工作表，新增第 13 张文献目录。后续 `python tools/update_literature.py --refresh` 可同步目录与校验清单，`--check` 可执行本地检查。
+
+下方为此前发布与增量准备的历史记录，按各节日期和范围阅读。
+
 目标仓库：[zindigo321/paper-CGFedllm](https://github.com/zindigo321/paper-CGFedllm)，已有公开仓库，默认分支为 `main`。本次复用了原仓库并保留其初始 README 与提交历史。
 
 ## 发布状态

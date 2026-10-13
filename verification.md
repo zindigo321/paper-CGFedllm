@@ -1,5 +1,27 @@
 # 验证记录、文件清单与待补充信息
 
+## 2026-10-13：innovation 分类实际论文整理（第 1 批，本地准备）
+
+基于远程 main `aabb70f318e9e7c213df8452133aa2f50f448c22`，累计新增 5 篇 / 91 页，现共 14 篇 / 279 页 / 5 份公开 PDF。每篇附件按物理页码完整阅读，缺失 supplementary 明确标记未取得；未运行训练或实验复现。
+
+原九篇记录 / 论文文档与原四份公开 PDF 保留，新分类仅使用 innovation1 / innovation2，不生成创新点说明。十个附件哈希彼此不同，也不与旧九篇身份记录重复。
+
+XMind 保留原 12 个工作表，更新目录并新增 5 个 Abstract / Introduction / Method / Experiments / Limitation 工作表，共 18 张。ZIP、双格式结构与资源可检查；环境没有可用的 XMind 主程序，未执行桌面打开测试。
+
+实际本地校验范围与结果见 [metadata/innovation-checks.json](metadata/innovation-checks.json)。校验值指本地工作区字节，不代表不同 Git 换行配置的字节或最终 GitHub 渲染。新增页面需你推送后检查公式及链接。未提交、推送、创建 PR 或写入远程。
+
+下方为此前日期与范围的历史记录。
+
+## 2026-10-13：分类目录与文献树本地更新
+
+基于远程 main 提交 `aabb70f318e9e7c213df8452133aa2f50f448c22` 下载的本地副本准备。新增 `papers/innovation1` 与 `papers/innovation2`；分类只记录中性名称，不添加创新点说明。当前未收到新增论文附件，两个目录只有说明和填写模板；原九篇 / 188 页 / 四份公开 PDF 的元数据与原文件保持。
+
+更新 `literature-tree.md` 和 `CG-FedLLM-Literature-Trees-v3.xmind`。XMind 保留原 12 张工作表及 1,348 个主题，新增“13 文献目录”；原节点、样式和资源保留，现代 JSON 与传统 XML 同步。新分类链接在用户推送后才可从 GitHub 访问。文件名继续沿用 v3，便于更新原文件。
+
+本地检查工具 [tools/update_literature.py](tools/update_literature.py) 可验证论文文档、现有公开 PDF 原件校验、目录统计、Markdown 相对链接、XMind ZIP 完整性 / JSON-XML 节点一致性、SHA-256 文件清单。实际交付检查结果记录在 [metadata/innovation-checks.json](metadata/innovation-checks.json)。
+
+本次没有重新阅读九篇全文、运行模型实验、自动生成新论文内容、提交 / 推送或创建 PR。已验证 XMind 文件结构；环境中没有可用的 XMind 主程序，未执行桌面打开测试。新增文件的 GitHub 显示待用户自行上传后检查。下方保留旧日期与旧范围的历史记录。
+
 当前阅读范围为**九篇独立上传全文、188页**：此前七篇138页，加 ISER 期刊版33页和 FedALA-WR 期刊版17页。此次三个附件中的 PowerSGD 与第七篇原件逐字节相同，记录别名、不重复计数。核对日期2026-10-12；以下保留原日期、原范围和历史发布记录。
 
 ## 2026-10-12：三份附件整理，新增 ISER / FedALA-WR

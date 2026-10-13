@@ -1,6 +1,6 @@
-# 九篇论文的条件化比较
+# 14 篇论文的条件化比较
 
-本表是**整理者归纳**，具体方法与数字以各篇笔记和其所标上传 PDF 页码为准。比较范围仅限九篇独立上传全文（本次 PowerSGD 重复件不重复计数）；不是全领域综述。它们分别优化适配器容量、私有梯度压缩、学习传输压缩、传输稀疏性、聚合一致性、主干压缩、同步梯度压缩的收敛控制、每实例图像码流适配与客户端 replay 稳定性，不能按一个 Accuracy / 通信倍数做统一排名。
+本表是**整理者归纳**，具体方法与数字以各篇笔记和其所标上传 PDF 页码为准。比较范围为现有 14 篇实际附件（文件名别名不重复计数，未提供的补充材料不算已读）；不是全领域综述。它们分别优化适配器容量、私有梯度压缩、学习传输压缩、传输稀疏性、聚合一致性、主干压缩、同步梯度压缩的收敛控制、每实例图像码流适配与客户端 replay 稳定性，不能按一个 Accuracy / 通信倍数做统一排名。
 
 ## 问题、方法、条件与局限
 
@@ -15,6 +15,20 @@
 | [PowerSGD+](papers/2025-xie-powersgd-plus/notes.md)，2025 v1；正式 ICASSP 2026 | 单步子空间跟踪即使配 EF 仍可能失去收敛控制 | 同步全参数梯度 / EF 校正更新；共同基底、单步 power iteration、周期 SVD safeguard | 4 × RTX 4090；RoBERTa-Base / GLUE；LLaMA-60M / 130M / C4；无 DP，非联邦 LoRA 实验 | GLUE 原表 Avg 86.28 vs PowerSGD 85.73，p. 6 表 1，前三个基线均值有核算差异；C4 130M / rank 8 PPL 26.11 vs 26.24，p. 9 表 3 | 理论针对 MSGD，实验 Adam / AdamW；刷新传完整矩阵；有限步依赖 tau / rank；证明记号、配置与官方代码待核实，未测 wall-clock |
 | [ISER](papers/2026-park-iser/notes.md)，2026 Electronics 期刊版33页 | 图像 codec 在新任务 / 每图实例上的适配与 TTFT 开销 | SVD-LoRA，decoder SV 动态全局预算、ISES、patch→全图 MSTS；压缩图像码流 | TIC / Cheng2020，COCO / ImageNet / KITTI；每图已知目标 evaluator，无 DP；4090 | TIC open segmentation BD-Rate −52.86% vs LoRA-comp −49.51%，相对节省幅度约6.77%，p.17表2；最大44%编码减少为另一 closed detection 条件 | 秒级编码 / 毫秒解码分开；预算 / 信令与公开代码不完全一致；小 TTFT 预算不逐项领先，不是梯度压缩 |
 | [FedALA-WR](papers/2026-singh-fedala-wr/notes.md)，2026 Cluster Computing 期刊版17页 | non-IID pFL 的轮内遗忘 / 聚合稳定性 | 本地 entropy replay、mixture loss、逐层 attention 聚合完整 CNN 参数；不压缩消息 | 4-layer CNN，20 / 50 / 100 clients，private test；五次重复，单机2×3080，无 DP | CIFAR-100 Dir0.10 / 20 clients，57.53±0.15% vs FedALA56.99±0.19%，p.12表3；Tiny时间175.56 vs182.43min，p.15表5 | 正文 / 表格及公开代码 replay detach、距离符号、stop规则有差异；无完整收敛证明 / 网络时间 / LLM验证 |
+
+## 2026-10-13 新增论文：条件与边界
+
+以下仅归纳公开论文的方法和实验，不将分类名称解释为创新点，也不添加未验证的联合研究方案。
+
+| 论文 / 阅读版本 | 方法与对象 | 实验条件 | 关键结果及页码 | 局限 |
+| --- | --- | --- | --- | --- |
+| [AE-PSL](papers/innovation1/2026-meuwissen-ae-psl/notes.md)，2607.17913v1 | GA公共对齐、CSA本地AE暖启及decoder平均；DFT冻结AE，压缩ViT切分层patch激活和latent梯度（pp.5–6） | ViT-B/32，s5；N5/25，四视觉分类任务；LoRA r16/alpha32，10epochs，3seeds；global测试移除AE、local保留（pp.6–8、16） | ViT-B/32、N=5、CIFAR-100 global evaluation、R≈10：82.7±0.2%，与无压缩82.7±0.2%相同；3 seeds（pp.8、17，表1/4） | 仅视觉分类、CLS不压缩；global评估移除AE而local评估保留；摘要与正文5.2/5.3及附录95/99%目标存在口径差异（pp.1、7、10、12、18–20） |
+| [SNC](papers/innovation1/2026-almanifi-snc/notes.md)，Elsevier typeset journal article, Internet of Things 40 (2026) 102113 | Top-k残差、Conv1D/GDN量化latent及learned prior/arithmetic coding压缩非零更新，Fibonacci编码索引；服务器PCA+KDE增广训练codec（pp.7–11） | K15/Kp8，Dirichlet alpha0.3，MLP/CNN/VGG/ResNet四小视觉模型；codec100epochs；峰值测试accuracy/平均更新CR（pp.12–14） | FMNIST/CNN/FedAvg、K=15/Kp=8、alpha=0.3，lambda=10：峰值88.89%，平均更新CR450.79倍；无压缩88.24%（pp.13–14，表2/3） | 只小视觉模型；CR重点上行更新；CIFAR100 lambda10损失8.92个百分点；无独立privacy攻击或严格加密验证，收敛条件未保证（pp.12、14、16、20） |
+| [ECLoRA](papers/innovation1/2025-ning-eclora/notes.md)，IEEE typeset October 2025 issue, current version dated 2025-10-09 | 重构BiAi按数据量平均，补偿服务器上一轮分解残差，RSVD并按客户端rank截断下发（pp.4–5） | N100/参与0.1，rank4/8/16/32/64；四语言基础模型、六任务，200rounds，3seeds，beta1、p2r（p.8） | RoBERTa-base/MRPC：88.7±1.4，FedIT83.8±1.1；聚合0.33s，FlexLoRA9.64s；各模型平均轮数收益1.54–3.01倍（pp.9–10，表II/III） | LoRA专属严格理论留待未来；完整维度服务器残差；label-flipping仅投毒实验；公开main源码RSVD输入未补偿，与论文式8不同（pp.4、8、13；作者代码静态核查） |
+| [Learned Parameter Compression](papers/innovation1/2024-chen-learned-parameter-compression/notes.md)，IEEE Open Journal of the Communications Society Version of Record; current version 2024-06-25 | 逐层Conv1D autoencoder；本地每次迭代替换为有损重建参数；35轮预热后一次共享decoder，常规只上传低维码并解码平均（pp.5-7）。 | LeNet/MLP，Fashion-MNIST/CIFAR-10/100；100clients、500rounds、seed1234；B64/E10或B8/E1；DLG/IGA、128样本、7k攻击steps；无DP。 | Regular表示CR4.10×（p.9表6）；CIFAR10 LeNet IID B64/E10 60.43% vsFedAvg60.75%；non-IID B8/E1 41.65% vs46.18%（表4）；已训练MLP第5/40轮IGA，两个数据集测得SSIM0.00/ASR0（pp.11-12表11-12）。 | 攻击条件下经验结果非DP保证；4.1×未计全尺寸预热、decoder与下行总账；单seed、小模型；缺少本地替换/仅上传压缩的独立组件消融。 |
+| [LoRA-comp](papers/innovation1/2025-park-lora-comp/notes.md)，CVF CVPR 2025 Open Access accepted version; printed pages 4430-4440; not the separately hosted supplementary material | SVD-LoRA W0+UΣVᵀ，两阶段初始化/每图TTFT；encoder更新全因子，decoder仅SV；量化/算术编码SV随图像位流发送（pp.4-5）。 | TIC、rank4、40iterations/图；COCO检测/分割、ImageNet分类；四quality λ2/1/0.5/0.2；open-set仍用已知目标evaluator特征；消融A10080GB、COCO5000图；无DP。 | 相对TIC：closed检测BD-Rate−54.96%/BD-mAP2.98；open检测−48.94%/2.69（p.7表1）；40iteration消融0.106bpp/mAP36.25/14.13s（表2）；decoder全因子额外位流overhead15.3×（p.8图9）。 | TTFT秒级编码；open-set需要目标网络而非未知任务零信息；SV共享初始化与码流成本；主文缺少seed统计/完整复现参数；未取得supplement，不能引用其CNN结果。 |
+
+不同论文压缩的激活、参数、图像码流、张量因子和同步次数不同；压缩率 / 同步量 / BD-Rate / 准确率不可跨条件直接排名。
 
 ## 哪些资源数字可以比较
 

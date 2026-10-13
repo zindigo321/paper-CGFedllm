@@ -1,5 +1,5 @@
 {
-  "verified_on": "2026-10-12",
+  "verified_on": "2026-10-13",
   "method": "Uploaded PDFs read in full; official version pages, author repositories, proceedings pages and publisher-deposited Crossref metadata used for bibliographic verification.",
   "records": [
     {
@@ -942,9 +942,148 @@
         "Springer official page is subscription preview; full text read only from the user attachment.",
         "No subscription bypass or formal publisher PDF byte comparison."
       ]
+    },
+    {
+      "paper": "AE-PSL",
+      "paper_id": 10,
+      "directory": "papers/innovation1/2026-meuwissen-ae-psl",
+      "uploaded_version": "2607.17913v1",
+      "verified_on": "2026-10-13",
+      "evidence": [
+        {
+          "url": "https://arxiv.org/abs/2607.17913v1",
+          "verified": [
+            "Title and author order",
+            "v1 submitted 2026-07-20",
+            "WAFL at ECML-PKDD 2026 acceptance comment",
+            "version-specific nonexclusive license"
+          ]
+        },
+        {
+          "url": "https://github.com/Nousphera/AE_PSL",
+          "verified": [
+            "Author-code repository title and paper-linked identity"
+          ]
+        }
+      ],
+      "public_pdf": false,
+      "license": "arXiv non-exclusive distribution"
+    },
+    {
+      "paper": "SNC",
+      "paper_id": 11,
+      "directory": "papers/innovation1/2026-almanifi-snc",
+      "uploaded_version": "Elsevier typeset journal article, Internet of Things 40 (2026) 102113",
+      "verified_on": "2026-10-13",
+      "evidence": [
+        {
+          "url": "https://www.sciencedirect.com/science/article/pii/S254266052600243X",
+          "verified": [
+            "Official indexed title, DOI, Volume 40, November 2026, article 102113",
+            "Contributor statement names"
+          ],
+          "access_limitation": "Direct web open returned 403; complete content read from uploaded publisher PDF"
+        },
+        {
+          "url": "https://doi.org/10.1016/j.iot.2026.102113",
+          "verified": [
+            "DOI printed on publisher PDF first page"
+          ]
+        }
+      ],
+      "public_pdf": false,
+      "license": "Elsevier All rights reserved"
+    },
+    {
+      "paper": "ECLoRA",
+      "paper_id": 12,
+      "directory": "papers/innovation1/2025-ning-eclora",
+      "uploaded_version": "IEEE typeset October 2025 issue, current version dated 2025-10-09",
+      "verified_on": "2026-10-13",
+      "evidence": [
+        {
+          "url": "https://doi.org/10.1109/TNNLS.2025.3586545",
+          "verified": [
+            "Publisher PDF first page title, 9 authors, DOI, issue date, volume/number/pages, all-rights-reserved notice"
+          ],
+          "access_limitation": "Web IEEE/DOI inaccessible; inspected actual uploaded IEEE typeset PDF"
+        },
+        {
+          "url": "https://github.com/ningwanyi/ECLoRA",
+          "verified": [
+            "Author repository paper title, author list, DOI, TNNLS2025; repository early pagination1-15 differs from final uploaded issue"
+          ]
+        },
+        {
+          "url": "https://github.com/ningwanyi/ECLoRA/blob/main/run_eclora.py",
+          "verified": [
+            "Static code inspection: uncompensated whole_param passed to rsvd although compensated_whole_param computed; compensation_beta not applied at call",
+            "RSVD oversampling2r and truncationr; evaluation before decomposition"
+          ]
+        }
+      ],
+      "public_pdf": false,
+      "license": "IEEE All rights reserved; redistribution requires permission"
+    },
+    {
+      "paper": "Learned Parameter Compression",
+      "paper_id": 13,
+      "directory": "papers/innovation1/2024-chen-learned-parameter-compression",
+      "uploaded_version": "IEEE Open Journal of the Communications Society Version of Record; current version 2024-06-25",
+      "verified_on": "2026-10-13",
+      "evidence": [
+        {
+          "url": "https://researchportal.vub.be/en/publications/learned-parameter-compression-for-efficient-and-privacy-preservin/",
+          "verified": [
+            "Complete title and four authors",
+            "Published 2024; volume 5; 14 pages; DOI",
+            "Final published version labelled CC BY-NC-ND"
+          ],
+          "caveat": "VUB generic bibliographical copyright says 2020 IEEE; actual uploaded page 1 explicitly says 2024 The Authors and CC BY-NC-ND 4.0."
+        },
+        {
+          "url": "https://www.comsoc.org/system/files/2024-07/Publications_Contents_Digest_2024_Jun.pdf",
+          "verified": [
+            "IEEE publication digest: same title and four authors, year 2024, pages 3503-3516"
+          ]
+        },
+        {
+          "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+          "verified": [
+            "License permits attributed noncommercial sharing of unmodified material"
+          ]
+        }
+      ],
+      "public_pdf": true,
+      "license": "CC BY-NC-ND 4.0"
+    },
+    {
+      "paper": "LoRA-comp",
+      "paper_id": 14,
+      "directory": "papers/innovation1/2025-park-lora-comp",
+      "uploaded_version": "CVF CVPR 2025 Open Access accepted version; printed pages 4430-4440; not the separately hosted supplementary material",
+      "verified_on": "2026-10-13",
+      "evidence": [
+        {
+          "url": "https://pure.korea.ac.kr/en/publications/test-time-fine-tuning-of-image-compression-models-for-multi-task-/",
+          "verified": [
+            "Exact title, five authors, CVPR 2025, pages 4430-4440, DOI",
+            "Publisher copyright 2025 IEEE"
+          ]
+        },
+        {
+          "url": "https://openaccess.thecvf.com/content/CVPR2025/papers/Park_Test-Time_Fine-Tuning_of_Image_Compression_Models_for_Multi-Task_Adaptability_CVPR_2025_paper.pdf",
+          "verified": [
+            "Official CVF first page title and five authors match upload; watermark specifies Open Access accepted version, final proceedings on IEEE Xplore"
+          ],
+          "caveat": "Availability for download alone does not establish permission for third-party public redistribution; no byte comparison performed."
+        }
+      ],
+      "public_pdf": false,
+      "license": "CVF Open Access accepted version; no explicit third-party public redistribution grant verified"
     }
   ],
-  "previous_verified_on": "2026-10-11",
+  "previous_verified_on": "2026-10-12",
   "existing_records_last_verified_on": "2026-10-11",
   "new_record_last_verified_on": "2026-10-12",
   "latest_update_scope": "Two new uploaded journal PDFs verified; previous seven publication records preserved. Duplicate PowerSGD upload shares the existing v1 identity."

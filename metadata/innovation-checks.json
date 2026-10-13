@@ -1,0 +1,71 @@
+{
+  "prepared_on": "2026-10-13",
+  "status": "passed-local-validation",
+  "base_commit": "aabb70f318e9e7c213df8452133aa2f50f448c22",
+  "new_paper_count": 5,
+  "new_uploaded_pdf_pages": 91,
+  "paper_count": 14,
+  "uploaded_pdf_pages": 279,
+  "public_pdf_count": 5,
+  "all_uploaded_pdf_pages_text_read": true,
+  "selected_source_pages_rendered_for_visual_checks": {
+    "10": [
+      1,
+      5,
+      8,
+      11
+    ],
+    "11": [
+      1,
+      11,
+      13,
+      14
+    ],
+    "12": [
+      1,
+      3,
+      4,
+      5,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "13": [
+      1,
+      6,
+      9,
+      10,
+      11,
+      12
+    ],
+    "14": [
+      1,
+      4,
+      7
+    ]
+  },
+  "missing_supplementary_materials": "Not counted as read; see individual notes (in particular PFAdapter and standalone LoRA-comp supplement).",
+  "original_nine_paper_records_and_documents_unchanged": true,
+  "original_four_public_pdfs_byte_identical": true,
+  "xmind": {
+    "sheets": 18,
+    "topics": 1536,
+    "original_12_sheets_json_identical": true,
+    "original_5_resource_manifest_entries_identical": true,
+    "zip_crc_passed": true,
+    "json_xml_consistency_checked_by_update_literature": true
+  },
+  "new_markdown_tables_structurally_checked": 18,
+  "new_math_expressions_counted": 97,
+  "math_check_scope": "GitHub delimiters and structural checks plus source-page review; no online GitHub rendering performed.",
+  "new_bibtex_entries_structurally_checked": 5,
+  "all_included_new_pdfs_match_uploaded_identity": true,
+  "sha256_entries": 71,
+  "checksum_scope": "Actual local working-tree bytes; text LF/CRLF differences can require reviewed local refresh.",
+  "innovation_descriptions_added": false,
+  "desktop_xmind_open_test_performed": false,
+  "model_reproduction_run": false,
+  "remote_write_performed": false
+}
